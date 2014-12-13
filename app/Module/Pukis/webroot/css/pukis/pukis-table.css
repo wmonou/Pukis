@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+
+
+#sql-dump table{
+	background-color: #fff666;
+	width: 100%;
+}
+
+#sql-dump table th, #sql-dump table td {
+	padding: 5px;
+	border: #808080 1px solid;
+}

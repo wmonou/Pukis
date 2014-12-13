@@ -1,0 +1,92 @@
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 400;
+	text-transform: capitalize;
+	broder-bottom: green 1px solid;
+}
+
+/* tipography */
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	margin: 0;
+}
+
+#wrapper {
+	background-color: #ffffff;
+	height: 100%;
+	position: absolute;
+	width:100%;
+}
+
+#header {
+	color: #fff666;
+	background-color: #808080;
+	top: 0;
+	padding: 10px;
+	position: fixed;
+	height: 40px;
+	width: 100%;
+	z-index: 4;
+}
+
+	#header a{
+		color: #fff666;
+	}
+
+#footer {
+	color: #fff666;
+	background-color: #808080;
+	bottom: 0;
+	padding: 10px;
+	position: fixed;
+	height: 40px;
+	width: 100%;
+	z-index: 4;
+}
+
+#loader{
+	background: rgba(45, 44, 44, 0.3) url('../../img/771896.gif') no-repeat center;
+	display: none;
+	height: 100%;
+	position: absolute;
+	width:100%;
+	z-index: 1;
+}
+
+#content {
+	top: 40px;
+	bottom: 40px;
+	padding: 20px;
+	position: fixed;
+	width:100%;
+	overflow: scroll;
+}
+
+#sql-dump{
+	margin: 10px 0;
+}
+
+#modal{
+   	background-color: rgba(0, 0, 0, 0.7);
+  	background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 20px;
+}
+
+.line {
+	border-bottom: 1px solid;
+	width: 100%
+}
+
+.box {
+	border: 1px solid;
+	width: 100%
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-left{
+	text-align: left;
+}
