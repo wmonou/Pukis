@@ -81,6 +81,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function(obj) {
 		$('#loader').show();
 		var form = $(obj).serialize();
 		$.post(url(), form, function(data){
+			alert('aaaa');
 			response = PUKISAPP.BEHAVIOR.PUKIS.checkJson(data);
 			if(response.url !== false){
 				ajaxRedirect(response.url);				
@@ -88,7 +89,10 @@ PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function(obj) {
 				$(element()).html(data);
 			}
 		}).fail(function(error){
-			$(element()).html(error.status);
+			// currently only handling 404
+			// @todo handle other message
+			message = '<h3>Error ' + error.status + '</h3>\n' + url() + ' ' + error.statusText;
+			modal = PUKISAPP.BEHAVIOR.PUKIS.modal(message).show();
 		}).always(function(){
 			$('#loader').hide();
 		});
@@ -104,7 +108,7 @@ PUKISAPP.BEHAVIOR.PUKIS.modal = function(message){
 	var modal = '#modal';
 	var message = message;
 	var setModal = function(){
-		$(modal).easyModal({top: 200,overlay : 0.2});
+		$(modal).easyModal({top: 200});
 	}
 	var setMessage = function(){
 		$(modal).html(message);

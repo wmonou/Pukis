@@ -8,7 +8,7 @@ h1,h2,h3,h4,h5,h6 {
 html, body {
 	font-family: 'Open Sans', sans-serif;
 	height: 100%;
-	margin: 0;
+	margin: 0;	
 }
 
 #wrapper {
@@ -16,11 +16,12 @@ html, body {
 	height: 100%;
 	position: absolute;
 	width:100%;
+	min-width: 1024px;
 }
 
 #header {
-	color: #fff666;
-	background-color: #808080;
+	color: #c69c6d;
+	background-color: #333333;
 	top: 0;
 	padding: 10px;
 	position: fixed;
@@ -29,13 +30,9 @@ html, body {
 	z-index: 4;
 }
 
-	#header a{
-		color: #fff666;
-	}
-
 #footer {
-	color: #fff666;
-	background-color: #808080;
+	color: #c69c6d;
+	background-color: #333333;
 	bottom: 0;
 	padding: 10px;
 	position: fixed;
@@ -43,6 +40,10 @@ html, body {
 	width: 100%;
 	z-index: 4;
 }
+
+	#header a, #footer a{
+		color: #c69c6d;
+	}
 
 #loader{
 	background: rgba(45, 44, 44, 0.3) url('../../img/771896.gif') no-repeat center;
@@ -56,17 +57,36 @@ html, body {
 #content {
 	top: 40px;
 	bottom: 40px;
-	padding: 20px;
 	position: fixed;
 	width:100%;
-	overflow: scroll;
+	overflow: hidden;
 }
+
+	#content .menu {
+		background-color: #e7e7e7;
+		top: 40px;
+		bottom: 40px;
+		position: fixed;
+		width:20%;
+		overflow: hidden;
+	}
+	
+	#content .frame {
+		top: 40px;
+		bottom: 40px;
+		left: 20%;
+		padding: 20px;
+		position: fixed;
+		width:80%;
+		overflow: scroll;
+	}
 
 #sql-dump{
 	margin: 10px 0;
 }
 
 #modal{
+	display:none;
    	background-color: rgba(0, 0, 0, 0.7);
   	background: rgba(0, 0, 0, 0.7);
     color: #ffffff;

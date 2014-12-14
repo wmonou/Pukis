@@ -38,7 +38,6 @@
  */
 	require CAKE . 'Config' . DS . 'routes.php';
 	
-	
 	Router::connect('/', array(
 		'plugin' => 'pukis',
 		'controller' => 'pukis',

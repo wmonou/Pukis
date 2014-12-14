@@ -7,4 +7,9 @@ Router::connect('/', array(
 	'admin' => false
 	));
 	
-	
+Router::connect('/admin/pukis/*', array(
+	'plugin' => 'pukis',
+	'controller' => 'pukis',
+	'action' => 'admin_index',
+	'admin' => true
+));

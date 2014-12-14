@@ -21,7 +21,7 @@ class PukisController extends PukisAppController {
 	 */
 	public function beforeFilter(){
 		parent::beforeFilter();	
-		$this->Auth->allow();	
+		$this->Auth->allow('index');	
 	}
 	
 	/**
@@ -31,8 +31,9 @@ class PukisController extends PukisAppController {
 	 */
 	public function index(){
 		// empty page
-		if (!$this->Auth->user()){
-			Wmonou::debug('rrr',$this->Auth->user());
+		$user =  $this->Auth->user();
+		if (!empty($user)){
+			$this->ajaxRedirect('/admin/pukis');
 		}
 	}
 	
@@ -43,6 +44,10 @@ class PukisController extends PukisAppController {
 	 */
 	public function admin_index(){
 		// empty page
+		$user =  $this->Auth->user();
+		if (empty($user)){
+			$this->ajaxRedirect('/admin/users/login');
+		}
 	}
 	
 }

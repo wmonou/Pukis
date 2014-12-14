@@ -60,13 +60,11 @@ class RolesController extends UsersAppController{
 	 */
 	public function admin_edit( $id = null )
 	{
-		if( !$id )
-		{
+		if( !$id ) {
 			$this->Session->setFlash(__d('admin', "Invalid ID"), 'flash_error');
 			$this->redirect(array("action" => 'index'));			
-		}
-		if( !empty( $this->request->data ) )
-		{
+		} 
+		if( !empty( $this->request->data ) ) {
 			if( $this->Role->save( $this->request->data ) )
 			{
 				$this->Session->setFlash(__d('admin', "The Role was saved."), 'flash_success');

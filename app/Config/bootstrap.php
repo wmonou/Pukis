@@ -109,3 +109,7 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::load('Pukis', array('bootstrap' => true, 'routes' => true));
+
+CakePlugin::load('Menus', array('bootstrap' => false, 'routes' => false));
+
+CakePlugin::load('Settings', array('bootstrap' => false, 'routes' => false));

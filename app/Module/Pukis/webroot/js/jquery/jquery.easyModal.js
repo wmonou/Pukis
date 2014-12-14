@@ -16,7 +16,7 @@
             var defaults = {
                 top: 'auto',
                 autoOpen: false,
-                overlayOpacity: 0.5,
+                overlayOpacity: 0.0,
                 overlayColor: '#000',
                 overlayClose: true,
                 overlayParent: 'body',

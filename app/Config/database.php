@@ -70,7 +70,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'rtfGHB',
-		'database' => 'kodehive_akemis',
+		'database' => 'kodehive_pukis',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

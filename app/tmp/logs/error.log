@@ -8180,3 +8180,1394 @@ Stack Trace:
 #3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-14 03:07:34 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:07:37 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:07:38 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:07:40 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:07:42 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:07:51 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:07:52 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:00 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:09 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:11 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:21 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:23 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:31 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:33 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:36 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:37 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:39 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:08:40 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:09:47 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:09:49 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:09:51 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:09:51 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:36 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:38 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:39 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:47 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:49 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:50 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:51 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:52 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:10:53 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:11:45 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:11:47 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:11:49 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:11:52 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:37 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:38 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:39 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:40 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:41 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:42 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:43 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:12:45 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:17 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:19 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:20 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:21 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:25 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:26 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:27 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:29 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:31 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:33 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:36 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:13:37 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:19:08 Error: Fatal Error (64): Can't use method return value in write context in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 34]
+2014-12-14 03:19:08 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\httpd\htdocs...', 34)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\httpd\htdocs...', 34, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\httpd\htdocs...', 34, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-14 03:20:40 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:22:28 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:22:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:22:37 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:22:49 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:22:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:22:58 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:23:02 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:24:21 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:24:47 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:24:51 Error: [MissingControllerException] Controller class AsdasdController could not be found.
+Exception Attributes: array (
+  'class' => 'AsdasdController',
+  'plugin' => 'Pukis',
+)
+Request URL: /admin/pukis/asdasd
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:25:12 Error: [MissingControllerException] Controller class 20Controller could not be found.
+Exception Attributes: array (
+  'class' => '20Controller',
+  'plugin' => 'Pukis',
+)
+Request URL: /admin/pukis/20
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:25:19 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => 'Pukis',
+)
+Request URL: /admin/pukis/index/20
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:25:33 Error: [MissingActionException] Action PukisController::admin_20() could not be found.
+Exception Attributes: array (
+  'controller' => 'PukisController',
+  'action' => 'admin_20',
+)
+Request URL: /admin/pukis/pukis/20
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-14 03:25:48 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:34:11 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:34:17 Error: [MissingControllerException] Controller class AsdasdController could not be found.
+Exception Attributes: array (
+  'class' => 'AsdasdController',
+  'plugin' => 'Pukis',
+)
+Request URL: /admin/pukis/asdasd/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:34:23 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:34:38 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis/pukis/index
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:34:44 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis/pukis/index/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:34:58 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/add/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:41:11 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Pukis\Pukis\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Pukis\\Pukis\\admin_index.ctp',
+)
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-14 03:57:28 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:57:28 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:58:39 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 03:58:39 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 04:01:41 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 04:01:41 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 04:09:09 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 04:09:09 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/plugins/metisMenu/metisMenu.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/sb-admin-2.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class Font-awesome-4.1.0Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Font-awesome-4.1.0Controller',
+  'plugin' => NULL,
+)
+Request URL: /admin/font-awesome-4.1.0/css/font-awesome.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher-2014-12-14 06:06:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/bootstrap.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/plugins/metisMenu/metisMenu.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/sb-admin-2.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/bootstrap.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class Font-awesome-4.1.0Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Font-awesome-4.1.0Controller',
+  'plugin' => NULL,
+)
+Request URL: /admin/font-awesome-4.1.0/css/font-awesome.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/jquery.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+ect(CakeResponse))
+#1 {main}
+2014-12-14 06:06:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/sb-admin-2.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/bootstrap.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/plugins/metisMenu/metisMenu.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/sb-admin-2.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/bootstrap.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/sb-admin-2.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+Response))
+#1 {main}
+, Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/bootstrap.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/plugins/metisMenu/metisMenu.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/jquery.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/sb-admin-2.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/bootstrap.min.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /admin/css/sb-admin-2.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+Response))
+#1 {main}
+2014-12-14 06:06:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/jquery.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+>dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/bootstrap.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/plugins/metisMenu/metisMenu.min.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:06:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/js/sb-admin-2.js
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:26:10 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:26:10 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:26:10 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:26:10 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:36:14 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:36:14 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:36:15 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:36:15 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:36:38 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:36:38 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:37:02 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:37:02 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:37:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:37:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:37:30 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:37:31 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:43:46 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:43:46 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:49:35 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:49:35 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:49:36 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:49:36 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:51:51 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.woff?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:51:51 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:51:51 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 06:51:51 Error: [MissingControllerException] Controller class PukisController could not be found.
+Exception Attributes: array (
+  'class' => 'PukisController',
+  'plugin' => NULL,
+)
+Request URL: /Pukis/css/fonts/fontawesome-webfont.ttf?v=4.2.0
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 07:20:16 Error: [MissingControllerException] Controller class Forms.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Forms.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /admin/forms.html
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 07:39:16 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /admin/index.html
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 10:13:15 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /admin/index.html
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 10:13:24 Error: [MissingControllerException] Controller class Forms.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Forms.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /admin/forms.html
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 10:13:32 Error: [MissingControllerException] Controller class Forms.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Forms.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /admin/forms.html
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-14 10:40:58 Error: [MissingControllerException] Controller class Forms.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Forms.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /admin/forms.html
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
