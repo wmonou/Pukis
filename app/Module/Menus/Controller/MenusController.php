@@ -30,6 +30,14 @@ class MenusController extends MenusAppController {
 	public $uses = array('Menus.Menu');
 	
 	/**
+	 * Components used by controller
+	 * 
+	 * @var array $components
+	 * @access public
+	 */
+	public $components = array('Pukis.DataTables');
+	
+	/**
 	 * Controller constructor
 	 * @see Controller::beforeFilter()
 	 * 
@@ -37,7 +45,7 @@ class MenusController extends MenusAppController {
 	 */
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('');
+		$this->Auth->allow();
 	}
 	
 	/**
@@ -46,9 +54,25 @@ class MenusController extends MenusAppController {
 	 * @access public
 	 */
 	public function admin_index() {
-		$this->Menu->unbindAll();
-		$menuData = $this->Menu->find('all');
-		$this->set('menuData', $menuData);
+		// get view
+		if(!empty($this->request->data)){
+			$this->autoRender = false;
+			print json_encode($this->DataTables->getResponse());			
+		}
+	}
+	
+	/**
+	 * List Data
+	 *
+	 * @access public
+	 */
+	public function admin_data() {
+		$this->autoRender = false;
+		if(!empty($this->request->data)){
+			//print_r ($this->RequestHandler->responseType());
+			//print_r ($this->request->data);
+			print json_encode($this->DataTables->getResponse());			
+		}
 	}
 	
 	/**
@@ -78,7 +102,7 @@ class MenusController extends MenusAppController {
 			$this->ajaxRedirect('/admin/menus/menus/index');
 		}
 		if ( !empty( $this->request->data )) {
-			if  ($this->Role->save( $this->request->data)) {
+			if  ($this->Menu->save( $this->request->data)) {
 				$this->Session->setFlash(__d('menus', "The Role was saved."), 'flash_success');
 				$this->redirect('/admin/menus/menus/index');
 			}
@@ -92,7 +116,7 @@ class MenusController extends MenusAppController {
 	 * @param string $id
 	 * @access public
 	 */
-	public function detele($id = null) {
+	public function admin_detele($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__d('menus', 'Invalid ID.'), 'flash_error');
 			$this->ajaxRedirect(array('action' => 'index'));

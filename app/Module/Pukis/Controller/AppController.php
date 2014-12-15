@@ -68,6 +68,7 @@ class AppController extends Controller {
 	 */
 	public $style = array(
 		'/Pukis/css/bootstrap/bootstrap.min.css',
+		'/Pukis/css/datatables/datatables.bootstrap.css',
 		'/Pukis/css/font-awesome/font-awesome.min.css',
 		'/Pukis/css/metis-menu/metis-menu.min.css',
 		'/Pukis/css/pukis/pukis.css'
@@ -82,6 +83,8 @@ class AppController extends Controller {
 		'/Pukis/js/jquery/jquery.min.js',
 		'/Pukis/js/jquery/jquery.easyModal.js',
 		'/Pukis/js/bootstrap/bootstrap.min.js',
+		'/Pukis/js/datatables/datatables.jquery.js',
+		'/Pukis/js/datatables/datatables.bootstrap.js',
 		'/Pukis/js/metis-menu/metis-menu.min.js',
 		'/Pukis/js/pukis/pukis.js'
 	);

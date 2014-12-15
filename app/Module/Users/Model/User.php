@@ -1,5 +1,8 @@
 <?php
 
+App::uses('UsersAppModel', 'Users.Model');
+App::uses('AuthComponent', 'Controller/Component');
+
 /**
  * User
  *
@@ -8,11 +11,8 @@
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
-App::uses('UsersAppModel', 'Users.Model');
-App::uses('AuthComponent', 'Controller/Component');
-
 class User extends UsersAppModel {
     
     /**

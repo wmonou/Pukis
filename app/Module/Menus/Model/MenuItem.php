@@ -1,84 +1,71 @@
 <?php
 App::uses('MenusAppModel', 'Menus.Model');
+
 /**
- * MenuItem Model
+ * MenuItem
  *
- * @property MenuItem $ParentMenuItem
- * @property Menu $Menu
- * @property MenuItem $ChildMenuItem
+ * @category Model
+ * @package  Module.Menu.Model
+ * @version  1.0
+ * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
+ * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
+ * @link     http://pukis.kodehive.com
  */
 class MenuItem extends MenusAppModel {
 
-/**
- * Validation rules
- *
- * @var array
- */
+	/**
+	 * Model behavior
+	 * 
+	 * @var unknown
+	 */
+	public $actsAs = array('ExtendAssociations');
+	
+	/**
+	 * Validation rules
+	 *
+	 * @var array
+	 */
 	public $validate = array(
 		'name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'required' => true				
 			),
 		),
 		'alias' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'required' => true				
 			),
 		),
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * belongsTo associations
- *
- * @var array
- */
+	/**
+	 * belongsTo associations
+	 *
+	 * @var array
+	 */
 	public $belongsTo = array(
 		'ParentMenuItem' => array(
 			'className' => 'MenuItem',
-			'foreignKey' => 'parent_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+			'foreignKey' => 'parent_id',			
 		),
 		'Menu' => array(
 			'className' => 'Menu',
-			'foreignKey' => 'menu_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+			'foreignKey' => 'menu_id',			
 		)
 	);
 
-/**
- * hasMany associations
- *
- * @var array
- */
+	/**
+	 * hasMany associations
+	 *
+	 * @var array
+	 */
 	public $hasMany = array(
 		'ChildMenuItem' => array(
 			'className' => 'MenuItem',
 			'foreignKey' => 'parent_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
+			'dependent' => false,			
 		)
 	);
 
