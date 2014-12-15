@@ -84,7 +84,12 @@ div.dataTables_scrollFoot table {
 	border-top: none;
 }
 
-
+div.dataTables_processing {
+	width:100%
+	text-align: center;
+	position:absolute;
+	top: 0;
+}
 
 
 /*

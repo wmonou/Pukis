@@ -105,7 +105,7 @@ class MenusController extends MenusAppController {
 				$this->redirect('/admin/menus/menus/index');
 			}
 		}
-		$this->request->data = $this->Role->read(null, $id);
+		$this->request->data = $this->Menu->read(null, $id);
 	}
 	
 	/**

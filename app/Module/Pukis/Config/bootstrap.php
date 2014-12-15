@@ -6,7 +6,13 @@
 
 App::uses('Wmonou', 'Vendor');
 
-Cache::config('users', array('engine' => 'File'));
+// long
+Cache::config('long', array(
+	    'engine' => 'File',
+	    'duration' => '+1 week',
+	    'probability' => 100,
+	    'path' => CACHE . 'long' . DS,
+	));
 
 App::uses('PukisJsonReader', 'Pukis.Configure');
 Configure::config('settings', new PukisJsonReader(APP . 'Module' . DS . 'Pukis' . DS . 'Config' . DS));

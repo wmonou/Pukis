@@ -190,23 +190,28 @@ class DataTablesComponent extends Component{
     		foreach ($responseData as $responseKey => $response){
     			// @todo handle recursive
     			foreach ($this->_datatableFields as $datatableFieldKey => $datatableField) {
-    				if (isset($response[$model][$datatableField]) && isset($this->_linkableFields[$datatableField]['target'])) {
+    				if (isset($this->_linkableFields[$datatableField]['target'])) {
     					if(!is_array($this->_linkableFields[$datatableField]['target'])){
+    						// link properties
+    						$linkName = ($response[$model][$datatableField])? $response[$model][$datatableField] : null;
+    						$linkUrl = $this->_generateParameterHyperlink(
+		    								$this->_linkableFields[$datatableField]['target'], 
+		    								$response);
+    						$linkClass = $this->_linkableFields[$datatableField]['htmlClass'];
+    						// table item and link
     						$responseJSON['data'][$responseKey][$datatableField] = 
-    							$this->_generateHyperlink(
-    									$response[$model][$datatableField],
-    									$this->_linkableFields[$datatableField]['target'],
-    									$this->_linkableFields[$datatableField]['htmlClass']);
+    							$this->_generateHyperlink($linkName,$linkUrl,$linkClass);		
    						
-    					} 
-    					else {
+    					} else {
     						$responseJSON['data'][$responseKey][$datatableField] = "";
     						foreach ($this->_linkableFields[$datatableField]['target'] as $targetKey => $target) {
+    							// link properties
+    							$linkName = $targetKey;
+    							$linkUrl = $this->_generateParameterHyperlink($target,$response);
+    							$linkClass = $this->_linkableFields[$datatableField]['htmlClass'][$targetKey];
+    							// table item and link
     							$responseJSON['data'][$responseKey][$datatableField] .= " " .
-	    							$this->_generateHyperlink(
-	    									$targetKey,
-	    									$target,
-	    									$this->_linkableFields[$datatableField]['htmlClass'][$targetKey]);
+	    							$this->_generateHyperlink($linkName,$linkUrl,$linkClass);
 	    							
     						}
     					}
@@ -309,15 +314,51 @@ class DataTablesComponent extends Component{
     	return $this->_ofset;
     }
     
+    /**
+     * 
+     * @param unknown $data
+     * @return number
+     */
     protected function _setDataTableDraw($data){
     	$this->_draw = $data['draw'];
     	
     	return $this->_draw;
     }
     
+    /**
+     * Generate link for table item
+     * 
+     * @param string $name 
+     * @param string $url
+     * @param string $htmlClass
+     * @return string
+     */
     protected function _generateHyperlink($name, $url = null, $htmlClass = null){
     	 $href = ($url)? "href='$url'" : "href='#'";
     	 $htmlClass = ($htmlClass)? "<i class='$htmlClass'></i> " : " ";
     	 return "<a $href>$htmlClass $name</a>";
+    }
+    
+    /**
+     * Transform url pattern for parameters
+     * 
+     * @param string $url
+     * @param array $data
+     */
+    protected function _generateParameterHyperlink($url, $data = array()){
+    	preg_match_all("/(:\w*)/", $url, $params, PREG_SET_ORDER);
+    	
+    	$model = get_class($this->_model);
+    	$replacement = array();
+    	foreach ($params as $param) {
+    		$dataParam = ltrim($param[1], ':');
+    		$replacement['match'][] = '/'.$param['1'].'/';
+    		$replacement['data'][] = $data[$model][$dataParam];
+    	}
+    	
+    	if (!empty($replacement['match']) && !empty($replacement['match']))
+    		return preg_replace($replacement['match'], $replacement['data'], $url);
+    	
+    	return $url;
     }
 }

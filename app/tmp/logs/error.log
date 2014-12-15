@@ -10324,3 +10324,33 @@ Stack Trace:
 #11 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
 #12 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-12-15 10:07:47 Error: Fatal Error (1): Call to undefined function generateParameterHyperlink() in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\Component\DataTablesComponent.php, line 195]
+2014-12-15 10:07:47 Error: [FatalErrorException] Call to undefined function generateParameterHyperlink()
+Request URL: /admin/menus/menus/index
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 195)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 195, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\httpd\htdocs...', 195, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 10:55:49 Error: Fatal Error (4): syntax error, unexpected '$params' (T_VARIABLE) in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\Component\DataTablesComponent.php, line 349]
+2014-12-15 10:55:49 Error: [FatalErrorException] syntax error, unexpected '$params' (T_VARIABLE)
+Request URL: /admin/menus/menus/index
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 349)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 349, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 349, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 11:33:30 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\Controller\MenusController.php, line 108]
+2014-12-15 11:33:30 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /admin/menus/menus/edit/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 108)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 108, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\httpd\htdocs...', 108, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
