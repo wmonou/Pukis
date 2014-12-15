@@ -69,8 +69,6 @@ class MenusController extends MenusAppController {
 	public function admin_data() {
 		$this->autoRender = false;
 		if(!empty($this->request->data)){
-			//print_r ($this->RequestHandler->responseType());
-			//print_r ($this->request->data);
 			print json_encode($this->DataTables->getResponse());			
 		}
 	}

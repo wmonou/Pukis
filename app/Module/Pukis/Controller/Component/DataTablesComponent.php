@@ -143,7 +143,7 @@ class DataTablesComponent extends Component{
     	$count = $this->_model->find('count', array('conditions' => $this->_conditions));
     	
     	// retreive data
-    	$this->model->recursive = $this->_recursive;
+    	$this->_model->recursive = $this->_recursive;
     	$data = $this->_model->find('all', $this->_prepareDataTableQuery($this->controller->request->data));
     	return $this->_prepareDataTableResponse($count, $data); 
     }
@@ -173,7 +173,7 @@ class DataTablesComponent extends Component{
      * @param array $data
      */
     protected function _prepareDataTableResponse($count, $responseData){
-    	$response = array(
+    	$responseJSON = array(
     		'draw' => intval($this->_draw),
     		'recordsTotal' => intval($count),
     		'recordsFiltered' => intval($this->_limit),
@@ -182,39 +182,43 @@ class DataTablesComponent extends Component{
     	
     	// return data
     	if(!$responseData){
-    		return $response;
+    		return $responseJSON;
     	}
     	else {
     		$model = get_class($this->_model);
+    		    		 
+    		foreach ($responseData as $responseKey => $response){
+    			// @todo handle recursive
+    			foreach ($this->_datatableFields as $datatableFieldKey => $datatableField) {
+    				if (isset($response[$model][$datatableField]) && isset($this->_linkableFields[$datatableField]['target'])) {
+    					if(!is_array($this->_linkableFields[$datatableField]['target'])){
+    						$responseJSON['data'][$responseKey][$datatableField] = 
+    							$this->_generateHyperlink(
+    									$response[$model][$datatableField],
+    									$this->_linkableFields[$datatableField]['target'],
+    									$this->_linkableFields[$datatableField]['htmlClass']);
+   						
+    					} 
+    					else {
+    						$responseJSON['data'][$responseKey][$datatableField] = "";
+    						foreach ($this->_linkableFields[$datatableField]['target'] as $targetKey => $target) {
+    							$responseJSON['data'][$responseKey][$datatableField] .= " " .
+	    							$this->_generateHyperlink(
+	    									$targetKey,
+	    									$target,
+	    									$this->_linkableFields[$datatableField]['htmlClass'][$targetKey]);
+	    							
+    						}
+    					}
+    				} else if (isset($response[$model][$datatableField])) {
+    					$responseJSON['data'][$responseKey][$datatableField] = $response[$model][$datatableField];
+    				} else {
+    					$responseJSON['data'][$responseKey][$datatableField] = "";
+    				}
+    			}
+    		}
     		
-//     		foreach ($responseData as $dataKey => $dataValue){
-//     			// @todo handle recursive
-//     			foreach ($this->_fields as $feildKey => $fieldName) {
-//     				if (isset($this->_linkableFields[$fieldName]['target'])) {
-//     					if(!is_array($this->_linkableFields[$fieldName]['target'])){
-//     						$response['data'][$dataKey][$fieldName] =
-//     							"<a href='" .  $this->_linkableFields[$fieldName]['target'] . "' >" 
-//     							 . $dataValue[$model][$fieldName] .
-//     							"</a>";
-//     					} else {
-//     						$response['data'][$dataKey][$fieldName] = "";
-//     						$target = preg_replace("/(:\w+)/", $response['data']['id'], $target);
-//     						print
-// 							foreach ($this->_linkableFields[$fieldName]['target'] as $targetKey => $target) {
-// 								$response['data'][$dataKey][$fieldName] .=
-// 									"<a href='" .  $target . "' >"
-// 									. $targetKey .
-// 									"</a> ";																
-// 							}						
-//     					}
-//     				} elseif (isset($dataValue[$model][$fieldName])) {
-//     					$response['data'][$dataKey][$fieldName] = $dataValue[$model][$fieldName];
-//     				} else {
-//     					$response['data'][$dataKey][$fieldName] = "";
-//     				}
-//     			}
-//     		}
-    		return $response;
+    		return $responseJSON;
     	}
     }
     
@@ -234,7 +238,16 @@ class DataTablesComponent extends Component{
     	// field for actions
     	if(empty($this->_linkableFields) && !empty($data['actions'])){
     		foreach ($data['actions'] as $action){
-    			$this->_linkableFields[$action['data']] = $action['target'];
+    			// url target
+    			if(isset($action['target']))
+    				$this->_linkableFields[$action['data']]['target'] = $action['target'];
+    			else
+    				$this->_linkableFields[$action['data']]['target'] = "#";
+    			// htmlClass
+    			if(isset($action['htmlClass']))
+    				$this->_linkableFields[$action['data']]['htmlClass'] = $action['htmlClass'];
+    			else
+    				$this->_linkableFields[$action['data']]['htmlClass'] = "";
     		}
     	}
     	
@@ -300,5 +313,11 @@ class DataTablesComponent extends Component{
     	$this->_draw = $data['draw'];
     	
     	return $this->_draw;
+    }
+    
+    protected function _generateHyperlink($name, $url = null, $htmlClass = null){
+    	 $href = ($url)? "href='$url'" : "href='#'";
+    	 $htmlClass = ($htmlClass)? "<i class='$htmlClass'></i> " : " ";
+    	 return "<a $href>$htmlClass $name</a>";
     }
 }

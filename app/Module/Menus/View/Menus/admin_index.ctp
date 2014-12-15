@@ -5,19 +5,17 @@
 			<tr>
 				<th>Menu Name</th>
 				<th>Editable</th>
-				<th>Action</th>
+				<th style="width: 120px">Action</th>
 			</tr>
 		</thead>
 
 		<tfoot>
 			<tr>
-				<th>First name</th>
-				<th>Last name</th>
-				<th>Action</th>
+				<th>Menu Name</th>
+				<th>Editable</th>
+				<th style="width: 120px">Action</th>
 			</tr>
 		</tfoot>
-
-
 	</table>
 </div>
 
@@ -39,7 +37,11 @@ $(document).ready(function() {
                     	target: {
                         	edit: '/admin/menus/menus/edit/:id', 
                             delete: '/admin/menus/menus/delete/:id'
-                        }
+                        },
+                    	htmlClass: {
+							edit: 'fa fa-pencil',
+							delete: 'fa fa-trash-o',
+                    	}
                     }
                 ];
             }
