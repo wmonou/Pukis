@@ -1,4 +1,5 @@
 .buildpath
 .project
 .settings/
-app/tmp/
+/app/tmp/*
+

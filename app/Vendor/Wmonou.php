@@ -22,6 +22,21 @@ Class Wmonou {
 	public static function debug () {
 		Wmonou::$args = func_get_args();
 	}
+	
+	/**
+	 * to print assign argument
+	 * 
+	 * @access public static 
+	 */
+	public static function printd() {
+		Wmonou::$args = func_get_args();
+		
+		foreach (Wmonou::$args as $arg) {
+			print_r('<pre>');
+			print_r($arg);
+			print_r('</pre>');
+		}
+	}
 }
 
 ?>

@@ -35,7 +35,15 @@ class MenusController extends MenusAppController {
 	 * @var array $components
 	 * @access public
 	 */
-	public $components = array('Pukis.DataTables');
+	public $components = array();
+	
+	/**
+	 * Models used by controller
+	 *
+	 * @var array
+	 * @access public
+	 */
+	public $helpers = array('Pukis.Table');
 	
 	/**
 	 * Controller constructor
@@ -54,23 +62,8 @@ class MenusController extends MenusAppController {
 	 * @access public
 	 */
 	public function admin_index() {
-		// get view
-		if(!empty($this->request->data)){
-			$this->autoRender = false;
-			print json_encode($this->DataTables->getResponse());			
-		}
-	}
-	
-	/**
-	 * List Data
-	 *
-	 * @access public
-	 */
-	public function admin_data() {
-		$this->autoRender = false;
-		if(!empty($this->request->data)){
-			print json_encode($this->DataTables->getResponse());			
-		}
+		$list = $this->paginate('Menu');
+		$this->set('menuData', $list);
 	}
 	
 	/**

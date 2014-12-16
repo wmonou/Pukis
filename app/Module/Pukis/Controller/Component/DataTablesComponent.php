@@ -237,6 +237,9 @@ class DataTablesComponent extends Component{
     	if(empty($this->_datatableFields) && !empty($data['columns'])){
     		foreach ($data['columns'] as $column){
     			$this->_datatableFields[] = $column['data'];
+    			
+    			if($this->_model->hasField($column['data']))
+    				$this->_fields[] = $column['data'];
     		}
     	}
     	
@@ -255,15 +258,7 @@ class DataTablesComponent extends Component{
     				$this->_linkableFields[$action['data']]['htmlClass'] = "";
     		}
     	}
-    	
-    	// field for query
-    	if(empty($this->_fields) && !empty($this->_datatableFields)){
-    		foreach ($this->_datatableFields as $field){
-    			if($this->_model->hasField($field))    				
-    				$this->_fields[] = $field;
-    		}
-    	}
-    	
+	
     	if(!array_search('a', $this->_fields))
     		return array_merge(array('id'), $this->_fields);
     	

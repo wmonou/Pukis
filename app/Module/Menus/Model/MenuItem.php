@@ -14,11 +14,18 @@ App::uses('MenusAppModel', 'Menus.Model');
 class MenuItem extends MenusAppModel {
 
 	/**
+	 * Model recursive
+	 * 
+	 * @var integer
+	 */
+	public $recursive = -1;
+	
+	/**
 	 * Model behavior
 	 * 
 	 * @var unknown
 	 */
-	public $actsAs = array('ExtendAssociations');
+	public $actsAs = array('Containable');
 	
 	/**
 	 * Validation rules

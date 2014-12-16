@@ -36,8 +36,10 @@ PUKISAPP.createNameSpace("PUKISAPP.BEHAVIOR.PUKIS");
 
 PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function(obj) {
 	var obj = obj;
-	var action = obj.href;
-	var url = function(){
+	var url = function(reloadUrl){
+		if(typeof reloadUrl != 'undefined') {
+			return reloadUrl; 
+		}
 		if(typeof $(obj).attr('href') != 'undefined') {
 			return $(obj).attr('href'); 
 		}
@@ -46,10 +48,12 @@ PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function(obj) {
 		}
 		return "#";
 	}
-	var element = function(){
+	var element = function(reloadElement){
+		if(typeof reloadElement != 'undefined') {
+			return reloadElement; 
+		}
 		if(typeof $(obj).attr('reload-element') != 'undefined') {
-			var string = $(obj).attr('reload-element');
-			return "." + string; 
+			return "#" + $(obj).attr('reload-element');
 		}
 		return "#content";
 	}
@@ -75,6 +79,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function(obj) {
 			modal = PUKISAPP.BEHAVIOR.PUKIS.modal(message).show();
 		}).always(function(){
 			$('#loader').hide();
+			alert(element());
 		});	
 	}
 	var ajaxFormRequest = function(){

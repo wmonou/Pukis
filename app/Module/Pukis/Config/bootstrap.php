@@ -7,9 +7,9 @@
 App::uses('Wmonou', 'Vendor');
 
 // long
-Cache::config('long', array(
-	    'engine' => 'File',
-	    'duration' => '+1 week',
+Cache::config('default', array(
+	    'engine' => 'Memcached',
+	    'duration' => 3600,
 	    'probability' => 100,
 	    'path' => CACHE . 'long' . DS,
 	));

@@ -10354,3 +10354,329 @@ Stack Trace:
 #3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-15 21:46:34 Error: Fatal Error (1): Class 'PaginatorComponent' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\Component\TablePaginatorComponent.php, line 3]
+2014-12-15 21:46:35 Error: [FatalErrorException] Class 'PaginatorComponent' not found
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 3, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 3, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 21:48:04 Error: Fatal Error (1): Class 'PaginatorComponent' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\Component\TablePaginatorComponent.php, line 5]
+2014-12-15 21:48:04 Error: [FatalErrorException] Class 'PaginatorComponent' not found
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 21:48:16 Error: Fatal Error (1): Class 'PaginatorComponent' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\Component\TablePaginatorComponent.php, line 5]
+2014-12-15 21:48:16 Error: [FatalErrorException] Class 'PaginatorComponent' not found
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 21:48:18 Error: Fatal Error (1): Class 'PaginatorComponent' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\Component\TablePaginatorComponent.php, line 5]
+2014-12-15 21:48:18 Error: [FatalErrorException] Class 'PaginatorComponent' not found
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Paginato...', 'C:\httpd\htdocs...', 5, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 21:50:49 Error: Fatal Error (1): Class name must be a valid object or a string in [C:\httpd\htdocs\projects\kodehive\pukis\app\Vendor\Wmonou.php, line 32]
+2014-12-15 21:50:49 Error: [FatalErrorException] Class name must be a valid object or a string
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class name must...', 'C:\httpd\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class name must...', 'C:\httpd\htdocs...', 32, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class name must...', 'C:\httpd\htdocs...', 32, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-15 21:52:02 Error: Fatal Error (1): Using $this when not in object context in [C:\httpd\htdocs\projects\kodehive\pukis\app\Vendor\Wmonou.php, line 32]
+2014-12-15 21:52:02 Error: [FatalErrorException] Using $this when not in object context
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 32, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', 'C:\httpd\htdocs...', 32, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 04:30:36 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:31:08 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:31:57 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:32:16 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:32:20 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:33:27 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:33:30 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:34:07 Error: [MissingHelperException] Helper class TableHelper could not be found.
+Exception Attributes: array (
+  'class' => 'TableHelper',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Menus.Table')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Table')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_data.ctp(22): View->__get('Table')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(471): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#9 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-16 04:34:30 Error: Fatal Error (64): Cannot redeclare TableHelper::_getField() in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Helper\TableHelper.php, line 128]
+2014-12-16 04:34:30 Error: [FatalErrorException] Cannot redeclare TableHelper::_getField()
+Request URL: /admin/menus/menus/data
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\httpd\htdocs...', 128)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\httpd\htdocs...', 128, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\httpd\htdocs...', 128, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 05:19:06 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\View\Helper\TableHelper.php, line 255]
+2014-12-16 05:19:06 Error: [FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /admin/menus/menus/data/sort:name/direction:desc
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 255)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 255, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 255, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 07:25:45 Error: [MissingControllerException] Controller class MenusitemController could not be found.
+Exception Attributes: array (
+  'class' => 'MenusitemController',
+  'plugin' => 'Menus',
+)
+Request URL: /admin/menus/menusitem/index/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:38:42 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:38:45 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/1
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:39:23 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/1
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:39:24 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:39:27 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:39:29 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/1
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:39:31 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:40:07 Error: [MissingControllerException] Controller class PropertiesController could not be found.
+Exception Attributes: array (
+  'class' => 'PropertiesController',
+  'plugin' => NULL,
+)
+Request URL: /properties/view/1
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 07:40:38 Error: Fatal Error (1): Call to a member function paginate() on a non-object in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\Controller\MenusController.php, line 73]
+2014-12-16 07:40:38 Error: [FatalErrorException] Call to a member function paginate() on a non-object
+Request URL: /admin/menus/menus/index
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 73)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 73, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\httpd\htdocs...', 73, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 08:23:31 Error: [MissingActionException] Action MenusController::admin_data() could not be found.
+Exception Attributes: array (
+  'controller' => 'MenusController',
+  'action' => 'admin_data',
+)
+Request URL: /admin/menus/menus/data/sort:name/direction:asc
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

@@ -15,7 +15,6 @@ $(function(){
 		}
 	});
 
-
 	$(".permission-toggle").click(function(){
 		$this = $(this);
 		$.ajax({
@@ -27,7 +26,7 @@ $(function(){
 				aro_id: $this.data('aro_id')
 			},
 			beforeSend: function(){
-				//...
+				
 			},
 			success: function(data){
 				if ( data.length != "" ) {
