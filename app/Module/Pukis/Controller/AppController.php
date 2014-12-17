@@ -133,8 +133,8 @@ class AppController extends Controller {
 		$this->Auth->loginRedirect = array(
 			'plugin' => 'pukis',
 			'controller' => 'pukis',
-			'action' => 'index',
-			'admin' => false
+			'action' => 'admin_index',
+			'admin' => true
 		);
 	}
 	

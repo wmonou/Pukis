@@ -5,7 +5,7 @@ App::uses('MenusAppModel', 'Menus.Model');
  * Menu
  *
  * @category Model
- * @package  Module.User.Model
+ * @package  Module.Menus.Model
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License

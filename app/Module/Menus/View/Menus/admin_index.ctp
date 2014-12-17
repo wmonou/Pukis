@@ -1,5 +1,11 @@
 <div class="menu-admin-index">
 
+<?php echo $this->Html->link(
+		"<li class='fa fa-plus'></li> " . __d('menus', 'Create New Menu'), 
+		array('plugin'=>'menus', 'controller' => 'menus', 'action'=>'add', 'admin' => true),
+		array('class' => 'btn btn-default', 'escape' => false)); ?>
+		
+
 <?php
  $displayFields = array(
   					'Id' => 'id',
@@ -28,22 +34,20 @@
 print $this->Table->createTable('Menu', $menuData, $displayFields, $tableOptions, $actions);
 
 ?>
-</div>
 
 <script type="text/javascript">
 $(document).ready(function() {
 
+	var request = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+	
 	$('.menu-admin-index a').click(function(e){
 		e.preventDefault();
-		var request = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest(this);
-		request.ajaxLinkRequest();
+		request.ajaxLinkRequest(this, this.href, $('.menu-admin-index').parent());
 	});
 
 	$('.menu-admin-index form').submit(function(e){
-		e.preventDefault();
-		var model = PUKISAPP.BEHAVIOR.PUKIS;
-		var request = new model.ajaxRequest(this);
-		request.ajaxFormRequest();
+		e.preventDefault();		
+		request.ajaxFormRequest(this, this.action);
 	});
 
 });

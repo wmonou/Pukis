@@ -1,9 +1,10 @@
 <?php
 
+
 /**
- * 
- * @author Xmonos
  *
+ * @author ”Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>”
+ * modified from steveklebanoff https://github.com/steveklebanoff/cakephp-table-helper/blob/master/table.php
  */
 
 /**
@@ -56,6 +57,7 @@
  * echo $this->Table->createTable('Property', $properties, $displayFields, $tableOption, $actions);
  * 
  */
+
 class TableHelper extends AppHelper
 {
     var $helpers = array('Html', 'Paginator');
@@ -91,7 +93,7 @@ class TableHelper extends AppHelper
     			$tableDisplayField = $tableDisplayField['fieldName'];
     		}
     		
-    		$output .= "<th class='th-$tableDisplayField'>" . $this->Paginator->sort($tableDisplayField, $tableDisplayFieldName, array('direction' => 'asc')) . "</th>";
+    		$output .= "<th class='th-$tableDisplayField'>" . $this->Paginator->sort($tableDisplayField, $tableDisplayFieldName) . "</th>";
     	}
     	
     	// if has table header actions
@@ -149,7 +151,6 @@ class TableHelper extends AppHelper
      * @param array $entry
      * @param array $entryDisplayField
      * @return array
-     * @author steveklebanoff modified Yusuf Widiyatmono
      */
     private function _getField($defaultModelName, $entry, $entryDisplayField = null)
     {
@@ -262,7 +263,6 @@ class TableHelper extends AppHelper
      * @param array $tableOption
      * @param array $tableActions
      * @return string
-     * @author steveklebanoff modified Yusuf Widiyatmono
      */
     public function createTable($tableModelName, $tableEntries, $tableDisplayFields, $tableOption, $tableActions = array())
     {
@@ -295,7 +295,7 @@ class TableHelper extends AppHelper
 
         $output .= $this->_getTableFooter($tableDisplayFields, $tableActions);
         
-        $output .= $this->_getPaginator("asda");
+        $output .= $this->_getPaginator();
         
         return $output;
     }
@@ -307,30 +307,32 @@ class TableHelper extends AppHelper
      * @param string $nextClass
      * @return string
      */
-    private function _getPaginator($class, $prevClass = null, $nextClass = null){
+    private function _getPaginator(){
     	
-    	if($prevClass = null)
-    		$prevClass = $class;
-    	if($nextClass = null)
-    		$prevClass = $class;
+    	$output = "";
+    	$output.= "<div class='btn-group' role='group'>";
     	
-    	$prev = $this->Paginator->prev(
-					__('prev'),
-					array('tag' => false),
-					null,
-					array('class' => 'prev disabled')
+    	$output.= $this->Paginator->prev(
+					"<i class='fa fa-angle-left'></i> " . __d('pukis', 'prev'),
+					array('class' => 'btn btn-default prev', 'tag' => 'a', 'escape' => false),
+					"<i class='fa fa-angle-left'></i> " . __d('pukis', 'prev'),
+					array('class' => 'btn btn-default prev disabled', 'tag'=>'a', 'escape' => false)
 					);
     	
-    	$next = $this->Paginator->next(
-	    			__('next'),
-	    			array('tag' => false),
-	    			null,
-	    			array('class' => 'next disabled')
-    	);
-    	    	    	
-    	$number = $this->Paginator->numbers();
+    	$output.= $this->Paginator->numbers(array(
+    		'class'=>'btn btn-default', 'tag' => 'a', 'currentClass' => 'btn btn-primary', 'currentTag' => 'a'
+    		));
     	
-    	return $prev . $number . $next;
+    	$output.= $this->Paginator->next(
+	    			__d('pukis', 'next') . " <i class='fa fa-angle-right'></i>",
+	    			array('class' => 'btn btn-default next', 'tag' => 'a', 'escape' => false),
+	    			__d('pukis', 'next') . " <i class='fa fa-angle-right'></i>",
+	    			array('class' => 'btn btn-default next disabled', 'tag'=>'a', 'escape' => false)
+    	);
+    	
+    	$output.= "</div>";
+    	
+    	return $output;
     }
 }
 

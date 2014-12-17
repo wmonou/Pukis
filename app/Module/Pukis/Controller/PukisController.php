@@ -19,9 +19,10 @@ class PukisController extends PukisAppController {
 	 * 
 	 * @see PukisAppController::beforeFilter()
 	 */
-	public function beforeFilter(){
-		parent::beforeFilter();	
-		$this->Auth->allow('index');	
+	public function beforeFilter()
+	{
+		parent::beforeFilter();
+		$this->Auth->allow('index');
 	}
 	
 	/**
@@ -29,7 +30,8 @@ class PukisController extends PukisAppController {
 	 * 
 	 * @access public
 	 */
-	public function index(){
+	public function index()
+	{
 		// empty page
 		$user =  $this->Auth->user();
 		if (!empty($user)){
@@ -42,12 +44,19 @@ class PukisController extends PukisAppController {
 	 * 
 	 * @access public
 	 */
-	public function admin_index(){
+	public function admin_index()
+	{
 		// empty page
 		$user =  $this->Auth->user();
 		if (empty($user)){
 			$this->ajaxRedirect('/admin/users/login');
 		}
+		
+		$event = new CakeEvent('adminSetup', $this, array(
+			'id' => $this->id,
+			'data' => $this->data[$this->alias]
+		));
+		$this->getEventManager()->dispatch($event);
 	}
 	
 }

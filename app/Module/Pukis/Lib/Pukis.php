@@ -14,4 +14,8 @@ App::uses('CakeEventManager', 'Event');
  */
 class Pukis {
 
+	public static function generateAdminMenu(){
+		
+	}
+	
 }

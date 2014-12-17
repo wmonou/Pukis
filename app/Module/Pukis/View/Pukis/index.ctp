@@ -9,10 +9,11 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
+	var request = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+	
 	$('a.demo').click(function(e){
 		e.preventDefault();
-		var request = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest(this);
-		request.ajaxLinkRequest(); 		
+		request.ajaxLinkRequest(this, this.href); 		
 	});
 	
 });

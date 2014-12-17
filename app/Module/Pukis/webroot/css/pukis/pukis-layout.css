@@ -81,6 +81,11 @@ html, body {
 		overflow: scroll;
 	}
 
+#login {
+    top: 20%;
+    position: relative;
+}
+
 #sql-dump{
 	margin: 10px 0;
 }
