@@ -10680,3 +10680,104 @@ Stack Trace:
 #1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
 #2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-12-16 09:01:02 Error: Fatal Error (1): Call to undefined function _d() in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Menus\View\Menus\admin_index.ctp, line 3]
+2014-12-16 09:01:02 Error: [FatalErrorException] Call to undefined function _d()
+Request URL: /admin/menus/menus/index/sort:name/direction:asc
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 3, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\httpd\htdocs...', 3, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 09:03:15 Error: [MissingActionException] Action MenusController::admin_data() could not be found.
+Exception Attributes: array (
+  'controller' => 'MenusController',
+  'action' => 'admin_data',
+)
+Request URL: /admin/menus/menus/data/sort:name/direction:asc
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-16 09:03:27 Error: [MissingActionException] Action MenusController::admin_data() could not be found.
+Exception Attributes: array (
+  'controller' => 'MenusController',
+  'action' => 'admin_data',
+)
+Request URL: /admin/menus/menus/data/sort:name/direction:desc
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MenusController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-16 09:52:57 Error: Fatal Error (4): syntax error, unexpected '/' in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\View\Helper\TableHelper.php, line 331]
+2014-12-16 09:52:57 Error: [FatalErrorException] syntax error, unexpected '/'
+Request URL: /admin/menus/menus/index
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 331)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 331, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 331, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 11:36:22 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\AppController.php, line 104]
+2014-12-16 11:36:22 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 104)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 104, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 104, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 12:07:45 Error: [MissingControllerException] Controller class PermissionController could not be found.
+Exception Attributes: array (
+  'class' => 'PermissionController',
+  'plugin' => NULL,
+)
+Request URL: /admin/permission/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 12:35:32 Error: [MissingActionException] Action PukisController::admin_logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'PukisController',
+  'action' => 'admin_logout',
+)
+Request URL: /admin/pukis/pukis/logout
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-16 13:16:17 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/logout
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-16 13:18:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 55]
+2014-12-16 13:18:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 55, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\httpd\htdocs...', 55, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-16 13:19:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 55]
+2014-12-16 13:19:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\httpd\htdocs...', 55, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\httpd\htdocs...', 55, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

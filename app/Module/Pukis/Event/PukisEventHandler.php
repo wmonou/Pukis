@@ -17,10 +17,10 @@ class PukisEventHandler implements CakeEventListener {
 	 */
 	public function implementedEvents() {
 		return array(
-			'Croogo.beforeSetupAdminData' => array(
+			'Pukis.beforeSetupAdminInterface' => array(
 				'callable' => 'onBeforeSetupAdminData',
 			),
-			'Croogo.setupAdminData' => array(
+			'Pukis.setupAdminInterface' => array(
 				'callable' => 'onSetupAdminData',
 			),
 		);

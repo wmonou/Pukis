@@ -12,23 +12,43 @@
 class PukisMenu {
 	
 	/**
-	 * Returns an array in for menu
-	 *
-	 * @param array $json
-	 * @return string
-	 * @author http://recursive-design.com/blog/2008/03/11/format-json-with-php/
-	 */		
-	public static function fetch(){
-		$plugins = CakePlugin::loaded();
-		$config = 'Config' . DS . 'admin_menu.php';
-		foreach ($plugins as $plugin) {
-			$file = CakePlugin::path($plugin) . $config;
-			if (file_exists($file)) {
-				require $file;
-			}
+	 * Menu variable
+	 * 
+	 * @var unknown
+	 */
+	public static $menu = array('sidebar' => array());	
+	
+	/**
+	 * Default item menu value
+	 * 
+	 * @var unknown
+	 */
+	private $_default = array(
+		'title' => false,
+		'icon' => false,
+		'url' => '#',
+		'children' => array()
+	);
+	
+	/**
+	 * Add item to menu
+	 * 
+	 * @param unknown $group
+	 */
+	public static function add($menu, $group, $option) 
+	{
+		$item = array();
+		$dimension =& $item;
+
+		$groups = explode('.', $group);
+		foreach ($groups as $g) {
+			$dimension[$g] = array();
+			$dimension = &$dimension[$g];
 		}
+		
+		$dimension = (!empty($option))? $option : $this->_default;
+		
+		self::$menu[$menu] = hash::merge(self::$menu[$menu], $item);
 	}
-	
-	
 	
 }
