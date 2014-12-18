@@ -11,20 +11,26 @@
 			<?php echo $this->Form->create('User', array('role' => 'form', 'class' => 'form-signin')); ?>
 			<?php 
 				echo $this->Form->input('username', array(
-						'label' =>  __d('admin', 'username') . $this->Html->tag('span', ' *', array('class' => 'asterisk')),
+						'label' =>  __d('users', 'username') . $this->Html->tag('span', ' *', array('class' => 'asterisk')),
 						'div' => 'form-group',
 						'class' => 'form-control',
-						'placeholder' => __d('admin', 'Username')
+						'placeholder' => __d('users', 'Username')
 					));
 				echo $this->Form->input('password', array(
-						'label' => __d('admin','password') . $this->Html->tag('span', ' *', array('class' => 'asterisk')),
+						'label' => __d('users','password') . $this->Html->tag('span', ' *', array('class' => 'asterisk')),
 						'div' => 'form-group',
 						'class' => 'form-control',
-						'placeholder' => __d('admin', 'Password'),
+						'placeholder' => __d('users', 'Password'),
 						'type' => 'password'
 					));
-			?>
-			<?php echo $this->Form->end(array('label' => __d('admin', 'Login'), 'class' => 'btn btn-lg btn-primary btn-block')); ?>
+				?>
+				<div class="checkbox">
+				    <label>
+				    	<?php echo $this->Form->checkbox('remember_me'), __d('users', 'Remember Me'); ?> 
+				    </label>
+				</div>
+				
+			<?php echo $this->Form->end(array('label' => __d('users', 'Login'), 'class' => 'btn btn-lg btn-default pukis btn-block')); ?>
 			
 		</div>
 	</div>

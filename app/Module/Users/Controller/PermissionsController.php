@@ -70,7 +70,7 @@ class PermissionsController extends UsersAppController {
 			));
 		$rolesAros = Set::combine($rolesAros, '{n}.AclAro.foreign_key', '{n}.AclAro.id');
 		
-		// check permission
+		// retreive all permission
 		$this->AclPermission->unbindAll();
 		$aclPermission = $this->AclPermission->find('all');
 		$aclPermission = Hash::combine(
@@ -84,13 +84,20 @@ class PermissionsController extends UsersAppController {
 			'{n}.AclPermission.aco_id'
 			);
 		
+		// check permission
 		$permissions = array();
 		foreach ($acos as $acoId => $acoAlias) {
 			if (substr_count($acoAlias, '_') != 0) {
 				$permission = array();
 				foreach ($roles as $roleId => $roleTitle) {
-					if(Hash::check($aclPermission, $acoId . '.' .$rolesAros[$roleId])){
-						$permission[$roleId] = 1;
+					// check if its already has entry on acl permission
+					if(Hash::check($aclPermission, $acoId . '.' . $rolesAros[$roleId])){
+						// check value if its 1 or 0
+						if($aclPermission[$acoId][$rolesAros[$roleId]] == 'create:1/read:1/update:1/delete:1'){
+							$permission[$roleId] = 1;
+						} else {
+							$permission[$roleId] = 0;
+						}
 					} else {
 						$permission[$roleId] = 0;
 					}
@@ -102,6 +109,7 @@ class PermissionsController extends UsersAppController {
 		
 		$this->set(compact('rolesAros', 'permissions'));
 		
+		// get controller list
 		$controllers = array();
 		$controllers[] = $this->AclUtility->getControllerList();
 		$plugins = CakePlugin::loaded();
@@ -168,6 +176,7 @@ class PermissionsController extends UsersAppController {
 		// save
 		$success = 0;
 		if ($this->AclPermission->save($data)) {
+			$data = $this->AclPermission->find('first', array('conditions' => $conditions));
 			$success = 1;
 		}
 		$this->set(compact('success'));
@@ -180,11 +189,10 @@ class PermissionsController extends UsersAppController {
 	 */
 	public function admin_sync()
 	{
-		if ( $this->AclUtility->aco_sync() ) {
+		if ($this->AclUtility->aco_sync()) {
 			$this->Session->setFlash(__d('users', 'All Controllers was sincronized.'), 'flash_success');
-			$this->redirect(array('action' => 'index'));
+			$this->ajaxRedirect('/admin/users/permissions/index/');
 		}
-		$this->render(false);
 	}
 }
 

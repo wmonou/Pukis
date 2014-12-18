@@ -23,7 +23,7 @@ class PukisMenu {
 	 * 
 	 * @var unknown
 	 */
-	private $_default = array(
+	public static $options = array(
 		'title' => false,
 		'icon' => false,
 		'url' => '#',
@@ -35,18 +35,18 @@ class PukisMenu {
 	 * 
 	 * @param unknown $group
 	 */
-	public static function add($menu, $group, $option) 
+	public static function add($menu, $group, $options) 
 	{
 		$item = array();
 		$dimension =& $item;
-
+		
 		$groups = explode('.', $group);
 		foreach ($groups as $g) {
 			$dimension[$g] = array();
 			$dimension = &$dimension[$g];
 		}
 		
-		$dimension = (!empty($option))? $option : $this->_default;
+		$dimension = (!empty($options))? $options : self::$options;
 		
 		self::$menu[$menu] = hash::merge(self::$menu[$menu], $item);
 	}

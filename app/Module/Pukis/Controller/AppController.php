@@ -1,6 +1,8 @@
 <?php
 
 App::uses('Controller', 'Controller');
+App::uses('PukisListener', 'Pukis.Event');
+App::uses('PukisMenu', 'Pukis.Lib');
 
 /**
  * User
@@ -41,7 +43,10 @@ class AppController extends Controller {
 		'Paginator',
 		'Session',
 		'Text',
-		'Time'
+		'Time',
+		'Pukis.Pukis',
+		'Pukis.Table',
+		'Pukis.Menu',
 	);
 		
 	/**
@@ -68,7 +73,6 @@ class AppController extends Controller {
 	 */
 	public $style = array(
 		'/Pukis/css/bootstrap/bootstrap.min.css',
-		'/Pukis/css/datatables/datatables.bootstrap.css',
 		'/Pukis/css/font-awesome/font-awesome.min.css',
 		'/Pukis/css/metis-menu/metis-menu.min.css',
 		'/Pukis/css/pukis/pukis.css'
@@ -83,8 +87,6 @@ class AppController extends Controller {
 		'/Pukis/js/jquery/jquery.min.js',
 		'/Pukis/js/jquery/jquery.easyModal.js',
 		'/Pukis/js/bootstrap/bootstrap.min.js',
-		'/Pukis/js/datatables/datatables.jquery.js',
-		'/Pukis/js/datatables/datatables.bootstrap.js',
 		'/Pukis/js/metis-menu/metis-menu.min.js',
 		'/Pukis/js/pukis/pukis.js'
 	);
@@ -95,10 +97,16 @@ class AppController extends Controller {
 	 * @access public
 	 */
 	public function beforeFilter() {
-		
 		parent::beforeFilter();
+		
+		// implemenet listener
+		$this->getEventManager()->attach(new PukisListener());
+		$this->getEventManager()->dispatch(new CakeEvent('Pukis.onSetupAdminData'));	
+
 		$this->_authSetup();
 		$this->_assetSetup();
+		$this->_layoutSetup();
+		$this->_menuSetup();
 	}
 	
 	/**
@@ -136,24 +144,42 @@ class AppController extends Controller {
 			'action' => 'admin_index',
 			'admin' => true
 		);
+		
+		$this->Auth->allow('ajaxRedirect');
 	}
 	
 	/**
+	 * Asset Setup
+	 * 
 	 * @access protected
 	 */
 	protected function _assetSetup() {
-		if ($this->plugin != 'Pukis') {
-			if (file_exists(APP . 'Module' . DS . 'Module' . DS . $this->plugin . DS . 'webroot' . DS .'css' . DS . strtolower($this->plugin) . 'css')) {
-				$this->script[] = $this->plugin . DS . 'css' . DS . strtolower($this->plugin) . 'css';
-			}
-			
-			if (file_exists(APP . 'Module' . DS . 'Module' . DS . $this->plugin . DS . 'webroot' . DS .'css' . DS . strtolower($this->plugin) . 'js')) {
-				$this->script[] = $this->plugin . DS . 'css' . DS . strtolower($this->plugin) . 'js';
-			}
-		}
-		
 		$this->set('style', $this->style);
 		$this->set('script', $this->script);
+	}
+	
+	/**
+	 * Layout Setup
+	 * 
+	 * @access protected
+	 */
+	protected function _layoutSetup() {
+		if ($this->params['controller'] != 'pukis') {
+			// $this->layout = "Pukis.pukis_admin";
+			$this->layout = "Pukis.blank"; // debug mode
+		} else {
+			$this->layout = "Pukis.pukis";
+		}
+	}
+	
+	/**
+	 * Menu Setup
+	 * 
+	 * @access protected
+	 */
+	protected function _menuSetup() {
+		$sidebar = PukisMenu::$menu;
+		$this->set('sidebar', $sidebar['sidebar']);
 	}
 	
 	/**
@@ -164,7 +190,7 @@ class AppController extends Controller {
 	 * 
 	 * @access protected
 	 */
-	public function ajaxRedirect($url, $status = null, $exit = true) {
+	protected function ajaxRedirect($url, $status = null, $exit = true) {
 		$this->autoRender = false;
 		if ($this->request->is('ajax')) {
 			$data = array('url' => $url, 'status' => $status, 'exit' => $exit);

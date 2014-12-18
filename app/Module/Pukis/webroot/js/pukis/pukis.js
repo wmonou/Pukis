@@ -65,10 +65,12 @@ PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function() {
 				$(ajaxElement(element)).html(data);
 			}
 		}).fail(function(error) {
-			// currently only handling 404
-			// @todo handle other message
-			message = '<h3>Error ' + error.status + '</h3>\n' + ajaxUrl(url) + ' ' + error.statusText;
-			modal = PUKISAPP.BEHAVIOR.PUKIS.modal(message).show();
+			if(error.status != 403){
+				message = '<h3>Error ' + error.status + '</h3>\n' + ajaxUrl(url) + ' ' + error.statusText;
+				modal = PUKISAPP.BEHAVIOR.PUKIS.modal(message).show();
+			}else{
+				
+			}
 		}).always(function() {
 			$('#loader').hide();
 		});	

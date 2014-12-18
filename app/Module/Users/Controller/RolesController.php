@@ -33,7 +33,7 @@ class RolesController extends UsersAppController{
 	public function admin_index()
 	{
 		$this->paginate['Role']['order'] = 'Role.id Desc';
-		$this->set('groups', $this->paginate('Role'));
+		$this->set('roles', $this->paginate('Role'));
 	}
 	
 	/**

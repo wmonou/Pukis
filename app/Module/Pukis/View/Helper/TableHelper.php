@@ -60,7 +60,11 @@
 
 class TableHelper extends AppHelper
 {
-    var $helpers = array('Html', 'Paginator');
+	/**
+	 * Helper used in this helper
+	 * @var array
+	 */
+    public $helpers = array('Html', 'Paginator');
         
     /**
      * Create table header

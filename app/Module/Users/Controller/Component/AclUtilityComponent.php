@@ -88,7 +88,7 @@ class AclUtilityComponent extends Component {
 		} else {
 			$plugin = $params['plugin'];
 			if (!in_array($plugin, App::objects('plugin')) || !CakePlugin::loaded($plugin)) {
-				throw new Exception("Plugin {$plugin} não encontrado", 1);
+				throw new Exception("Plugin {$plugin} not valid", 1);
 				
 				return false;
 			}
@@ -116,10 +116,14 @@ class AclUtilityComponent extends Component {
 			$dotPlugin .= '.';
 			$pluginPath .= '/';
 		}
-		$appIndex = array_search($plugin . 'AppController', $controllers);
-		if ($appIndex !== false) {
-			App::uses($plugin . 'AppController', $dotPlugin . 'Controller');
-			unset($controllers[$appIndex]);
+		
+		$apps = array('AppController', $plugin . 'AppController');
+		foreach($apps as $app){
+			$appIndex = array_search($app, $controllers);
+			if ($appIndex !== false) {
+				App::uses($plugin . 'AppController', $dotPlugin . 'Controller');
+				unset($controllers[$appIndex]);
+			}
 		}
 
 		foreach ($controllers as $controller) {
@@ -156,10 +160,12 @@ class AclUtilityComponent extends Component {
 	 **/
 	public function getControllerList($plugin = null) {
 		if (!$plugin) {
-			$controllers = App::objects('Controller', null, false);
+			$controllers = App::objects('Controller', null, false);			
 		} else {
 			$controllers = App::objects($plugin . '.Controller', null, false);
 		}
+		
+		
 		return $controllers;
 	}
 

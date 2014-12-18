@@ -10781,3 +10781,639 @@ Stack Trace:
 #3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-17 12:36:34 Error: Fatal Error (1): Class 'PukisMenu' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 59]
+2014-12-17 12:36:34 Error: [FatalErrorException] Class 'PukisMenu' not found
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'PukisMen...', 'C:\httpd\htdocs...', 59)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PukisMen...', 'C:\httpd\htdocs...', 59, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'PukisMen...', 'C:\httpd\htdocs...', 59, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 12:47:08 Error: Fatal Error (1): Call to undefined method PukisEventHandler::dispatch() in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 58]
+2014-12-17 12:47:09 Error: [FatalErrorException] Call to undefined method PukisEventHandler::dispatch()
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 58)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 58, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\httpd\htdocs...', 58, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 13:11:51 Error: Fatal Error (1): Class 'PukisListener' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 30]
+2014-12-17 13:11:51 Error: [FatalErrorException] Class 'PukisListener' not found
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'PukisLis...', 'C:\httpd\htdocs...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PukisLis...', 'C:\httpd\htdocs...', 30, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'PukisLis...', 'C:\httpd\htdocs...', 30, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 13:12:38 Error: Fatal Error (1): Class 'PukisListener' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 30]
+2014-12-17 13:12:38 Error: [FatalErrorException] Class 'PukisListener' not found
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'PukisLis...', 'C:\httpd\htdocs...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PukisLis...', 'C:\httpd\htdocs...', 30, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'PukisLis...', 'C:\httpd\htdocs...', 30, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 13:29:36 Error: Fatal Error (1): Class 'Wmonou' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 64]
+2014-12-17 13:29:36 Error: [FatalErrorException] Class 'Wmonou' not found
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Wmonou' ...', 'C:\httpd\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Wmonou' ...', 'C:\httpd\htdocs...', 64, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Wmonou' ...', 'C:\httpd\htdocs...', 64, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 13:29:37 Error: [MissingControllerException] Controller class VendorsController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorsController',
+  'plugin' => NULL,
+)
+Request URL: /vendors/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:30:05 Error: [MissingPluginException] Plugin Vendor could not be found.
+Exception Attributes: array (
+  'plugin' => 'Vendor',
+)
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(227): CakePlugin::path('Vendor')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(549): App::path('Wmonou', 'Vendor')
+#2 [internal function]: App::load('Wmonou')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php(64): spl_autoload_call('Wmonou')
+#4 [internal function]: PukisController->admin_index()
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PukisController), Array)
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PukisController), Object(CakeRequest))
+#8 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-12-17 13:30:06 Error: [MissingControllerException] Controller class VendorsController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorsController',
+  'plugin' => NULL,
+)
+Request URL: /vendors/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:31:48 Error: [MissingControllerException] Controller class VendorsController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorsController',
+  'plugin' => NULL,
+)
+Request URL: /vendors/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:37:50 Error: [MissingControllerException] Controller class VendorsController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorsController',
+  'plugin' => NULL,
+)
+Request URL: /vendors/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:40:10 Error: [MissingControllerException] Controller class WmonouController could not be found.
+Exception Attributes: array (
+  'class' => 'WmonouController',
+  'plugin' => NULL,
+)
+Request URL: /Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:43:02 Error: [MissingControllerException] Controller class WmonouController could not be found.
+Exception Attributes: array (
+  'class' => 'WmonouController',
+  'plugin' => NULL,
+)
+Request URL: /Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:43:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/css/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:46:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:47:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 13:47:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/Wmonou/wmonou.css
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 14:02:27 Error: Fatal Error (1): Call to undefined method Wmonou::printd() in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Controller\PukisController.php, line 64]
+2014-12-17 14:02:27 Error: [FatalErrorException] Call to undefined method Wmonou::printd()
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 64, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\httpd\htdocs...', 64, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 17:09:19 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 18:08:20 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/admin/permissions
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 19:00:31 Error: Fatal Error (1): Call to undefined method PermissionsController::autoRender() in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 183]
+2014-12-17 19:00:31 Error: [FatalErrorException] Call to undefined method PermissionsController::autoRender()
+Request URL: /admin/users/permissions/sync
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 183)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\httpd\htdocs...', 183, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\httpd\htdocs...', 183, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 19:01:26 Error: [MissingControllerException] Controller class [objectObject]Controller could not be found.
+Exception Attributes: array (
+  'class' => '[objectObject]Controller',
+  'plugin' => 'Pukis',
+)
+Request URL: /admin/pukis/%5Bobject%20Object%5D
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 20:16:10 Error: [MissingControllerException] Controller class ChangepasswordController could not be found.
+Exception Attributes: array (
+  'class' => 'ChangepasswordController',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/changepassword
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 20:16:45 Error: [MissingControllerException] Controller class ResetPasswordController could not be found.
+Exception Attributes: array (
+  'class' => 'ResetPasswordController',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/reset_password
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 20:17:02 Error: [MissingControllerException] Controller class ResetpasswordController could not be found.
+Exception Attributes: array (
+  'class' => 'ResetpasswordController',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/resetpassword
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 20:20:44 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/admin/users/add
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 20:23:00 Error: Fatal Error (4): syntax error, unexpected 'arra' (T_STRING) in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\View\Users\admin_index.ctp, line 17]
+2014-12-17 20:23:00 Error: [FatalErrorException] syntax error, unexpected 'arra' (T_STRING)
+Request URL: /admin/users
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 17, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 17, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 20:23:16 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\View\Users\admin_index.ctp, line 17]
+2014-12-17 20:23:16 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Request URL: /admin/users
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 17, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 17, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-17 20:39:05 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-17 21:58:36 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\View\Roles\admin_add.ctp, line 65]
+2014-12-17 21:58:36 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /admin/users/roles/add
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 65)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 65, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 65, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 01:36:55 Error: Fatal Error (1): Class 'monou' not found in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 170]
+2014-12-18 01:36:55 Error: [FatalErrorException] Class 'monou' not found
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'monou' n...', 'C:\httpd\htdocs...', 170)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'monou' n...', 'C:\httpd\htdocs...', 170, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'monou' n...', 'C:\httpd\htdocs...', 170, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 02:36:00 Error: [MissingHelperException] Helper class MenuHelper could not be found.
+Exception Attributes: array (
+  'class' => 'MenuHelper',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/permissions/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Users.Menu')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(837): HelperCollection->__isset('Menu')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\View\Layouts\pukis_admin.ctp(27): View->__get('Menu')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(948): include('C:\httpd\htdocs...')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(910): View->_evaluate('C:\httpd\htdocs...', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(542): View->_render('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(479): View->renderLayout('', 'Pukis.pukis_adm...')
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#9 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
+#10 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-12-18 03:59:00 Error: Fatal Error (1): Using $this when not in object context in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Lib\PukisMenu.php, line 49]
+2014-12-18 03:59:00 Error: [FatalErrorException] Using $this when not in object context
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 49, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', 'C:\httpd\htdocs...', 49, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 04:00:05 Error: Fatal Error (1): Using $this when not in object context in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Lib\PukisMenu.php, line 49]
+2014-12-18 04:00:06 Error: [FatalErrorException] Using $this when not in object context
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 49, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', 'C:\httpd\htdocs...', 49, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 04:01:32 Error: Fatal Error (1): Using $this when not in object context in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Lib\PukisMenu.php, line 42]
+2014-12-18 04:01:32 Error: [FatalErrorException] Using $this when not in object context
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 42, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', 'C:\httpd\htdocs...', 42, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 04:06:23 Error: Fatal Error (1): Using $this when not in object context in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Lib\PukisMenu.php, line 42]
+2014-12-18 04:06:23 Error: [FatalErrorException] Using $this when not in object context
+Request URL: /admin/pukis
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', 'C:\httpd\htdocs...', 42, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', 'C:\httpd\htdocs...', 42, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 04:10:28 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\UsersController.php, line 120]
+2014-12-18 04:10:28 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /admin/users/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 120)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\httpd\htdocs...', 120, Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\httpd\htdocs...', 120, Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-18 04:19:34 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-18 04:23:12 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /admin/user/logout/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-18 04:23:18 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => 'Users',
+)
+Request URL: /admin/users/logout/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-18 04:24:46 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-18 04:29:09 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:19 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:26 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:29 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:45 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:48 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:52 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:29:55 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:30:04 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:30:08 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:30:52 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:30:55 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:30:58 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:01 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:04 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:08 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:12 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:15 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:19 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:31:23 Error: [MissingActionException] Action UsersController::admin_reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_reset_password',
+)
+Request URL: /admin/users/users/reset_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:32:59 Error: [MissingActionException] Action UsersController::admin_changepassword() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_changepassword',
+)
+Request URL: /admin/users/users/changepassword/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-18 04:33:15 Error: [MissingViewException] View file "C:\httpd\htdocs\projects\kodehive\pukis\app\View\Plugin\Users\Users\admin_change_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\httpd\\htdocs\\projects\\kodehive\\pukis\\app\\View\\Plugin\\Users\\Users\\admin_change_password.ctp',
+)
+Request URL: /admin/users/users/change_password/2
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

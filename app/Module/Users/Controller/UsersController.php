@@ -19,7 +19,7 @@ class UsersController extends UsersAppController
 	 *
 	 * @var array
 	 **/
-	public $uses = array('Users.User', 'Users.Role');
+	public $uses = array('Users.User', 'Users.Role', 'User.Login');
 
 	/**
 	 * Controller callback - beforeFilter()
@@ -32,7 +32,7 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * admin_index
+	 * Index
 	 * 
 	 * @return void
 	 */
@@ -42,7 +42,7 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * admin_add
+	 * User Add
 	 * 
 	 * @return void
 	 */
@@ -60,7 +60,7 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * admin_edit
+	 * User Edit
 	 * 
 	 * @param $id User ID
 	 * @return void
@@ -76,28 +76,50 @@ class UsersController extends UsersAppController
 			}
 		}
 		$this->request->data = $this->User->read(null, $id);
-		$groups = $this->Role->find('list');
-		$this->set(compact('groups'));
+		$roles = $this->Role->find('list');
+		$this->set(compact('roles'));
 	}
 	
 	/**
-	 * admin_login
+	 * Login
 	 * 
 	 * @return void
 	 */
 	public function admin_login()
 	{
 		
-			if ( $this->request->is('post') ) {
-				if ( $this->Auth->login() ) {
-					return $this->ajaxRedirect($this->Auth->redirect());
+		if ($this->Auth->loggedIn()) {
+			//return $this->ajaxRedirect($this->Auth->redirect());
+		}
+		
+		if ( $this->request->is('post') ) {
+// 			if ( $this->Auth->login() ) {
+// 				return $this->ajaxRedirect($this->Auth->redirect());
+// 			}
+			
+			if ($this->Auth->login()) {
+			
+				// did they select the remember me checkbox?
+				if ($this->request->data['User']['remember_me'] == 1) {
+					// remove "remember me checkbox"
+					unset($this->request->data['User']['remember_me']);
+					
+					// hash the user's password
+					$this->request->data['User']['password'] = $this->Auth->password($this->request->data['User']['password']);
+			
+					// write the cookie
+					$this->Cookie->write('remember_me_cookie', $this->request->data['User'], true, '2 weeks');
 				}
+			
+				return $this->redirect($this->Auth->redirect());
+				
 			}
+		}
 		
 	}
 	
 	/**
-	 * admin_logout
+	 * Logout
 	 * 
 	 * @return void
 	 */
@@ -109,12 +131,12 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * admin_reset_password
+	 * Reset Password
 	 * 
 	 * @param  $id User ID
 	 * @return void
 	 */
-	public function admin_reset_password( $id = null )
+	public function admin_change_password( $id = null )
 	{
 		if ( !$id ) {
 			$this->Session->setFlash(__d('users', 'Invalid ID'), 'flash_error');
@@ -129,7 +151,7 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * admin_delete
+	 * Delete User
 	 * 
 	 * @param $id User ID
 	 * @return void
@@ -144,7 +166,10 @@ class UsersController extends UsersAppController
 			$this->redirect(array('action' => 'index'));
 		}
 	}
-	
+		
+	/**
+	 *  Install
+	 */
 	public function admin_install(){
 		$this->AclAco->create(array('parent_id' => null, 'alias' => 'controllers'));
 		$this->AclAco->save();

@@ -75,14 +75,7 @@ class User extends UsersAppModel {
 		),
 		'password_again' => array(
 			'rule' => 'validate_password_again',
-			'message' => 'The passwords no match.'
-		),
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => 'notEmpty',
-				'message' => 'Name fields is required.',
-				'last' => true,
-			),			
+			'message' => 'The passwords no match.'		
 		),
 	);
 	
@@ -117,7 +110,7 @@ class User extends UsersAppModel {
     }
 
     public function beforeSave($options = array()) {
-        if ( !empty( $this->data['User']['password'] ) ) {
+        if (!empty( $this->data['User']['password'])) {
             $this->data['User']['password'] = AuthComponent::password(
                       $this->data['User']['password']
                     );
@@ -132,12 +125,12 @@ class User extends UsersAppModel {
 	 * @return void
 	 **/
 	public function validate_password_again() {
-	if (isset($this->data['User']['password'])) {
-		if ($this->data['User']['password'] != $this->data['User']['password_again']) {
-			return false;
+		if (isset($this->data['User']['password'])) {
+			if ($this->data['User']['password'] != $this->data['User']['password_again']) {
+				return false;
+			}
 		}
-	}
-	return true;
-	}
+		return true;
+		}
 }
  ?>

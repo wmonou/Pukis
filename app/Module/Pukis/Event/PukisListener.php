@@ -10,17 +10,17 @@ App::uses('CakeEventListener', 'Event');
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     http://www.croogo.org
  */
-class PukisEventHandler implements CakeEventListener {
+class PukisListener implements CakeEventListener {
 
 	/**
 	 * implementedEvents
 	 */
 	public function implementedEvents() {
 		return array(
-			'Pukis.beforeSetupAdminInterface' => array(
+			'Pukis.onBeforeSetupAdminData' => array(
 				'callable' => 'onBeforeSetupAdminData',
 			),
-			'Pukis.setupAdminInterface' => array(
+			'Pukis.onSetupAdminData' => array(
 				'callable' => 'onSetupAdminData',
 			),
 		);
@@ -45,7 +45,7 @@ class PukisEventHandler implements CakeEventListener {
 	 */
 	public function onSetupAdminData($event) {
 		$plugins = CakePlugin::loaded();
-		$config = 'Config' . DS . 'admin_menu.php';
+		$config = 'Config' . DS . 'menu.php';
 		foreach ($plugins as $plugin) {
 			$file = CakePlugin::path($plugin) . $config;
 			if (file_exists($file)) {

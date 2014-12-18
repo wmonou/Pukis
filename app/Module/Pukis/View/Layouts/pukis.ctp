@@ -5,13 +5,14 @@
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo $title_for_layout; ?> - <?php echo __d('pukis', 'Pukis'); ?></title>
 		<?php
-		echo $this->Html->css($style);
-		
-		echo $this->Html->script($script);
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
+			echo $this->Html->meta('favicon.ico', '/Pukis/favicon.ico', array('type' => 'icon'));
+			
+			echo $this->Html->css($style);
+			echo $this->Html->script($script);
+	
+			echo $this->fetch('meta');
+			echo $this->fetch('css');
+			echo $this->fetch('script');
 		?>
 	</head>
 	<body>
@@ -20,12 +21,8 @@
 				Pukis
 			</div>
 					
-			<div id="content">
-				<?php echo $this->Session->flash(); ?>
-			 
+			<div id="content">	 
 				<?php print $this->fetch('content'); ?>
-				
-				<?php echo $this->element('sql_dump'); ?>			
 			</div>
 			
 			<div  id="footer">
@@ -33,12 +30,12 @@
 			</div>
 			
 			<!-- loader  -->
-			<div class="loader">
+			<div id="loader">
 				
 			</div>
 			
 			<!-- modal  -->
-			<div class="modal">
+			<div id="modal">
 
 			</div>
 		</div>
