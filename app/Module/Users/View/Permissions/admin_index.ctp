@@ -1,25 +1,22 @@
 <div class="users-permissions-admin-index">
-	<div class="row">
+	<div>
 		<div class="col-md-12">
 			<?php echo $this->Pukis->getTitle(); ?>
 		</div>
 	</div>
 	
-	<div class="row">
+	<div>
 		<div class="col-md-12">
-			<ul class="nav nav-pills">
-			  <li class="active">
-				<?php echo $this->Html->link(
+				<?php 
+					echo $this->Html->link(
 						$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-refresh')) . __d('admin', 'Sincronize'), 
 						array('plugin' => 'users', 'controller' => 'permissions', 'action'=>'sync', 'admin' => true), 
-						array('class' => 'sync', 'escape' => false)); ?>
-			  </li>
-			</ul>
+						array('class' => 'sync btn btn-default', 'escape' => false)); 
+				?>
 		</div>
 	</div>
 	
-	<div style="height: 8px;"></div>
-	<div class="row">
+	<div>
 		<div class="col-md-12">
 			<div class="table-responsive">
 				<table class="table table-hover table-bordered table-acl">

@@ -199,7 +199,6 @@ form {
 /* Button
 -------------------------------------------------- */
 .btn.btn-default.pukis {
-  float: right;
   border: 1px solid #603913;
   background-color: #603913;
   color: #ffffff;

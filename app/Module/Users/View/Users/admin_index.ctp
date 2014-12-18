@@ -1,11 +1,11 @@
 <div class="users-users-admin-index">
-	<div class="row">
+	<div>
 		<div class="col-md-12">
 			<?php echo $this->Pukis->getTitle(); ?>
 		</div>
 	</div>
 
-	<div class="row">
+	<div>
 		<div class="col-md-12">
 		  	<?php 
 		  	echo $this->Html->link(
@@ -23,7 +23,7 @@
 		</div>
 	</div>
 	
-	<div class="row">
+	<div>
 		<div class="col-md-12">
 			<table class="table table-hover">
 			      <?php 
