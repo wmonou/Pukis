@@ -12,7 +12,8 @@ PukisMenu::add('sidebar', 'settings', array(
 				'plugin' => 'settings',
 				'controller' => 'settings',
 				'action' => 'edit',
-				'admin' => true
+				'admin' => true,
+				'key' => 'Site'
 				),
 			'icon' => 'fa fa-check-square-o'
 			),

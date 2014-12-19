@@ -37,21 +37,6 @@
 						</div>
 					</div>
 				</div>
-				
-				<script type="text/javascript">
-				$(document).ready(function() {
-				
-					var request = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
-					
-					$('.sidebar a.sidebar-nav-item-a').click(function(e){
-						e.preventDefault();
-						request.ajaxLinkRequest(this, this.href, '.body');
-					});
-					
-					$('.sidebar').metisMenu();
-					
-				});
-				</script>
 			</div>
 			
 			<div  id="footer">
@@ -68,6 +53,22 @@
 
 			</div>
 		</div>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+			
+				var request = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
+				
+				$('.sidebar a.sidebar-nav-item-a').click(function(e){
+					e.preventDefault();
+					request.ajaxRequest(this, this.href, '.body');
+				});
+				
+				$('.sidebar').metisMenu();
+				
+			});
+		</script>
+		
 	</body>
 </html>
 

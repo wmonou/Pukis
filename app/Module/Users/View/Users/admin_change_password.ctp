@@ -85,7 +85,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
 
 		$('.users-users-admin-change a').click(function(e){
 			e.preventDefault();

@@ -190,7 +190,7 @@ class PermissionsController extends UsersAppController {
 	public function admin_sync()
 	{
 		if ($this->AclUtility->aco_sync()) {
-			$this->Session->setFlash(__d('users', 'All Controllers was sincronized.'), 'flash_success');
+			$this->Session->setFlash(__d('users', 'All Controllers was sincronized.'), 'flash_success', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/permissions/index/');
 		}
 	}

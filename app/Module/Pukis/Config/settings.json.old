@@ -1,13 +1,13 @@
 {
-    "Dev": {
-        "ver": 0.1
-    },
+	"Dev": {
+		"ver": "0.1"
+	},
     "Site": {
-    	"title": "Pukis",
-        "tagline": "A CakePHP ajax user management dashboard",
+    	"tagline": "A CakePHP ajax user management dashboard",
         "email": "admin@your-site.com",
         "locale": "eng",
-        "timezone": "UTC"        
+        "timezone": "UTC",
+        "title": "Pukis"
     },
     "Plugin": {
         "bootstraps": "Pukis,Users,Settings"

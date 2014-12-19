@@ -61,11 +61,14 @@ PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
 					} else {
 						$(redirect.element).html(data);
 					}
+			    	$('#loader').hide();
 			    }).fail(function (jqXHR, textStatus, error) {
-			    	// currently only handling 404
-					// @todo handle other message
-			    	modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(jqXHR.status, jqXHR.statusText, redirect.url);			    	
-			    }).always(function() { 
+			    	if(jqXHR.status != '403') {
+			    		modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(jqXHR.status, jqXHR.statusText, redirect.url);
+			    	} else {
+			    		ajaxType('get');
+			    		ajaxRequest(obj, '/admins/users/users/login', '#content');		
+			    	}	
 			    	$('#loader').hide();
 			    });
 		}
@@ -114,7 +117,6 @@ PUKISAPP.BEHAVIOR.PUKIS.dispacher = function() {
 	var redirect = function(url, element) {
 		url = url || defaultUrl;
 		element = element || defaultElement;
-		console.log(url);
 		if(url === null){
 			return {url: defaultUrl, element: element};
 		}
@@ -122,10 +124,10 @@ PUKISAPP.BEHAVIOR.PUKIS.dispacher = function() {
 			return {url: defaultUrl, element: element};
 		}
 		if(url.indexOf("login") > -1) {
-			return {url: url, element: element}
+			return {url: url, element: defaultElement}
 		}
 		if(url.indexOf("logout") > -1) {
-			return {url: url, element: element}
+			return {url: url, element: defaultElement}
 		}
 		return {url: url, element : element}
 	}

@@ -1,6 +1,6 @@
 <?php
 
-App::uses('AppController', 'Controller');
+App::uses('AppController', 'Pukis.Controller');
 
 class SettingsAppController extends AppController {
 

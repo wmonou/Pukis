@@ -16,7 +16,7 @@
 	<div>
 		<div class="col-md-12">
 			<div class="table-responsive">
-				<table class="table table-hover table-bordered table-acl">
+				<table class="table table-hover table-condensed table-bordered table-acl">
 				<?php
 					$roleTitles = array_values($roles);
 					$roleIds   = array_keys($roles);

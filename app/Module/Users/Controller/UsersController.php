@@ -206,7 +206,7 @@ class UsersController extends UsersAppController
 		$key = 'id';
 		$this->set(compact('key', 'id'));
 	}
-		
+	
 	/**
 	 *  Install
 	 */
@@ -214,6 +214,9 @@ class UsersController extends UsersAppController
 	{
 		$this->AclAco->create(array('parent_id' => null, 'alias' => 'controllers'));
 		$this->AclAco->save();
+		
+		$this->Session->setFlash(__d('users', 'AclAco has been created'), 'flash_success', array('plugin' => 'Pukis'));
+		$this->ajaxRedirect('/admin/users/users/index');	
 	}
 	
 	/**

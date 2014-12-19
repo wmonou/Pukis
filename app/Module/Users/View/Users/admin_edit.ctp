@@ -7,29 +7,14 @@
 		  	<?php 
 			  	echo $this->Html->link(
 			  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left')) . __d('admin', 'Back'),  
-			  		array(
-				  		'plugin' => 'users', 
-				  		'controller' => 'users', 
-				  		'action' => 'index',
-				  		'admin' => true),
-			  		array(
-			  			'class' => 'btn btn-primary',
-			  			'escape' => false)
-			  		);
+				  		'/admin/users/users/index',
+				  		array('class' => 'btn btn-primary','escape' => false));
 		  	?>
 		    <?php 
 		      	echo $this->Html->link(
 		      		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-key')) . __d('users', 'Change password'),
-		      		 array(
-				        'plugin' => 'users',
-				        'controller' => 'users',
-				        'action' => 'change_password',
-				        'admin' => true,
-				        $this->request->pass[0]),
-		      		array(
-			  			'class' => 'btn btn-primary',
-			  			'escape' => false)
-		      		); 
+		      			'/admin/users/users/change_password/'. $this->request->pass[0],		      		 
+		      			array('class' => 'btn btn-primary','escape' => false)); 
 		    ?>
 		</div>
 	</div>
@@ -57,7 +42,7 @@
 			</div>
 
 			<div class="form-group <?php echo $this->Form->isFieldError('email') ? 'has-error' : '' ?>">
-				<label for="inputPassword3" class="col-sm-2 control-label">E-mail</label>
+				<label for="inputEmail" class="col-sm-2 control-label"><?php echo __d('users', 'Email'); ?></label>
 				<div class="col-md-6 col-sm-10">
 					<?php 
 					echo $this->Form->input('email', array(
@@ -71,7 +56,7 @@
 			</div>
 			
 			<div class="form-group <?php echo $this->Form->isFieldError('username') ? 'has-error' : '' ?>">
-				<label for="inputPassword3" class="col-sm-2 control-label"><?php echo __d('users', 'Username'); ?></label>
+				<label for="inputUsername" class="col-sm-2 control-label"><?php echo __d('users', 'Username'); ?></label>
 				<div class="col-md-6 col-sm-10">
 				  <?php 
 					echo $this->Form->input('username', array(
@@ -85,7 +70,7 @@
 			</div>
 			
 			<div class="form-group">
-			    <label for="inputPassword3" class="col-sm-2 control-label"><?php echo __d('users', 'status'); ?></label>
+			    <label for="inputStatus" class="col-sm-2 control-label"><?php echo __d('users', 'status'); ?></label>
 			    <div class="col-md-6 col-sm-10">
 				    <?php 
 				      echo $this->Form->input('status', array(
@@ -105,17 +90,10 @@
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					<?php 
-						echo $this->Html->link(
+					  	echo $this->Html->link(
 					  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left')) . __d('admin', 'Back'),  
-					  		array(
-						  		'plugin' => 'users', 
-						  		'controller' => 'users', 
-						  		'action' => 'index',
-						  		'admin' => true),
-					  		array(
-					  			'class' => 'btn btn-primary',
-					  			'escape' => false)
-					  	);
+						  		'/admin/users/users/index',
+						  		array('class' => 'btn btn-primary','escape' => false));
 					 ?> 
 					 <?php 
 				        echo $this->Form->end(
@@ -128,6 +106,7 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 
 <script type="text/javascript">
