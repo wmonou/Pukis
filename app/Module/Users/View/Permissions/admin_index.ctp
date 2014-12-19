@@ -1,9 +1,6 @@
 <div class="users-permissions-admin-index">
-	<div>
-		<div class="col-md-12">
-			<?php echo $this->Pukis->getTitle(); ?>
-		</div>
-	</div>
+	
+	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
 	
 	<div>
 		<div class="col-md-12">
@@ -11,7 +8,7 @@
 					echo $this->Html->link(
 						$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-refresh')) . __d('admin', 'Sincronize'), 
 						array('plugin' => 'users', 'controller' => 'permissions', 'action'=>'sync', 'admin' => true), 
-						array('class' => 'sync btn btn-default', 'escape' => false)); 
+						array('class' => 'sync btn btn-primary', 'escape' => false)); 
 				?>
 		</div>
 	</div>
@@ -109,16 +106,16 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
 		var usersRequest = new PUKISAPP.BEHAVIOR.USERS.permissions();
 		
 		$('.users-permissions-admin-index a.sync').click(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxLinkRequest(this, this.href, $('.users-permissions-admin-index').parent());
+			pukisRequest.ajaxRequest(this, this.href, $('.users-permissions-admin-index').parent());
 		});
 
 		usersRequest.aclChange();
-				
+			
 		$('[data-rel=tooltip]').tooltip({placement: 'left'});
 		
 	})

@@ -158,7 +158,7 @@ html, body {
 
 .sidebar-nav ul ul a:hover, .sidebar-nav ul ul a:focus, .sidebar-nav ul ul a:active
 	{
-	background: #c69c6d;
+	background: #d7bea3;
 }
 
 .sidebar-nav-item {
@@ -175,8 +175,8 @@ table {
 	margin-top : 10px;
 }
 
-table th .th-actions{
-	width:120px;
+table th.th-actions{
+	width:15%;
 }
 
 #sql-dump table{
@@ -221,6 +221,66 @@ form {
 .btn.btn-default.pukis:hover {
   color: #fff;
   background-color: c7b299;  
+}
+
+/* Callout
+-------------------------------------------------- */
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #eee;
+    border-left-width: 10px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-color: #503821;
+}
+.bs-callout-primary h4 {
+    color: #503821;
+}
+.bs-callout-success {
+    border-color: #1cbbb4;
+}
+.bs-callout-success h4 {
+    color: #1cbbb4;
+}
+.bs-callout-danger {
+    border-color: #9e0039;
+}
+.bs-callout-danger h4 {
+    color: #9e0039;
+}
+.bs-callout-warning {
+    border-color: #fff568;
+}
+.bs-callout-warning h4 {
+    color: #fff568;
+}
+.bs-callout-info {
+    border-color: #5674b9;
+}
+.bs-callout-info h4 {
+    color: #5674b9;
 }
 
 /* Color

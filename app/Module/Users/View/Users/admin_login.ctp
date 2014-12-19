@@ -2,7 +2,13 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 			<h1 class="text-">PUKIS</h1>
-			<h3><small>User Management Dashboard</small></h3>
+			<h3><small>Ajax User Management Dashboard Ver. <?php echo (Configure::read('Dev.ver')); ?></small></h3>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<?php echo $this->Session->flash(); ?>
 		</div>
 	</div>
 	
@@ -29,7 +35,7 @@
 				    	<?php echo $this->Form->checkbox('remember_me'), __d('users', 'Remember Me'); ?> 
 				    </label>
 				</div>
-				
+			
 			<?php echo $this->Form->end(array('label' => __d('users', 'Login'), 'class' => 'btn btn-lg btn-default pukis btn-block')); ?>
 			
 		</div>
@@ -39,15 +45,11 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-	var request = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
-	$('.user-admin-login a').click(function(e){
-		e.preventDefault();
-		request.ajaxLinkRequest(this, this.href);	
-	});	
-
+	var request = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
+	
 	$('.user-admin-login form').submit(function(e){
 		e.preventDefault();
-		request.ajaxFormRequest(this, this.action); 		
+		request.ajaxType('post').ajaxRequest(this, this.action); 		
 	});	
 	
 });

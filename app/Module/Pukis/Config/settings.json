@@ -1,5 +1,46 @@
 {
+	"Dev": {
+		"ver": "0.1"
+	},
     "Site": {
-        "default_role_id": "5"
+        "acl_plugin": "Acl",
+        "admin_theme": "",
+        "asset_timestamp": "force",
+        "email": "admin@your-site.com",
+        "feed_url": "",
+        "home_url": "",
+        "ipWhitelist": "127.0.0.1",
+        "locale": "eng",
+        "status": 1,
+        "tagline": "A CakePHP ajax user management dashboard",
+        "theme": "",
+        "timezone": "UTC",
+        "title": "Pukis"
+    },
+    "Plugin": {
+        "bootstraps": "Pukis,User"
+    },
+    "AuthAccess": {
+        "duration": "+1 week",
+        "defaultRole": ""
+    },
+    "Email": {
+        "host": "M d, Y",
+        "port": 1,
+        "username": "",
+        "password": ""
+    },
+    "Meta": {
+        "description": "Pukis - A CakePHP ajax user management dashboard",
+        "generator": "Pukis - Content Management System",
+        "keywords": "pukis, Pukis, cms, CMS, ajax, user management, cakephp",
+        "robots": "index, follow"
+    },
+    "Reading": {
+        "date_time_format": "D, M d Y H:i:s",
+        "paging": 20
+    },
+    "Writing": {
+        "wysiwyg": 1
     }
 }

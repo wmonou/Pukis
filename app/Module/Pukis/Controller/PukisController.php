@@ -30,7 +30,7 @@ class PukisController extends PukisAppController {
 	public function beforeFilter()
 	{
 		parent::beforeFilter();
-		$this->Auth->allow('index');
+		$this->Auth->allow('index', 'message');
 	}
 	
 	/**
@@ -60,4 +60,13 @@ class PukisController extends PukisAppController {
 		
 	}
 	
+	/**
+	 *
+	 * @param unknown $message
+	 *
+	 * @access public
+	 */
+	public function message() {
+		// is used to print
+	}
 }

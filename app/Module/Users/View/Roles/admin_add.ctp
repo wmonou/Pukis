@@ -1,24 +1,14 @@
 <div class="users-roles-admin-add">
-	<div>
-		<div class="col-md-12">
-			<?php echo $this->Pukis->getTitle(); ?>
-		</div>
-	</div>
+
+	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
 	
 	<div>
 		<div class="col-sm-offset-2 col-sm-10">
 		  	<?php 
 			  	echo $this->Html->link(
-			  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left'))  .__d('admin', 'Back'), 
-			  		array(
-				  		'plugin' => 'users', 
-				  		'controller' => 'roles', 
-				  		'action' => 'index',
-				  		'admin' => true),
-			  		array(
-			  			'class' => 'btn btn-primary',
-			  			'escape' => false)
-			  		);
+			  			$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left'))  .__d('admin', 'Back'), 
+				  		"/admin/users/roles/index", 
+				  		array('class' => 'btn btn-primary', 'escape' => false));
 		  	?>
 		</div>
 	</div>
@@ -31,12 +21,12 @@
 		        <label class="col-sm-2 control-label"><?php echo __d('admin', 'Name:'); ?></label>
 		        <div class="col-md-6 col-sm-10">
 		          <?php 
-		            echo $this->Form->input('name', array(
-		              'div' => false,
-		              'label' => false,
-		              'class' => 'form-control',
-		              'placeholder' => 'Name'
-		              ));
+		            echo $this->Form->input('name', 
+		            		array(
+		              			'div' => false,
+					              'label' => false,
+					              'class' => 'form-control',
+					              'placeholder' => 'Name'));
 		           ?>
 		        </div>
 	      	</div>
@@ -45,24 +35,16 @@
 		        <div class="col-sm-offset-2 col-sm-10">
 		        	<?php 
 				  	echo $this->Html->link(
-				  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left'))  .__d('admin', 'Back'), 
-				  		array(
-					  		'plugin' => 'users', 
-					  		'controller' => 'roles', 
-					  		'action' => 'index',
-					  		'admin' => true),
-				  		array(
-				  			'class' => 'btn btn-primary',
-				  			'escape' => false)
-				  		);
+					  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left')) . __d('admin', 'Back'),  
+						  	"/admin/users/roles/index", 
+					  		array('class' => 'btn btn-primary', 'escape' => false));
 			  		?>
 		        	<?php 
 		        		echo $this->Form->end(
 		        			array(
-					   			'label' =>  __d('users', 'Save'), 
-					   			'class' => 'btn btn-success', 
-					   			'div' => false)
-					   		); 
+		        				'label' =>  __d('users', 'Save'), 
+		        				'class' => 'btn btn-success', 
+		        				'div' => false)); 
 		        	?>
 		        </div>
 	      	</div>
@@ -73,16 +55,16 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
 
 		$('.users-roles-admin-add a').click(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.href, '.body');
+			pukisRequest.ajaxRequest(this, this.href, '.body');
 		});
 		
 		$('.users-roles-admin-add form').submit(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.action, '.body');
+			pukisRequest.ajaxType('post').ajaxRequest(this, this.action, '.body');
 		});
 		
 	})

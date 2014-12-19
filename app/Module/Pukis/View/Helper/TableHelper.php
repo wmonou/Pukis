@@ -71,22 +71,14 @@ class TableHelper extends AppHelper
      * 
      * @todo
      * @param array $tableDisplayFields
-     * @param array $tableOptions
      * @param array $tableActions
      * @return string
      */
-    private function _getTableHeader($tableDisplayFields, $tableOptions = array(), $tableActions = array()) {
+    private function _createTableHeader($tableDisplayFields, $tableActions = array()) {
     	$output = "";
     	$options = "";
     	
-    	// table options
-    	if(!empty($tableOptions)) {
-    		foreach($tableOptions as $tableOptionKey => $tableOptionValue){
-    			$options .= " $tableOptionKey='$tableOptionValue'";
-    		}
-    	}
-    	
-    	$output .= "<table $options>";
+    	$output .= "<table class='table table-bordered table-condensed table-hover'>";
     	$output .= "<thead>";
     	$output .= "<tr>";
 
@@ -96,8 +88,8 @@ class TableHelper extends AppHelper
     		if(is_array($tableDisplayField) && isset($tableDisplayField['fieldName'])){
     			$tableDisplayField = $tableDisplayField['fieldName'];
     		}
-    		
-    		$output .= "<th class='th-$tableDisplayField'>" . $this->Paginator->sort($tableDisplayField, $tableDisplayFieldName) . "</th>";
+    		$tableClass = str_replace('.', '-', strtolower($tableDisplayField)); 
+    		$output .= "<th class='th-$tableClass'>" . $this->Paginator->sort($tableDisplayField, $tableDisplayFieldName) . "</th>";
     	}
     	
     	// if has table header actions
@@ -119,7 +111,7 @@ class TableHelper extends AppHelper
      * @param array $tableActions
      * @return string
      */
-    private function _getTableFooter($tableDisplayFields, $tableActions = array()){
+    private function _createTableFooter($tableDisplayFields, $tableActions = array()){
     	$output = "";
     	
     	$output .= "<tfoot>";
@@ -232,7 +224,7 @@ class TableHelper extends AppHelper
     	$output = "";
     	foreach ($entryActions as $entryActionKey => $entryActionValue)
     	{
-    		if($entryActionValue['urlPrefix'] && $entryActionValue['urlParam']) {
+    		if (isset($entryActionValue['urlPrefix']) && isset($entryActionValue['urlParam'])) {
     			list($actionName, $actionUrlPrefix, $actionUrlParam)  =
     			array($entryActionKey, $entryActionValue['urlPrefix'], $entryActionValue['urlParam']);
     	
@@ -244,10 +236,10 @@ class TableHelper extends AppHelper
     				$actionConfirm = $entryActionValue['confirm'];
     			 
     			$actionOption = array();
-    			if(isset($entryActionValue['option']))
-    				$actionOption = $entryActionValue['confirm'];
+    			if(isset($entryActionValue['options']))
+    				$actionOption = $entryActionValue['options'];
     			$actionOption['escape'] = false;
-    			 
+    			
     			$actionUrl = $actionUrlPrefix . $this->_getField($defaultModelName, $entry, $actionUrlParam);
     			$output .= $this->Html->link($actionName, $actionUrl, $actionOption, $actionConfirm);
     			$output .= " ";
@@ -264,15 +256,14 @@ class TableHelper extends AppHelper
      * @param String $tableModelName
      * @param array $tableEntries
      * @param array $tableDisplayFields
-     * @param array $tableOption
      * @param array $tableActions
      * @return string
      */
-    public function createTable($tableModelName, $tableEntries, $tableDisplayFields, $tableOption, $tableActions = array())
+    public function createTable($tableModelName, $tableEntries, $tableDisplayFields, $tableActions = array())
     {
 		$output = "";
 		// Get table header
-		$output .= $this->_getTableHeader($tableDisplayFields, $tableOption, $tableActions);
+		$output .= $this->_createTableHeader($tableDisplayFields, $tableActions);
 		
 		// return message when there is no data to generate
 		if (empty($tableEntries))
@@ -297,9 +288,9 @@ class TableHelper extends AppHelper
             $output .= "</tr>";
         }
 
-        $output .= $this->_getTableFooter($tableDisplayFields, $tableActions);
+        $output .= $this->_createTableFooter($tableDisplayFields, $tableActions);
         
-        $output .= $this->_getPaginator();
+        $output .= $this->_createPaginator();
         
         return $output;
     }
@@ -311,7 +302,7 @@ class TableHelper extends AppHelper
      * @param string $nextClass
      * @return string
      */
-    private function _getPaginator(){
+    private function _createPaginator(){
     	
     	$output = "";
     	$output.= "<div class='btn-group' role='group'>";

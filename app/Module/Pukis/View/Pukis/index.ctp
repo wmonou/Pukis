@@ -1,4 +1,4 @@
-<div>
+<div class = 'container-fluid'>
 	<h1>PUKIS</h1>
 	<p>Version 0.1.0</p>
 	<p>Pukis is made to accomodate full ajax application.</p>

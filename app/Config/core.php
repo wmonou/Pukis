@@ -150,7 +150,7 @@
  *
  */
 	Configure::write('Routing.prefixes', array('admin'));
-
+	
 /**
  * Turn off all caching application-wide.
  *
@@ -222,7 +222,7 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'kodehive-wmonou-141114');
+	Configure::write('Security.salt', 'kodehive-pukis-141214');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
@@ -359,19 +359,7 @@ if (Configure::read('debug') > 0) {
 }
 
 // Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
-$prefix = 'myapp_';
-
-/**
- * Configure the cache used for general framework caching. Path information,
- * object listings, and translation cache files are stored with this configuration.
- */
-Cache::config('_cake_core_', array(
-	'engine' => $engine,
-	'prefix' => $prefix . 'cake_core_',
-	'path' => CACHE . 'persistent' . DS,
-	'serialize' => ($engine === 'File'),
-	'duration' => $duration
-));
+$prefix = 'pukis_';
 
 /**
  * Configure the cache for model and datasource caches. This cache configuration

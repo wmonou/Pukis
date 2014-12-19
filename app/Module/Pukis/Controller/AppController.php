@@ -85,6 +85,7 @@ class AppController extends Controller {
 	 */
 	public $script = array(
 		'/Pukis/js/jquery/jquery.min.js',
+		'/Pukis/js/jquery/jquery-ui.min.js',
 		'/Pukis/js/jquery/jquery.easyModal.js',
 		'/Pukis/js/bootstrap/bootstrap.min.js',
 		'/Pukis/js/metis-menu/metis-menu.min.js',
@@ -131,21 +132,28 @@ class AppController extends Controller {
 			'admin' => true
 		);
 		
-		$this->Auth->logoutRedirect = array(
+		$this->Auth->loginAction = array(
 			'plugin' => 'users',
 			'controller' => 'users',
-			'action' => 'logout',
+			'action' => 'login',
 			'admin' => true
+		);
+		
+		$this->Auth->logoutRedirect = array(
+			'plugin' => 'pukis',
+			'controller' => 'users',
+			'action' => 'index',
+			'admin' => false
 		);
 		
 		$this->Auth->loginRedirect = array(
 			'plugin' => 'pukis',
 			'controller' => 'pukis',
-			'action' => 'admin_index',
+			'action' => 'index',
 			'admin' => true
 		);
 		
-		$this->Auth->allow('ajaxRedirect');
+		$this->Auth->allow('ajaxRedirect', 'ajaxMessage');
 	}
 	
 	/**
@@ -164,9 +172,9 @@ class AppController extends Controller {
 	 * @access protected
 	 */
 	protected function _layoutSetup() {
-		if ($this->params['controller'] != 'pukis') {
-			// $this->layout = "Pukis.pukis_admin";
-			$this->layout = "Pukis.blank"; // debug mode
+		if ($this->params['controller'] != 'pukis' && $this->params['action'] != 'admin_login') {
+			 $this->layout = "Pukis.pukis_admin";
+			//$this->layout = "Pukis.blank"; // debug mode
 		} else {
 			$this->layout = "Pukis.pukis";
 		}
@@ -193,11 +201,14 @@ class AppController extends Controller {
 	protected function ajaxRedirect($url, $status = null, $exit = true) {
 		$this->autoRender = false;
 		if ($this->request->is('ajax')) {
+			$url = Router::normalize($url);
 			$data = array('url' => $url, 'status' => $status, 'exit' => $exit);
 			print json_encode($data);
 		} else {
 			$this->redirect($url, $status = null, $exit = true);
 		}
+		if($exit)
+			exit;
 	}
-	
+
 }

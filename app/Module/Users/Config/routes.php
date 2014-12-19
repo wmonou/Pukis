@@ -17,6 +17,13 @@ Router::connect('/admin/users/login', array(
 	'admin' => true
 ));
 
+Router::connect('/admin/users/logout', array(
+	'plugin' => 'users',
+	'controller' => 'users',
+	'action' => 'logout',
+	'admin' => true
+));
+
 Router::connect('/admin/roles', array(
 	'plugin' => 'users',
 	'controller' => 'roles', 

@@ -1,24 +1,14 @@
 <div class="users-roles-admin-edit">
-	<div>
-		<div class="col-md-12">
-			<?php echo $this->Pukis->getTitle(); ?>
-		</div>
-	</div>
+	
+	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
 	
 	<div>
 		<div class="col-sm-offset-2 col-sm-10">
 		  	<?php 
 			  	echo $this->Html->link(
-			  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left'))  .__d('admin', 'Back'), 
-			  		array(
-				  		'plugin' => 'users', 
-				  		'controller' => 'roles', 
-				  		'action' => 'index',
-				  		'admin' => true),
-			  		array(
-			  			'class' => 'btn btn-primary',
-			  			'escape' => false)
-			  		);
+				  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left')) . __d('admin', 'Back'),  
+					  	"/admin/users/roles/index", 
+				  		array('class' => 'btn btn-primary', 'escape' => false));
 		  	?>
 		</div>
 	</div>
@@ -48,16 +38,9 @@
 				<div class="col-sm-offset-2 col-sm-10">
 				   	<?php 
 					  	echo $this->Html->link(
-					  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left'))  .__d('admin', 'Back'), 
-					  		array(
-						  		'plugin' => 'users', 
-						  		'controller' => 'roles', 
-						  		'action' => 'index',
-						  		'admin' => true),
-					  		array(
-					  			'class' => 'btn btn-primary',
-					  			'escape' => false)
-					  		);
+						  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left')) . __d('admin', 'Back'),  
+							  	"/admin/users/roles/index", 
+						  		array('class' => 'btn btn-primary', 'escape' => false));
 				  	?>
 			        <?php 
 		        		echo $this->Form->end(
@@ -76,16 +59,16 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
 
 		$('.users-roles-admin-edit a').click(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.href, '.body');
+			pukisRequest.ajaxRequest(this, this.href, '.body');
 		});
 		
 		$('.users-roles-admin-edit form').submit(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.action, '.body');
+			pukisRequest.ajaxType('post').ajaxRequest(this, this.action, '.body');
 		});
 		
 	})

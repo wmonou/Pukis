@@ -1,9 +1,6 @@
 <div class="users-users-admin-edit">
-	<div>
-		<div class="col-md-12">
-			<?php echo $this->Pukis->getTitle(); ?>
-		</div>
-	</div>
+	
+	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
 
 	<div>
 		<div class="col-sm-offset-2 col-sm-10">
@@ -136,16 +133,16 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest();
+		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
 
 		$('.users-users-admin-edit a').click(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.href, '.body');
+			pukisRequest.ajaxRequest(this, this.href, '.body');
 		});
 		
 		$('.users-users-admin-edit form').submit(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.action, '.body');
+			pukisRequest.ajaxType('post').ajaxRequest(this, this.action, '.body');
 		});
 		
 	})

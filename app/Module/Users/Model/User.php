@@ -2,6 +2,7 @@
 
 App::uses('UsersAppModel', 'Users.Model');
 App::uses('AuthComponent', 'Controller/Component');
+App::uses('CakeSession', 'Model/Datasource');
 
 /**
  * User
@@ -20,7 +21,10 @@ class User extends UsersAppModel {
      *
      * @var array
      **/	
-    public $actsAs = array('Acl' => array('type' => 'requester', 'enabled' => false));
+    public $actsAs = array(
+    	'Acl' => array('type' => 'requester', 'enabled' => false),
+    	'Containable'
+    );
 
     /**
      * belongsTo relationship
@@ -40,8 +44,7 @@ class User extends UsersAppModel {
      * @var string
      **/
 	public $validationDomain = 'model_validation';
-	
-	
+		
 	/**
 	 * validation rules
 	 *
@@ -110,7 +113,7 @@ class User extends UsersAppModel {
     }
 
     public function beforeSave($options = array()) {
-        if (!empty( $this->data['User']['password'])) {
+    	if (!empty( $this->data['User']['password'])) {
             $this->data['User']['password'] = AuthComponent::password(
                       $this->data['User']['password']
                     );
@@ -119,6 +122,11 @@ class User extends UsersAppModel {
         return true;
     }
 	
+    
+    public function beforeDelete($cascade = true) {
+
+    }
+    
 	/**
 	 * validate_password_again
 	 *

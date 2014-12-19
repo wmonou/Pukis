@@ -1,9 +1,6 @@
 <div class="users-users-admin-change">
-	<div>
-		<div class="col-md-12">
-			<?php echo $this->Pukis->getTitle(); ?>
-		</div>
-	</div>
+	
+	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
 	
 	<div>
 		<div class="col-sm-offset-2 col-sm-10">
@@ -24,7 +21,7 @@
 	</div>
 	
 	<div>
-		<div class="col-sm-offset-2 col-sm-10">
+		<div class="col-md-12">
 			<?php 
 				echo $this->Form->create('User', array('class' => 'form-horizontal', 'role' => 'form'));
 				echo $this->Form->input('id', array('value' => $this->request->pass[0]));
@@ -32,7 +29,7 @@
 			
 			<div class="form-group <?php echo $this->Form->isFieldError('password') ? 'has-error' : '' ?>">
 			  	<label class="col-sm-2 control-label"><?php echo __d('users', 'Password:'); ?></label>
-			  	<div class="col-sm-10">
+			  	<div class="col-md-6 col-sm-10">
 			    <?php 
 			      echo $this->Form->input('password', array(
 			        'div' => false,
@@ -45,7 +42,7 @@
 			
 			<div class="form-group <?php echo $this->Form->isFieldError('password_again') ? 'has-error' : '' ?>">
 			  	<label class="col-sm-2 control-label"><?php echo __d('users', 'Password again:'); ?></label>
-			  	<div class="col-sm-10">
+			  	<div class="col-md-6 col-sm-10">
 			    <?php 
 			      echo $this->Form->password('password_again', array(
 			        'div' => false,
@@ -58,7 +55,26 @@
 			
 			<div class="form-group">
 			  	<div class="col-sm-offset-2 col-sm-10">
-			     <?php echo $this->Form->end(array('label' => __d('users', 'Save'), 'class' => 'btn btn-primary')); ?>
+			  		<?php 
+					  	echo $this->Html->link(
+					  		$this->Html->tag('i', '&nbsp;', array('class' => 'fa fa-arrow-left')) . __d('admin', 'Back'),  
+					  		array(
+						  		'plugin' => 'users', 
+						  		'controller' => 'users', 
+						  		'action' => 'index',
+						  		'admin' => true),
+					  		array(
+					  			'class' => 'btn btn-primary',
+					  			'escape' => false)
+					  		);
+					  	?>
+			     	<?php 
+				        echo $this->Form->end(
+					   		array(
+					   			'label' => __d('users', 'Save'), 
+					   			'class' => 'btn btn-success', 
+					   			'div' => false)); 
+				     	?>			
 			  	</div>
 			</div>
 		</div>
@@ -73,12 +89,12 @@
 
 		$('.users-users-admin-change a').click(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.href, '.body');
+			pukisRequest.ajaxRequest(this, this.href, '.body');
 		});
 		
 		$('.users-users-admin-change form').submit(function(e){
 			e.preventDefault();
-			pukisRequest.ajaxFormRequest(this, this.action, '.body');
+			pukisRequest.ajaxType('post').ajaxRequest(this, this.action, '.body');
 		});
 		
 	})

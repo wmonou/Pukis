@@ -35,104 +35,103 @@ PUKISAPP.createNameSpace = function(namespace) {
 
 PUKISAPP.createNameSpace("PUKISAPP.BEHAVIOR.PUKIS");
 
-PUKISAPP.BEHAVIOR.PUKIS.ajaxRequest = function() {
-	var obj = obj;
-	var ajaxUrl = function(reloadUrl) {
-		if (typeof reloadUrl != 'undefined') {
-			return reloadUrl; 
-			}
-		return "#";
+PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
+	var type = "get"; 
+	var ajaxType = function(type){
+		this.type = type;
+		return this;
 	}
-	var ajaxElement = function(reloadElement) {
-		if (typeof reloadElement != 'undefined') {
-			return reloadElement; 
+	var ajaxRequest = function(obj, url, element) {
+		redirect = PUKISAPP.BEHAVIOR.PUKIS.dispacher().redirect(url, element);
+		if (typeof redirect.url != 'undefined' && redirect.url != null) {
+			$('#loader').show();
+			data = null;
+			if(this.type == 'post'){
+				data = $(obj).serialize();
 			}
-		return "#content";
-	}
-	var ajaxRedirect = function(url, element) {
-		$.get(url, function(data){
-			$(ajaxElement(element)).html(data);
-			});
+			$.ajax({
+					url: redirect.url,
+					type: this.type,
+					data: data
+				}).done(function (data) { 
+			    	response = PUKISAPP.BEHAVIOR.PUKIS.util().checkJson(data);
+			    	if (typeof response.url != 'undefined') {
+			    		ajaxType('get');
+			    		ajaxRequest(obj, response.url, redirect.element);				
+					} else {
+						$(redirect.element).html(data);
+					}
+			    }).fail(function (jqXHR, textStatus, error) {
+			    	// currently only handling 404
+					// @todo handle other message
+			    	modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(jqXHR.status, jqXHR.statusText, redirect.url);			    	
+			    }).always(function() { 
+			    	$('#loader').hide();
+			    });
+		}
 		return false;
 	}
-	var ajaxLinkRequest = function(obj, url, element) {
-		$('#loader').show();
-		$.get(ajaxUrl(url), function(data) {
-			response = PUKISAPP.BEHAVIOR.PUKIS.checkJson(data);
-			if (typeof response.url != 'undefined') {
-				ajaxRedirect(response.url, ajaxElement(element));				
-			} else {
-				$(ajaxElement(element)).html(data);
-			}
-		}).fail(function(error) {
-			if(error.status != 403){
-				message = '<h3>Error ' + error.status + '</h3>\n' + ajaxUrl(url) + ' ' + error.statusText;
-				modal = PUKISAPP.BEHAVIOR.PUKIS.modal(message).show();
-			}else{
-				
-			}
-		}).always(function() {
-			$('#loader').hide();
-		});	
-	}
-	var ajaxFormRequest = function(obj, url, element) {
-		$('#loader').show();
-		var form = $(obj).serialize();
-		$.post(ajaxUrl(url), form, function(data){
-			response = PUKISAPP.BEHAVIOR.PUKIS.checkJson(data);
-			if(typeof response.url != 'undefined'){
-				ajaxRedirect(response.url, ajaxElement(element));				
-			}else{
-				$(ajaxElement(element)).html(data);
-			}
-		}).fail(function(error) {
-			// currently only handling 404
-			// @todo handle other message
-			message = '<h3>Error ' + error.status + '</h3>\n' + ajaxUrl(url) + ' ' + error.statusText;
-			modal = PUKISAPP.BEHAVIOR.PUKIS.modal(message).show();
-		}).always(function() {
-			$('#loader').hide();
-		});
-	}
 	return {
-		ajaxRedirect: ajaxRedirect,
-		ajaxLinkRequest: ajaxLinkRequest,
-		ajaxFormRequest: ajaxFormRequest
+		ajaxType: ajaxType,
+		ajaxRequest: ajaxRequest
 	}
 }
 
-PUKISAPP.BEHAVIOR.PUKIS.modal = function(message) {
-	var modal = '#modal';
-	var message = message;
-	var setModal = function() {
-		$(modal).easyModal({top: 200});
-	}
-	var setMessage = function() {
-		$(modal).html(message);
-	}
-	var show = function(message) {
-		setModal();
-		setMessage();
-		$(modal).trigger('openModal');
+PUKISAPP.BEHAVIOR.PUKIS.util = function() {
+	var checkJson = function(jsonString) {
+		try {
+	        var jsonObject = JSON.parse(jsonString);
+	         if (jsonObject && typeof jsonObject === "object" && jsonObject !== null) {
+	        	return jsonObject;
+	        }
+	    }
+	    catch(e) {
+	    	return false;
+	    }
+	    return false;
 	}
 	return {
-		show: show
+		checkJson: checkJson
 	}
-}
-
-PUKISAPP.BEHAVIOR.PUKIS.checkJson = function(jsonString) {
-	try {
-        var jsonObject = JSON.parse(jsonString);
-        // Handle non-exception-throwing cases:
-        // Neither JSON.parse(false) or JSON.parse(1234) throw errors, hence the type-checking,
-        // but... JSON.parse(null) returns 'null', and typeof null === "object",
-        // so we must check for that, too.
-        if (jsonObject && typeof jsonObject === "object" && jsonObject !== null) {
-        	return jsonObject;
-        }
-    }
-    catch(e) {
-    	return false;
-    }
-    return false;
 };
+
+PUKISAPP.BEHAVIOR.PUKIS.view = function() {
+	var modal = '#modal';
+	var showErrorModal = function(errorStatus, errorStatusText, errorUrl) {
+		message = '<h3>Error ' + errorStatus + ' <small>' + errorStatusText + '</small></h3>\n' + errorUrl;
+		$('#modal').easyModal({top: '200'});
+		$('#modal').html(message);
+		$('#modal').trigger('openModal');
+	}	
+	return {
+		showErrorModal: showErrorModal
+	}
+}
+
+PUKISAPP.BEHAVIOR.PUKIS.dispacher = function() {
+	var defaultUrl = null;
+	var defaultElement = '#content';
+	var redirect = function(url, element) {
+		url = url || defaultUrl;
+		element = element || defaultElement;
+		console.log(url);
+		if(url === null){
+			return {url: defaultUrl, element: element};
+		}
+		if(url.indexOf("#") > -1){
+			return {url: defaultUrl, element: element};
+		}
+		if(url.indexOf("login") > -1) {
+			return {url: url, element: element}
+		}
+		if(url.indexOf("logout") > -1) {
+			return {url: url, element: element}
+		}
+		return {url: url, element : element}
+	}
+	return {
+		redirect : redirect
+	}
+}
+
+var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();

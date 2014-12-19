@@ -43,12 +43,15 @@ class RolesController extends UsersAppController{
 	 */
 	public function admin_add()
 	{
-		if ( !empty( $this->request->data ) ) {
+		if (!empty( $this->request->data)) {
 			$this->Role->create();
 			if ( $this->Role->save( $this->request->data ) ) {
-				$this->Session->setFlash(__d('admin', 'Role created.'), 'flash_success');
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__d('admin', 'Role created.'), 'flash_success', array('plugin' => 'Pukis'));
+				$this->ajaxRedirect('/admin/users/roles/index');
 			}
+			
+			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
+			$this->ajaxRedirect('/admin/users/roles/index');
 		}
 	}
 	
@@ -62,15 +65,20 @@ class RolesController extends UsersAppController{
 	{
 		if( !$id ) {
 			$this->Session->setFlash(__d('admin', "Invalid ID"), 'flash_error');
-			$this->redirect(array("action" => 'index'));			
+			$this->ajaxRedirect(array("action" => 'index'));			
 		} 
+		
 		if( !empty( $this->request->data ) ) {
 			if( $this->Role->save( $this->request->data ) )
 			{
-				$this->Session->setFlash(__d('admin', "The Role was saved."), 'flash_success');
-				$this->redirect(array("action" => 'index'));		
-			}			
+				$this->Session->setFlash(__d('admin', "The Role was saved."), 'flash_success', array('plugin' => 'Pukis'));
+				$this->ajaxRedirect('/admin/users/roles/index');
+			}
+			
+			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
+			$this->ajaxRedirect('/admin/users/roles/index');
 		}
+		
 		$this->request->data = $this->Role->read(null, $id);
 	}
 	
@@ -81,17 +89,24 @@ class RolesController extends UsersAppController{
 	 * 
 	 * @return void
 	 */
-	public function admin_delete( $id = null )
+	public function admin_delete($id = null, $confirm = 0)
 	{
-		if( !$id )
-		{
+		if (!$id) {
 			$this->Session->setFlash(__d('admin', 'Invalid ID.'), 'flash_error');
-			$this->redirect(array('action' => 'index'));
+			$this->ajaxRedirect(array('action' => 'index'));
 		}
-		if( $this->Role->delete( $id ) )
-		{
-			$this->Session->setFlash(__d('admin', 'The user was deleted.'), 'flash_success');
-			$this->redirect(array('action' => 'index'));
+				
+		if($confirm == 1) {
+			if ($this->Role->delete($id)) {
+				$this->Session->setFlash(__d('admin', 'The role was deleted.'), 'flash_success', array('plugin' => 'Pukis'));
+				$this->redirect(array('action' => 'index'));
+			}
+			
+			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
+			$this->ajaxRedirect('/admin/users/roles/index');
 		}
+		
+		$key = 'id';
+		$this->set(compact('key', 'id'));
 	}
 }

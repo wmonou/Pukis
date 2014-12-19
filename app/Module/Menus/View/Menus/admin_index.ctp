@@ -18,18 +18,15 @@
 
   $actions = array('edit' => array(
   						'urlPrefix' => '/properties/view/', 	
-  						'urlParam' =>'Menu.id',
+  						'urlParam' =>'User.id',
   						'iconClass' => 'fa fa-pencil',			
-  						'confirm' => 'are you sure?',			
-  						'options' => array()),					
+  						'options' => array('class' => 'btn btn-primary btn-xs')),					
                    'delete' => array(
   						'urlPrefix' => '/properties/view/', 
-  						'urlParam' =>'Menu.id', 
+  						'urlParam' =>'User.id', 
   						'iconClass' => 'fa fa-trash-o',
-  						'confirm' => 'are you sure?',
-  						'options' => array())
+  						'options' => array('class' => 'btn btn-primary btn-xs'))
                    	);
-	$tableOptions = array('class' => 'table table-bordered table-condensed table-hover');
   
 print $this->Table->createTable('Menu', $menuData, $displayFields, $tableOptions, $actions);
 

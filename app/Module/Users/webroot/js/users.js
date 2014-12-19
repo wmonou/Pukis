@@ -42,6 +42,12 @@ PUKISAPP.BEHAVIOR.USERS.permissions = function() {
 							break;
 						}
 					}
+				},
+				beforeSend: function(data){
+					$('#loader').show();
+				},
+				complete: function(data){
+					$('#loader').hide();
 				}
 			});
 		});

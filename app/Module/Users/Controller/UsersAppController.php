@@ -60,20 +60,37 @@ class UsersAppController extends AppController{
 			Configure::write('Config.'.$setting['Setting']['setting'], $setting['Setting']['value']);
 		}
 		
-		if (!$this->Auth->loggedIn() && $this->Cookie->read('remember_me_cookie')) {
-			$cookie = $this->Cookie->read('remember_me_cookie');
-		
+		$this->Cookie->key = 'qSI23ATYH2qs*&sXOw!adre@FUCKIT!KJ34SAv!@*(XSL#$%)asGb$@11IAJL:+!@#HKis~#^';
+		$this->Cookie->httpOnly = true;
+// 		if (!$this->_checkRememberMe()) {
+// 			$this->ajaxRedirect('/admin/users/logout');
+// 		}
+	}
+	
+	/**
+	 * Check remember me cookies
+	 * @return boolean
+	 */
+	private function _checkRememberMe() 
+	{
+		if (!$this->Auth->loggedIn() && $this->Cookie->read('Pukis.token')) {
+
+			$cookie = $this->Cookie->read('Pukis.token');
+			
 			$user = $this->User->find('first', array(
 				'conditions' => array(
 					'User.username' => $cookie['username'],
 					'User.password' => $cookie['password']
 				)
 			));
-		
+			
 			if ($user && !$this->Auth->login($user['User'])) {
-				$this->redirect('/users/logout'); // destroy session & cookie
-			}
+				$this->Cookie->delete('token');
+				return false; 
+			}			
 		}
+		
+		return true;
 	}
 }
 

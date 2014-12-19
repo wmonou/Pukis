@@ -17,6 +17,7 @@
 	</head>
 	<body>
 		<div id="wrapper">
+		
 			<div  id="header">
 				Pukis
 			</div>
@@ -35,10 +36,14 @@
 			</div>
 			
 			<!-- modal  -->
-			<div id="modal">
-
+			<div id="modal"aria-hidden="true">
+			  	
 			</div>
+			
 		</div>
+		
+		<?php echo $this->fetch('scriptBottom'); ?>
+		
 	</body>
 </html>
 

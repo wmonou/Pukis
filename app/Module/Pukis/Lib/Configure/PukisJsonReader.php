@@ -46,13 +46,15 @@ class PukisJsonReader implements ConfigReaderInterface {
 		} else {
 			$file = $this->_path . $key;
 		}
+		
 		$file .= '.json';
-		if (!is_file($file)) {
+		if (!is_file($file)) {			
 			if (!is_file(substr($file, 0, -4))) {
 				throw new ConfigureException(__d('Pukis', 'Could not load configuration files: %s or %s', $file, substr($file, 0, -4)));
 			}
 		}
 		$config = json_decode(file_get_contents($file), true);
+		
 		return $config;
 	}
 
