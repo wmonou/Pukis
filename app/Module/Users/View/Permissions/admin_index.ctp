@@ -106,19 +106,33 @@
 	</div>
 </div>
 
-<?php echo $this->Html->script('/users/js/users.js'); ?>
+<?php //echo $this->Html->script('/users/js/users.js'); ?>
 <script type="text/javascript">
 	$(document).ready(function(){
 
 		var pukisRequest = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
-		var usersRequest = new PUKISAPP.BEHAVIOR.USERS.permissions();
+		//var usersRequest = new PUKISAPP.BEHAVIOR.USERS.permissions();
 		
 		$('.users-permissions-admin-index a.sync').click(function(e){
 			e.preventDefault();
 			pukisRequest.ajaxRequest(this, this.href, $('.users-permissions-admin-index').parent());
 		});
 
-		usersRequest.aclChange();
+		$(".permission-toggle").mouseover(function(){ $(this).css('cursor', 'pointer'); });
+		$('.users-permissions-admin-index span.permission-toggle').click(function(e){
+			e.preventDefault();
+			var data = {aco_id: $(this).data('aco_id'), aro_id: $(this).data('aro_id')}
+			pukisRequest.ajaxType('post').ajaxData(data).ajaxRequest(this, '/admin/users/permissions/change', $('.users-permissions-admin-index').parent());
+		});
+
+		$(".expand").mouseover(function(){ $(this).css('cursor', 'pointer'); });
+		$('.expand').click(function(){
+			if ( $('.controller-'+ $(this).text()).is(':visible') == true ) {
+				$('.controller-'+ $(this).text()).addClass('hidden');
+			}else{
+				$('.controller-'+$(this).text()).removeClass('hidden');
+			}
+		});
 			
 		$('[data-rel=tooltip]').tooltip({placement: 'left'});
 		

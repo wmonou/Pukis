@@ -12924,3 +12924,54 @@ Stack Trace:
 #3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-26 05:05:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'aco_id' cannot be null
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ko...', Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ko...')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(1854): DboSource->create(Object(AclPermission), Array, Array)
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2265): Model->save(Array, Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2193): Model->saveMany(Array, Array)
+#6 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Model\AclPermission.php(101): Model->saveAll(Array)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php(206): AclPermission->change(NULL, Array, 1)
+#8 [internal function]: PermissionsController->admin_change()
+#9 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PermissionsController), Array)
+#10 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
+#12 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-12-26 05:05:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'aco_id' cannot be null
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ko...', Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ko...')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(1854): DboSource->create(Object(AclPermission), Array, Array)
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2265): Model->save(Array, Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2193): Model->saveMany(Array, Array)
+#6 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Model\AclPermission.php(101): Model->saveAll(Array)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php(206): AclPermission->change(NULL, Array, 1)
+#8 [internal function]: PermissionsController->admin_change()
+#9 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PermissionsController), Array)
+#10 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
+#12 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-12-26 05:06:04 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'aco_id' cannot be null
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `ko...', Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ko...')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(1854): DboSource->create(Object(AclPermission), Array, Array)
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2265): Model->save(Array, Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2193): Model->saveMany(Array, Array)
+#6 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Model\AclPermission.php(101): Model->saveAll(Array)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php(206): AclPermission->change(NULL, Array, 1)
+#8 [internal function]: PermissionsController->admin_change()
+#9 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PermissionsController), Array)
+#10 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
+#12 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

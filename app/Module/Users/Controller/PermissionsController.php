@@ -130,7 +130,11 @@ class PermissionsController extends UsersAppController {
 	 */
 	public function admin_change() {
 		if (!$this->request->is('ajax')) {
-			$this->redirect(array('action' => 'index'));
+			$this->ajaxRedirect('/admin/users/permissions/index');
+		}
+		
+		if(empty($this->request->data)) {
+			$this->ajaxRedirect('/admin/users/permissions/index');
 		}
 		
 		$this->layout = false;
@@ -141,7 +145,9 @@ class PermissionsController extends UsersAppController {
 		$permissionData = $this->AclPermission->find('first', array(
 			'conditions' => array(
 				'AclPermission.aco_id' => $acoId,
-				'AclPermission.aro_id' => $aroId)));
+				'AclPermission.aro_id' => $aroId),
+			'contain' => false
+		));
 		
 		// search for parent and child alias
 		$this->AclAco->bindModel(array(
@@ -155,24 +161,29 @@ class PermissionsController extends UsersAppController {
 					'foreignKey' => 'parent_id'))));
 		$acoData = $this->AclAco->find('first', array(
 				'conditions' => array('AclAco.id' => $acoId)));
-		
+	
 		// if parent is empty means it is already the first parents
 		// if childs are empty means it is already the last child
 		// if allowing, parent and childs should be allowed too
 		// if disallowing, parent doesnt need to be dissallowed but child does
+		$success = false;
 		if (!empty($permissionData)) {
-			if ($data['AclPermission']['_create'] == 1 &&
-				$data['AclPermission']['_read'] == 1 &&
-				$data['AclPermission']['_update'] == 1 &&
-				$data['AclPermission']['_delete'] == 1)
+			if ($permissionData['AclPermission']['_create'] == 1 &&
+				$permissionData['AclPermission']['_read'] == 1 &&
+				$permissionData['AclPermission']['_update'] == 1 &&
+				$permissionData['AclPermission']['_delete'] == 1)
 			{
 				// disallowing
 				// list acoId only for self and childs
 				$acoIdList = array($acoId);
 				if (!empty($acoData['AclAcoChild'])) {
-					$acoChildIdList = Hash::combine($acoData['AclAcoChild'], '{n}.id');
-					$acoIdList = Hash::merge($acoIdList, $acoChildIdList);
+					$acoChildIdList = array();
+					foreach ($acoData['AclAcoChild'] as $acoChild) {
+						$acoChildIdList[] = $acoChild['id'];
+					}
+					$acoIdList = Hash::merge($acoIdList, $acoChildIdList);					
 				}
+				$success = $this->AclPermission->change($aroId, $acoIdList, 0);
 			} else {
 				// allowing
 				// list acoId for self, parent, and childs
@@ -181,9 +192,13 @@ class PermissionsController extends UsersAppController {
 					$acoIdList = Hash::merge($acoIdList, array($acoData['AclAcoParent']['id']));
 				}
 				if (!empty($acoData['AclAcoChild'])) {
-					$acoChildIdList = Hash::combine($acoData['AclAcoChild'], '{n}.id');
+					$acoChildIdList = array();
+					foreach ($acoData['AclAcoChild'] as $acoChild) {
+						$acoChildIdList[] = $acoChild['id'];
+					}
 					$acoIdList = Hash::merge($acoIdList, $acoChildIdList);
 				}
+				$success = $this->AclPermission->change($aroId, $acoIdList, 1);
 			}
 		} else {
 			// allowing
@@ -193,18 +208,22 @@ class PermissionsController extends UsersAppController {
 				$acoIdList = Hash::merge($acoIdList, array($acoData['AclAcoParent']['id']));
 			}
 			if (!empty($acoData['AclAcoChild'])) {
-				$acoChildIdList = Hash::combine($acoData['AclAcoChild'], '{n}.id');
+				$acoChildIdList = array();
+				foreach ($acoData['AclAcoChild'] as $acoChild) {
+					$acoChildIdList[] = $acoChild['id'];
+				}
 				$acoIdList = Hash::merge($acoIdList, $acoChildIdList);
 			}
+			$success = $this->AclPermission->change($aroId, $acoIdList, 1);
 		}
-			
-		// save
-		$success = 0;
-		if ($this->AclPermission->save($data)) {
-			$data = $this->AclPermission->find('first', array('conditions' => $conditions));
-			$success = 1;
+		
+		// save	
+		if ($success) {
+			$this->Session->setFlash(__d('users', 'Permission has been changed!'), 'flash_success', array('plugin' => 'Pukis'));
+		} else {
+			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
 		}
-		$this->set(compact('success'));
+		$this->ajaxRedirect('/admin/users/permissions/index');
 	}
 	
 	/**
@@ -216,7 +235,7 @@ class PermissionsController extends UsersAppController {
 	{
 		if ($this->AclUtility->aco_sync()) {
 			$this->Session->setFlash(__d('users', 'All Controllers was sincronized.'), 'flash_success', array('plugin' => 'Pukis'));
-			$this->ajaxRedirect('/admin/users/permissions/index/');
+			$this->ajaxRedirect('/admin/users/permissions/index');
 		}
 	}
 	

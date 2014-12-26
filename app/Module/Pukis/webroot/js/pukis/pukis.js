@@ -36,46 +36,58 @@ PUKISAPP.createNameSpace = function(namespace) {
 PUKISAPP.createNameSpace("PUKISAPP.BEHAVIOR.PUKIS");
 
 PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
-	var type = "get"; 
-	var ajaxType = function(type){
+	var type = null;
+	var data = null;
+	var ajaxType = function(type) {
+		type = type || 'get';
 		this.type = type;
+		return this;
+	}
+	var ajaxData = function(data) {
+		this.data = data;
 		return this;
 	}
 	var ajaxRequest = function(obj, url, element) {
 		redirect = PUKISAPP.BEHAVIOR.PUKIS.dispacher().redirect(url, element);
-		if (typeof redirect.url != 'undefined' && redirect.url != null) {
-			$('#loader').show();
+		if (typeof redirect.url != 'undefined' && redirect.url != null) {			
 			data = null;
-			if(this.type == 'post'){
-				data = $(obj).serialize();
+			if (this.type == 'post' && this.data == null) {
+				this.data = $(obj).serialize();
 			}
 			$.ajax({
 					url: redirect.url,
 					type: this.type,
-					data: data
-				}).done(function (data) { 
-			    	response = PUKISAPP.BEHAVIOR.PUKIS.util().checkJson(data);
-			    	if (typeof response.url != 'undefined') {
-			    		ajaxType('get');
-			    		ajaxRequest(obj, response.url, redirect.element);				
-					} else {
-						$(redirect.element).html(data);
+					data: this.data,
+					success: function(data){
+						response = PUKISAPP.BEHAVIOR.PUKIS.util().checkJson(data);
+				    	if (typeof response.url != 'undefined') {
+				    		ajaxType('get');
+				    		ajaxRequest(obj, response.url, redirect.element);				
+						} else {
+							$(redirect.element).html(data);
+						}
+					},
+					error: function(error){
+						if(error.status != '403') {
+				    		modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(error.status, error.statusText, redirect.url);
+				    	} else {
+				    		ajaxType('get');
+				    		ajaxRequest(obj, '/admin/users/users/login', '#content');		
+				    	}
+					},
+					beforeSend: function(){
+						$('#loader').show();
+					},
+					complete: function(){
+						$('#loader').hide();
 					}
-			    	$('#loader').hide();
-			    }).fail(function (jqXHR, textStatus, error) {
-			    	if(jqXHR.status != '403') {
-			    		modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(jqXHR.status, jqXHR.statusText, redirect.url);
-			    	} else {
-			    		ajaxType('get');
-			    		ajaxRequest(obj, '/admin/users/users/login', '#content');		
-			    	}	
-			    	$('#loader').hide();
-			    });
+				});
 		}
 		return false;
 	}
 	return {
 		ajaxType: ajaxType,
+		ajaxData: ajaxData,
 		ajaxRequest: ajaxRequest
 	}
 }

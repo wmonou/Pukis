@@ -72,10 +72,7 @@ class AclPermission extends UsersAppModel {
 				'AclPermission.aco_id'),
 			'contain' => false
 		));
-		
 		$aclPermissionIdList = Hash::combine($aclPermissionData, '{n}.AclPermission.aco_id', '{n}.AclPermission.id');
-
-		Wmonou::debug($acoIdList, $aclPermissionData, $aclPermissionIdList);
 		
 		// permission CRUD;
 		$crudPermission = array(
@@ -84,23 +81,28 @@ class AclPermission extends UsersAppModel {
 				'_read' => $permission,
 				'_update' => $permission,
 				'_delete' => $permission));
-	
+
+		// assign permission to aco data save
 		$data = array();
-		foreach($acoIdList as $acoId)
-		{
+		foreach ($acoIdList as $acoId) {
 			$aclPermissionId = null;
-			if(isset($aclPermissionIdList[$acoId])) {
+			if (isset($aclPermissionIdList[$acoId])) {
 				$aclPermissionId = $aclPermissionIdList[$acoId];
 			} 
-			
 			$aclPermission = array('AclPermission' => array(
 					'id' => $aclPermissionId,
 					'aco_id' => $acoId,
 					'aro_id' => $aroId,
 			));
-			
 			$data[] = Hash::merge($aclPermission, $crudPermission);
 		}
+
+		// saving all permission change
+		if ($this->saveAll($data)) {
+			return true;
+		}
+		
+		return false;
 	}
 
 }
