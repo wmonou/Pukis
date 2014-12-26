@@ -1,8 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 /* Typography
 -------------------------------------------------- */
 
 html, body {
 	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -194,11 +197,17 @@ table th.th-actions{
 	border: #808080 1px solid;
 }
 
-
 /* Form
 -------------------------------------------------- */
 form {
 	margin-top : 10px;
+}
+
+/* Label
+-------------------------------------------------- */
+.label {
+	font-size: 90%;
+	font-weight: normal; 
 }
 
 /* Button
@@ -226,6 +235,10 @@ form {
 .btn.btn-default.pukis:hover {
   color: #fff;
   background-color: c7b299;  
+}
+
+.btn.btn-xs {
+	font-size: 90%;
 }
 
 /* Callout
@@ -344,4 +357,17 @@ form {
 .box {
 	border: 1px solid;
 	width: 100%
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* ofset
+-------------------------------------------------- */
+.ofset-10{
+	padding-left: 10px;
+}
+.ofset-20{
+	padding-left: 20px;
 }

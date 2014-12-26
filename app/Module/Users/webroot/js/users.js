@@ -2,8 +2,6 @@ PUKISAPP.createNameSpace("PUKISAPP.BEHAVIOR.USERS");
 
 PUKISAPP.BEHAVIOR.USERS.permissions = function() {
 	var aclChange = function() {
-		$('.bold').css('font-weight', 'bold');
-		$('span.bulet').css('color', '#E46D30');
 		$(".expand").mouseover(function(){ $(this).css('cursor', 'pointer'); });
 		$(".permission-toggle").mouseover(function(){ $(this).css('cursor', 'pointer'); });
 	

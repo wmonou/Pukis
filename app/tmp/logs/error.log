@@ -12801,3 +12801,126 @@ Stack Trace:
 #5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(SettingsController), Object(CakeRequest))
 #6 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+2014-12-20 07:43:31 Error: [MissingControllerException] Controller class AdminsController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminsController',
+  'plugin' => NULL,
+)
+Request URL: /admins/users/users/login
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-22 04:04:35 Error: Fatal Error (4): syntax error, unexpected '$acoData' (T_VARIABLE) in [D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 151]
+2014-12-22 04:04:36 Error: [FatalErrorException] syntax error, unexpected '$acoData' (T_VARIABLE)
+Request URL: /admin/permissions
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-22 04:05:00 Error: Fatal Error (4): syntax error, unexpected '$acoData' (T_VARIABLE) in [D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 151]
+2014-12-22 04:05:00 Error: [FatalErrorException] syntax error, unexpected '$acoData' (T_VARIABLE)
+Request URL: /admin/permissions
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-22 04:11:56 Error: Fatal Error (4): syntax error, unexpected '$acoData' (T_VARIABLE) in [D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 151]
+2014-12-22 04:11:56 Error: [FatalErrorException] syntax error, unexpected '$acoData' (T_VARIABLE)
+Request URL: /admin/permissions
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-22 04:11:59 Error: Fatal Error (4): syntax error, unexpected '$acoData' (T_VARIABLE) in [D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 151]
+2014-12-22 04:11:59 Error: [FatalErrorException] syntax error, unexpected '$acoData' (T_VARIABLE)
+Request URL: /admin/permissions
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\Wiedy\My Wor...', 151, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-22 05:08:07 Error: Fatal Error (1): [] operator not supported for strings in [D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php, line 152]
+2014-12-22 05:08:07 Error: [FatalErrorException] [] operator not supported for strings
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, '[] operator not...', 'D:\Wiedy\My Wor...', 152)
+#1 [internal function]: ErrorHandler::handleError(1, '[] operator not...', 'D:\Wiedy\My Wor...', 152, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, '[] operator not...', 'D:\Wiedy\My Wor...', 152, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-23 04:50:57 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php, line 458]
+2014-12-23 04:50:57 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 458)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 458, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 458, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-23 05:12:54 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php, line 458]
+2014-12-23 05:12:54 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 458)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 458, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 458, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-23 05:14:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'AclPermission.role_id' in 'where clause'
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `AclPerm...', Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `AclPerm...', Array, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `AclPerm...', false)
+#4 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Model.php(2947): DboSource->read(Object(AclPermission), Array)
+#5 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Model\AclPermission.php(74): Model->find('all', Array)
+#7 D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php(165): AclPermission->change(NULL, Array, 'deny')
+#8 [internal function]: PermissionsController->admin_change()
+#9 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PermissionsController), Array)
+#10 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
+#12 D:\Wiedy\My Workspace\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-12-23 05:16:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'AclPermission.role_id' in 'where clause'
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `AclPerm...', Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `AclPerm...', Array, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `AclPerm...', false)
+#4 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Model.php(2947): DboSource->read(Object(AclPermission), Array)
+#5 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Model\AclPermission.php(74): Model->find('all', Array)
+#7 D:\Wiedy\My Workspace\kodehive\pukis\app\Module\Users\Controller\PermissionsController.php(165): AclPermission->change('3', Array, 'deny')
+#8 [internal function]: PermissionsController->admin_change()
+#9 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PermissionsController), Array)
+#10 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
+#12 D:\Wiedy\My Workspace\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-12-23 07:41:15 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Event\CakeEventManager.php, line 264]
+2014-12-23 07:41:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /admin/users/permissions/change/
+Stack Trace:
+#0 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 264, Array)
+#2 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'D:\Wiedy\My Wor...', 264, Array)
+#3 D:\Wiedy\My Workspace\kodehive\pukis\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

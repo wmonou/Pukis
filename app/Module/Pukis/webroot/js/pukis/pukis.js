@@ -67,7 +67,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
 			    		modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(jqXHR.status, jqXHR.statusText, redirect.url);
 			    	} else {
 			    		ajaxType('get');
-			    		ajaxRequest(obj, '/admins/users/users/login', '#content');		
+			    		ajaxRequest(obj, '/admin/users/users/login', '#content');		
 			    	}	
 			    	$('#loader').hide();
 			    });

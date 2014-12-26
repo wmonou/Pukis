@@ -42,6 +42,7 @@ class PermissionsController extends UsersAppController {
 	{
 		parent::beforeFilter();
 		$this->set('title_for_layout', __d('users', 'Permissions'));
+		$this->Auth->allow('test');
 	}
 
 	/**
@@ -71,8 +72,7 @@ class PermissionsController extends UsersAppController {
 		$rolesAros = Set::combine($rolesAros, '{n}.AclAro.foreign_key', '{n}.AclAro.id');
 		
 		// retreive all permission
-		$this->AclPermission->unbindAll();
-		$aclPermission = $this->AclPermission->find('all');
+		$aclPermission = $this->AclPermission->find('all', array('contain' => false));
 		$aclPermission = Hash::combine(
 			$aclPermission, 
 			'{n}.AclPermission.aro_id', 
@@ -132,47 +132,72 @@ class PermissionsController extends UsersAppController {
 		if (!$this->request->is('ajax')) {
 			$this->redirect(array('action' => 'index'));
 		}
+		
 		$this->layout = false;
 		$acoId = $this->request->data['aco_id'];
 		$aroId = $this->request->data['aro_id'];
 		
-		// see if acoId and aroId combination exists
-		$conditions = array(
-			'AclPermission.aco_id' => $acoId,
-			'AclPermission.aro_id' => $aroId,
-		);
-		if ($this->AclPermission->hasAny($conditions)) {
-			$data = $this->AclPermission->find('first', array('conditions' => $conditions));
+		// look for current permission
+		$permissionData = $this->AclPermission->find('first', array(
+			'conditions' => array(
+				'AclPermission.aco_id' => $acoId,
+				'AclPermission.aro_id' => $aroId)));
+		
+		// search for parent and child alias
+		$this->AclAco->bindModel(array(
+			'hasMany' => array(
+				'AclAcoChild' => array(
+					'className' => 'AclAco',
+					'foreignKey' => 'parent_id')),
+			'belongsTo' => array(
+				'AclAcoParent' => array(
+					'className' => 'AclAco',
+					'foreignKey' => 'parent_id'))));
+		$acoData = $this->AclAco->find('first', array(
+				'conditions' => array('AclAco.id' => $acoId)));
+		
+		// if parent is empty means it is already the first parents
+		// if childs are empty means it is already the last child
+		// if allowing, parent and childs should be allowed too
+		// if disallowing, parent doesnt need to be dissallowed but child does
+		if (!empty($permissionData)) {
 			if ($data['AclPermission']['_create'] == 1 &&
 				$data['AclPermission']['_read'] == 1 &&
 				$data['AclPermission']['_update'] == 1 &&
 				$data['AclPermission']['_delete'] == 1)
 			{
-				// from 1 to 0
-				$data['AclPermission']['_create'] = 0;
-				$data['AclPermission']['_read'] = 0;
-				$data['AclPermission']['_update'] = 0;
-				$data['AclPermission']['_delete'] = 0;
-				$permitted = 0;
+				// disallowing
+				// list acoId only for self and childs
+				$acoIdList = array($acoId);
+				if (!empty($acoData['AclAcoChild'])) {
+					$acoChildIdList = Hash::combine($acoData['AclAcoChild'], '{n}.id');
+					$acoIdList = Hash::merge($acoIdList, $acoChildIdList);
+				}
 			} else {
-				// from 0 to 1
-				$data['AclPermission']['_create'] = 1;
-				$data['AclPermission']['_read'] = 1;
-				$data['AclPermission']['_update'] = 1;
-				$data['AclPermission']['_delete'] = 1;
-				$permitted = 1;
+				// allowing
+				// list acoId for self, parent, and childs
+				$acoIdList = array($acoId);
+				if (!empty($acoData['AclAcoParent'])) {
+					$acoIdList = Hash::merge($acoIdList, array($acoData['AclAcoParent']['id']));
+				}
+				if (!empty($acoData['AclAcoChild'])) {
+					$acoChildIdList = Hash::combine($acoData['AclAcoChild'], '{n}.id');
+					$acoIdList = Hash::merge($acoIdList, $acoChildIdList);
+				}
 			}
 		} else {
-			// create - CRUD with 1
-			$data['AclPermission']['aco_id'] = $acoId;
-			$data['AclPermission']['aro_id'] = $aroId;
-			$data['AclPermission']['_create'] = 1;
-			$data['AclPermission']['_read'] = 1;
-			$data['AclPermission']['_update'] = 1;
-			$data['AclPermission']['_delete'] = 1;
-			$permitted = 1;
+			// allowing
+			// list acoId for self, parent and childs
+			$acoIdList = array($acoId);
+			if (!empty($acoData['AclAcoParent'])) {
+				$acoIdList = Hash::merge($acoIdList, array($acoData['AclAcoParent']['id']));
+			}
+			if (!empty($acoData['AclAcoChild'])) {
+				$acoChildIdList = Hash::combine($acoData['AclAcoChild'], '{n}.id');
+				$acoIdList = Hash::merge($acoIdList, $acoChildIdList);
+			}
 		}
-
+			
 		// save
 		$success = 0;
 		if ($this->AclPermission->save($data)) {
@@ -194,6 +219,7 @@ class PermissionsController extends UsersAppController {
 			$this->ajaxRedirect('/admin/users/permissions/index/');
 		}
 	}
+	
 }
 
  ?>

@@ -4,11 +4,11 @@
  * UsersController
  *
  * @category Controller
- * @package  Module.User.Controller
+ * @package  Module.Users.Controller
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
 App::uses('UsersAppController', 'Users.Controller');
 
@@ -29,6 +29,7 @@ class UsersController extends UsersAppController
 	public function beforeFilter()
 	{
 		parent::beforeFilter();
+		$this->Auth->allow();
 	}
 	
 	/**

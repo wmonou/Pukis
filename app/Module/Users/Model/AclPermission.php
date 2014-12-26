@@ -33,7 +33,7 @@ class AclPermission extends UsersAppModel {
 	 *
 	 * @var unknown
 	 */
-	public $actsAs = array('ExtendAssociations');
+	public $actsAs = array('ExtendAssociations', 'Containable');
 	
 	/**
 	 * belongsTo
@@ -50,5 +50,57 @@ class AclPermission extends UsersAppModel {
 			'foreignKey' => 'aco_id',
 		),
 	);
+	
+	
+	/**
+	 * change permission for certain role with certain access
+	 * 
+	 * @param integer $roleId
+	 * @param array $acoIdList
+	 * @param string $permission
+	 * @access public
+	 */
+	public function change($aroId, $acoIdList, $permission = 0)
+	{
+		// get all aclPermission data
+		$aclPermissionData = $this->find('all', array(
+			'conditions' => array(
+				'AclPermission.aco_id' => $acoIdList,
+				'AclPermission.aro_id' => $aroId),
+			'fields' => array(
+				'AclPermission.id',
+				'AclPermission.aco_id'),
+			'contain' => false
+		));
+		
+		$aclPermissionIdList = Hash::combine($aclPermissionData, '{n}.AclPermission.aco_id', '{n}.AclPermission.id');
+
+		Wmonou::debug($acoIdList, $aclPermissionData, $aclPermissionIdList);
+		
+		// permission CRUD;
+		$crudPermission = array(
+			'AclPermission' => array(
+				'_create' => $permission,
+				'_read' => $permission,
+				'_update' => $permission,
+				'_delete' => $permission));
+	
+		$data = array();
+		foreach($acoIdList as $acoId)
+		{
+			$aclPermissionId = null;
+			if(isset($aclPermissionIdList[$acoId])) {
+				$aclPermissionId = $aclPermissionIdList[$acoId];
+			} 
+			
+			$aclPermission = array('AclPermission' => array(
+					'id' => $aclPermissionId,
+					'aco_id' => $acoId,
+					'aro_id' => $aroId,
+			));
+			
+			$data[] = Hash::merge($aclPermission, $crudPermission);
+		}
+	}
 
 }

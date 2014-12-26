@@ -21,11 +21,11 @@
 					$roleTitles = array_values($roles);
 					$roleIds   = array_keys($roles);
 	
-					$tableHeaders = array(
+					$tableHead = array(
 						__d('users', 'Section')
 					);
-					$tableHeaders = array_merge($tableHeaders, $roleTitles);
-					$tableHeaders =  $this->Html->tag('thead', $this->Html->tableHeaders($tableHeaders));
+					$tableHead = array_merge($tableHead, $roleTitles);
+					$tableHeaders =  $this->Html->tag('thead', $this->Html->tableHeaders($tableHead));
 					echo $tableHeaders;
 	
 					$currentController = '';				
@@ -45,12 +45,12 @@
 							
 							if ( substr($alias, 0, 1) == '_' ) {
 								$alias = substr_replace($alias, '', 0, 1);
-								$alias = $this->Html->tag('span', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr;  ', array('class' => 'bulet')) . preg_replace('/\_/', ' ', ucfirst($alias));
+								$alias = $this->Html->tag('span', "<i class='fa fa-caret-right ft-pukis-soft'>&nbsp;</i>", array('class' => 'ofset-20')) . preg_replace('/\_/', ' ', ucfirst($alias));
 							}else{			
 								if ( in_array($alias, $controllerName) ) {
 									$alias = $this->Html->tag('div', '&nbsp;&nbsp;  ' . preg_replace('/\_/', ' ', ucfirst($alias)), array('class' => 'bold'));
 								}else{
-									$alias = $this->Html->tag('span', '&nbsp;&nbsp;&rarr;  ', array('class' => 'bulet')) . preg_replace('/\_/', ' ', ucfirst($alias));
+									$alias = $this->Html->tag('span', "<i class='fa fa-caret-right ft-pukis-soft'>&nbsp;</i>", array('class' => 'ofset-10')) . preg_replace('/\_/', ' ', ucfirst($alias));
 								}							
 							}
 						} else {
@@ -94,7 +94,11 @@
 						}
 	
 						echo $this->Html->tableCells(array($row), $oddOptions, $evenOptions);
+						
 					}
+					
+					$tableFooters =  $this->Html->tag('thead', $this->Html->tableHeaders($tableHead));
+					echo $tableFooters;
 				?>
 				</table>
 			</div>
