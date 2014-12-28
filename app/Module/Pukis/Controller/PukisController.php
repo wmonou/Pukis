@@ -6,17 +6,16 @@ App::uses('PukisAppController', 'Pukis.Controller');
  * Pukis Controller
  *
  * @category Controller
- * @package  Pukis.Users.Controller
+ * @package  Pukis.Pukis.Controller
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     http://pukis.kodehive.com
  */
-class PukisController extends PukisAppController {
-	
+class PukisController extends PukisAppController 
+{
 	/**
 	 * Helpers used by controller
-	 *
 	 * @var array
 	 * @access public
 	 */
@@ -24,8 +23,8 @@ class PukisController extends PukisAppController {
 	
 	/**
 	 * Before Filter
-	 * 
 	 * @see PukisAppController::beforeFilter()
+	 * @access public
 	 */
 	public function beforeFilter()
 	{
@@ -34,8 +33,7 @@ class PukisController extends PukisAppController {
 	}
 	
 	/**
-	 * landing page of no authentication
-	 * 
+	 * Landing page of no authentication
 	 * @access public
 	 */
 	public function index()
@@ -47,8 +45,7 @@ class PukisController extends PukisAppController {
 	}
 	
 	/**
-	 * landing page of authentication
-	 * 
+	 * Landing page of authentication
 	 * @access public
 	 */
 	public function admin_index()
@@ -60,13 +57,4 @@ class PukisController extends PukisAppController {
 		
 	}
 	
-	/**
-	 *
-	 * @param unknown $message
-	 *
-	 * @access public
-	 */
-	public function message() {
-		// is used to print
-	}
 }

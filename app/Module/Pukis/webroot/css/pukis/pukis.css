@@ -27,7 +27,6 @@ html, body {
 	height: 100%;
 	position: absolute;
 	width:100%;
-	min-width: 1024px;
 }
 
 #header {
@@ -62,6 +61,7 @@ html, body {
 	height: 100%;
 	position: absolute;
 	width:100%;
+	top: 0;
 	z-index: 1;
 }
 
@@ -172,6 +172,10 @@ html, body {
 	padding-right: 5px;
 }
 
+.login{
+	position: relative;
+	bottom: 0;
+}
 /* Table
 -------------------------------------------------- */
 table {

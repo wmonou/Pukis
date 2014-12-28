@@ -12975,3 +12975,50 @@ Stack Trace:
 #11 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PermissionsController), Object(CakeRequest))
 #12 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-12-27 02:31:54 Error: [MissingPluginException] Plugin settings could not be found.
+Exception Attributes: array (
+  'plugin' => 'settings',
+)
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Pukis\Config\bootstrap.php(30): CakePlugin::load('settings')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\CakePlugin.php(247): include('C:\httpd\htdocs...')
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\CakePlugin.php(167): CakePlugin::_includeFile('C:\httpd\htdocs...', false)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\CakePlugin.php(99): CakePlugin::bootstrap('Pukis')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\Config\bootstrap.php(111): CakePlugin::load('Pukis', Array)
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Core\Configure.php(92): include('C:\httpd\htdocs...')
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\bootstrap.php(175): Configure::bootstrap(true)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(90): include('C:\httpd\htdocs...')
+#8 {main}
+2014-12-27 06:28:43 Error: [MissingActionException] Action UsersController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'logout',
+)
+Request URL: /users/users/logout
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-27 06:29:08 Error: [MissingActionException] Action UsersController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'logout',
+)
+Request URL: /users/users/logout
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-27 06:34:51 Error: [MissingActionException] Action UsersController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'logout',
+)
+Request URL: /users/users/logout
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

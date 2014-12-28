@@ -1,22 +1,34 @@
 <?php
+
 App::uses('SettingsAppController', 'Settings.Controller');
 
 /**
- * Settings Controller
+ * SettingsController
  *
+ * @category Controller
+ * @package  Pukis.Settings.Controller
+ * @version  1.0
+ * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
+ * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
+ * @link     http://pukis.kodehive.com
  */
-class SettingsController extends SettingsAppController {
+class SettingsController extends SettingsAppController 
+{
 
 	/**
+	 * Model used in controllers
 	 * 
-	 * @var unknown
+	 * @var array uses
+	 * @access public
 	 */
 	public $uses = array('Settings.Setting');
 	
 	/**
-	 * Scaffold
+	 * Configuration interface
+	 * @todo changing value trough this interface wont change anytingh
+	 * it is only a feature to introduce the functionality to save settings on json
 	 *
-	 * @var mixed
+	 * @access public
 	 */
 	public function admin_edit()
 	{
@@ -28,7 +40,7 @@ class SettingsController extends SettingsAppController {
 		if(!empty($this->request->data)) {
 			$this->Setting->save($this->request->data);
 		}
-				
+		
 		$configs = $this->Setting->find($key);
 		$this->set(compact('key', 'configs'));
 	}

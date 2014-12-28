@@ -24,8 +24,9 @@
     },
     "Meta": {
         "description": "Pukis - A CakePHP ajax user management dashboard",
-        "generator": "Pukis - Content Management System",
+        "generator": "Pukis - User management dashboard",
         "keywords": "pukis, Pukis, cms, CMS, ajax, user management, cakephp",
+        "author": "wmonou",
         "robots": "index, follow"
     },
     "Reading": {

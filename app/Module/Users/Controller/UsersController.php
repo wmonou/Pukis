@@ -1,5 +1,7 @@
 <?php
 
+App::uses('UsersAppController', 'Users.Controller');
+
 /**
  * UsersController
  *
@@ -10,21 +12,19 @@
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     http://pukis.kodehive.com
  */
-App::uses('UsersAppController', 'Users.Controller');
-
 class UsersController extends UsersAppController
 {
 	/**
-	 * Models
-	 *
+	 * Models used
 	 * @var array
+	 * @access public
 	 **/
 	public $uses = array('Users.User', 'Users.Role', 'User.Login');
 
 	/**
 	 * Controller callback - beforeFilter()
-	 * 
 	 * @return void
+	 * @access public
 	 */
 	public function beforeFilter()
 	{
@@ -33,9 +33,9 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * Index
-	 * 
+	 * Index - show all user
 	 * @return void
+	 * @access public
 	 */
 	public function admin_index()
 	{
@@ -44,9 +44,9 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * User Add
-	 * 
+	 * admin_add - add new user
 	 * @return void
+	 * @access public
 	 */
 	public function admin_add()
 	{
@@ -62,10 +62,10 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * User Edit
-	 * 
+	 * admin_edit - edit exsisting user
 	 * @param $id User ID
 	 * @return void
+	 * @access public
 	 */
 	public function admin_edit( $id = null )
 	{
@@ -99,9 +99,9 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * Login
-	 * 
+	 * admin_login - login
 	 * @return void
+	 * @access public
 	 */
 	public function admin_login()
 	{
@@ -131,9 +131,9 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * Logout
-	 * 
+	 * admin_logout - Logout
 	 * @return void
+	 * @access public
 	 */
 	public function admin_logout()
 	{
@@ -147,10 +147,10 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * Reset Password
-	 * 
+	 * admin_change_password - Reset Password
 	 * @param  $id User ID
 	 * @return void
+	 * @access public
 	 */
 	public function admin_change_password($id = null)
 	{
@@ -171,10 +171,10 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 * Delete User
-	 * 
+	 * admin_delete - Delete User
 	 * @param $id User ID
 	 * @return void
+	 * @access public
 	 */
 	public function admin_delete($id = null, $confirm = 0)
 	{	
@@ -209,7 +209,8 @@ class UsersController extends UsersAppController
 	}
 	
 	/**
-	 *  Install
+	 *  admin_install - Install
+	 *  @access public
 	 */
 	public function admin_install()
 	{
@@ -223,6 +224,8 @@ class UsersController extends UsersAppController
 	/**
 	 * Generate login token to be saved in login table and cookies
 	 * this is used to match login token and prevent hack to cookies
+	 * @todo this feature is not yet available
+	 * @access private
 	 */
 	private function _generateLoginToken()
 	{

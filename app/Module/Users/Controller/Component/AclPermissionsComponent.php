@@ -1,26 +1,31 @@
 <?php 
-/**
- * AclPermissions Component
- *
- * @author Luis Fred G S <luis.fred.gs@gmail.com>
- * @category Component
- * @package Plugin.Admin
- */
+
 App::uses('Component', 'Controller');
 App::uses('AuthComponent', 'Controller/Component');
+
+/**
+ * AclPermissionsComponent
+ *
+ * @category Component
+ * @package  Module.Users.Controller
+ * @version  1.0
+ * @author Luis Fred G S <luis.fred.gs@gmail.com>
+ * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
+ * @link     http://pukis.kodehive.com
+ */
 class AclPermissionsComponent extends Component
 {
 	/**
 	 * Controller methods by delegation
-	 *
 	 * @var string
+	 * @access public
 	 **/
 	protected $_controller = null;
 
 	/**
 	 * startup - Fired after the controller's beforeFilter method.
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function startup( Controller $controller )
 	{
@@ -29,8 +34,8 @@ class AclPermissionsComponent extends Component
 
 	/**
 	 * initialize - Fired before the controller's beforeFilter method.
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function initialize( Controller $controller )
 	{
@@ -39,8 +44,8 @@ class AclPermissionsComponent extends Component
 
 	/**
 	 * filter - access control for all sections on application
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function filter()
 	{			

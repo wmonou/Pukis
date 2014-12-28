@@ -7,9 +7,10 @@
  * @since    1.4.2
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://www.Pukis.org
+ * @link     http://pukis.kodehive.com
  */
-class PukisJson {
+class PukisJson 
+{
 
 	/**
 	 * Returns an array in a pretty json format
@@ -18,7 +19,8 @@ class PukisJson {
 	 * @return string
 	 * @author http://recursive-design.com/blog/2008/03/11/format-json-with-php/
 	 */
-	public static function stringify($json, $options = 0) {
+	public static function stringify($json, $options = 0) 
+	{
 		if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
 			return json_encode($json, $options);
 		} elseif (version_compare(PHP_VERSION, '5.3.0', '>=')) {
@@ -26,6 +28,7 @@ class PukisJson {
 		} else {
 			$json = json_encode($json);
 		}
+		
 		$json = str_replace(array('\/', ':{', ':"', ':['), array('/', ': {', ': "', ': ['), $json);
 		$found = preg_match_all('/:([0-9]+)/', $json, $matches);
 		if ($found) {
@@ -33,6 +36,7 @@ class PukisJson {
 				$json = preg_replace('/' . $search . '/', ': ' . $matches[1][$i], $json);
 			}
 		}
+		
 		$result			= '';
 		$pos			= 0;
 		$strLen			= strlen($json);
@@ -51,6 +55,7 @@ class PukisJson {
 					$result .= $indentStr;
 				}
 			}
+			
 			$result .= $char;
 			if (($char == ',' || $char == '{' || $char == '[') && $outOfQuotes) {
 				$result .= $newLine;
@@ -61,6 +66,7 @@ class PukisJson {
 					$result .= $indentStr;
 				}
 			}
+			
 			$prevChar = $char;
 		}
 		return $result;

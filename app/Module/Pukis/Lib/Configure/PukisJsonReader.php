@@ -11,7 +11,8 @@ App::uses('PukisJson', 'Pukis.Lib');
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     http://www.Pukis.org
  */
-class PukisJsonReader implements ConfigReaderInterface {
+class PukisJsonReader implements ConfigReaderInterface 
+{
 
 	/**
 	 * Default path to store file
@@ -22,7 +23,8 @@ class PukisJsonReader implements ConfigReaderInterface {
 	 * __construct
 	 *
 	 */
-	public function __construct($path = null) {
+	public function __construct($path = null) 
+	{
 		$this->_path = $path;
 	}
 
@@ -32,7 +34,8 @@ class PukisJsonReader implements ConfigReaderInterface {
 	 * @params $key string name key to read
 	 * @throws ConfigureException
 	 */
-	public function read($file) {
+	public function read($file) 
+	{
 		$file = $this->_file($file);
 		if (!is_file($file)) {			
 			if (!is_file(substr($file, 0, -4))) {
@@ -47,7 +50,8 @@ class PukisJsonReader implements ConfigReaderInterface {
 	/**
 	 * Dumps the state of Configure data into an json string.
 	 */
-	public function dump($file, $data) {
+	public function dump($file, $data) 
+	{
 		$file = $this->_file($file);
 		if (!is_file($file)) {
 			if (!is_file(substr($file, 0, -4))) {
@@ -71,7 +75,8 @@ class PukisJsonReader implements ConfigReaderInterface {
 	 * _writeFile
 	 *
 	 */
-	protected function _writeFile($file, $contents) {
+	protected function _writeFile($file, $contents) 
+	{
 		return file_put_contents($file, $contents);
 	}
 	
@@ -80,7 +85,8 @@ class PukisJsonReader implements ConfigReaderInterface {
 	 * @param unknown $file
 	 * @return string
 	 */
-	protected function _file($file) {
+	protected function _file($file) 
+	{
 		if (strpos($file, '..') !== false) {
 			throw new ConfigureException(__d('Pukis', 'Cannot load configuration files with ../ in them.'));
 		}

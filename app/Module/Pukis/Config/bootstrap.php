@@ -27,9 +27,4 @@ CakePlugin::loadAll(
 	array('Users' => array('bootstrap' => true, 'routes' => true))
 );
 
-CakePlugin::load('settings');
-
-
-
-
 ?>

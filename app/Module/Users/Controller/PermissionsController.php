@@ -1,30 +1,31 @@
 <?php
 
+App::uses('UsersAppController', 'Users.Controller');
+
 /**
  * PermissionsController
  *
  * @category Controller
- * @package  Module.User.Controller
+ * @package  Module.Users.Controller
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
-App::uses('UsersAppController', 'Users.Controller');
-
-class PermissionsController extends UsersAppController {	
+class PermissionsController extends UsersAppController 
+{	
 
 	/**
-	 * Components
-	 *
+	 * Components used in controller
 	 * @var array
+	 * @access public
 	 **/
 	public $components = array('Users.AclUtility');
 
 	/**
 	 * Models
-	 *
 	 * @var array
+	 * @access public
 	 **/
 	public $uses = array(
 		'Users.AclAco',
@@ -35,8 +36,8 @@ class PermissionsController extends UsersAppController {
 
 	/**
 	 * Controller callback
-	 * 
 	 * @return void
+	 * @access public
 	 */
 	public function beforeFilter()
 	{
@@ -46,9 +47,9 @@ class PermissionsController extends UsersAppController {
 	}
 
 	/**
-	 * admin_index
-	 * 
+	 * admin_index - show table permissions
 	 * @return void
+	 * @access public
 	 */
 	public function admin_index()
 	{
@@ -123,12 +124,12 @@ class PermissionsController extends UsersAppController {
 	}
 	
 	/**
-	 * admin_change
-	 * 
+	 * admin_change - change table permission
 	 * @return void
-	 * @todo recursice permission change
+	 * @access public
 	 */
-	public function admin_change() {
+	public function admin_change() 
+	{
 		if (!$this->request->is('ajax')) {
 			$this->ajaxRedirect('/admin/users/permissions/index');
 		}
@@ -227,14 +228,13 @@ class PermissionsController extends UsersAppController {
 	}
 	
 	/**
-	 * admin_sync
-	 * 
+	 * admin_sync - syncronize all actions in applications
 	 * @return void
 	 */
 	public function admin_sync()
 	{
 		if ($this->AclUtility->aco_sync()) {
-			$this->Session->setFlash(__d('users', 'All Controllers was sincronized.'), 'flash_success', array('plugin' => 'Pukis'));
+			$this->Session->setFlash(__d('users', 'All controllers were sincronized.'), 'flash_success', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/permissions/index');
 		}
 	}

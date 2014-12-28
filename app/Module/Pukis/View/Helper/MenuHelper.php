@@ -68,7 +68,7 @@ class MenuHelper extends AppHelper
 		$output = "";
 		
 		if (array($items)) {
-			$output.= '<ul id="menu">';
+			$output.= '<ul>';
 			
 			foreach ($items as $itemKey => $itemValue) {
 				$class = ($active)? 'class="active"' : '';

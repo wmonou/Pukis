@@ -1,19 +1,19 @@
-<div id="login" class="user-admin-login container-fluid">
+<div id="login" class="users-admin-login container-fluid">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<h1 class="text-">PUKIS</h1>
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+			<h1 class="text-"><a href="/">PUKIS</a></h1>
 			<h3><small>Ajax User Management Dashboard Ver. <?php echo (Configure::read('Dev.ver')); ?></small></h3>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 			<?php echo $this->Session->flash(); ?>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 			<?php echo $this->Form->create('User', array('role' => 'form', 'class' => 'form-signin')); ?>
 			<?php 
 				echo $this->Form->input('username', array(
@@ -46,8 +46,12 @@
 $(document).ready(function() {
 
 	var request = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
+	$('.users-admin-login a').click(function(e){
+		e.preventDefault();
+		request.ajaxType('post').ajaxRequest(this, this.href); 		
+	});
 	
-	$('.user-admin-login form').submit(function(e){
+	$('.users-admin-login form').submit(function(e){
 		e.preventDefault();
 		request.ajaxType('post').ajaxRequest(this, this.action); 		
 	});	

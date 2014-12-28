@@ -5,20 +5,20 @@ App::uses('PukisListener', 'Pukis.Event');
 App::uses('PukisMenu', 'Pukis.Lib');
 
 /**
- * User
+ * AppController
  *
  * @category Controller
  * @package  Module.Pukis.Controller
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
-class AppController extends Controller {
+class AppController extends Controller 
+{
 	
 	/**
 	 * Core Components
-	 * 
 	 * @var array
 	 * @access public
 	 */
@@ -31,8 +31,7 @@ class AppController extends Controller {
 	);
 	
 	/**
-	 * Helper
-	 *
+	 * Helper used in this controller
 	 * @var arrary
 	 * @access public
 	*/
@@ -50,24 +49,21 @@ class AppController extends Controller {
 	);
 		
 	/**
-	 * Model Use
-	 * 
+	 * Model used in this controller
 	 * @var array
 	 * @access public
 	 */
 	public $uses = array ();
 	
 	/**
-	 * Layout Use
-	 * 
+	 * Layout used in this controller
 	 * @var String
 	 * @access public
 	 */
 	public $layout = 'Pukis.pukis';
 	
 	/**
-	 * Style Use
-	 * 
+	 * Style used in this controller
 	 * @var style
 	 * @access public
 	 */
@@ -79,9 +75,9 @@ class AppController extends Controller {
 	);
 	
 	/**
-	 * Script Use
-	 *
+	 * Script used in this controller
 	 * @var style
+	 * @access public
 	 */
 	public $script = array(
 		'/Pukis/js/jquery/jquery.min.js',
@@ -94,10 +90,10 @@ class AppController extends Controller {
 		
 	/**
 	 * Constructor
-	 *
 	 * @access public
 	 */
-	public function beforeFilter() {
+	public function beforeFilter() 
+	{
 		parent::beforeFilter();
 		
 		// implemenet listener
@@ -112,10 +108,10 @@ class AppController extends Controller {
 	
 	/**
 	 * Configure AuthComponent
-	 * 
 	 * @access protected
 	 */
-	protected function _authSetup() {
+	protected function _authSetup() 
+	{
 		$this->Auth->authenticate = array(
 			'Form' => array(
 				'fields' => array(
@@ -132,16 +128,9 @@ class AppController extends Controller {
 			'admin' => true
 		);
 		
-		$this->Auth->loginAction = array(
-			'plugin' => 'users',
-			'controller' => 'users',
-			'action' => 'login',
-			'admin' => true
-		);
-		
 		$this->Auth->logoutRedirect = array(
 			'plugin' => 'pukis',
-			'controller' => 'users',
+			'controller' => 'pukis',
 			'action' => 'index',
 			'admin' => false
 		);
@@ -154,24 +143,28 @@ class AppController extends Controller {
 		);
 		
 		$this->Auth->allow('ajaxRedirect', 'ajaxMessage');
+		
+		if ($this->Auth->loggedIn()) {
+			$this->set('authUserId', $this->Auth->user('id'));
+		}
 	}
 	
 	/**
-	 * Asset Setup
-	 * 
+	 * Assets Setup
 	 * @access protected
 	 */
-	protected function _assetSetup() {
+	protected function _assetSetup() 
+	{
 		$this->set('style', $this->style);
 		$this->set('script', $this->script);
 	}
 	
 	/**
 	 * Layout Setup
-	 * 
 	 * @access protected
 	 */
-	protected function _layoutSetup() {
+	protected function _layoutSetup() 
+	{
 		if ($this->params['controller'] != 'pukis' && $this->params['action'] != 'admin_login') {
 			 $this->layout = "Pukis.pukis_admin";
 			//$this->layout = "Pukis.blank"; // debug mode
@@ -182,23 +175,22 @@ class AppController extends Controller {
 	
 	/**
 	 * Menu Setup
-	 * 
 	 * @access protected
 	 */
-	protected function _menuSetup() {
+	protected function _menuSetup() 
+	{
 		$sidebar = PukisMenu::$menu;
 		$this->set('sidebar', $sidebar['sidebar']);
 	}
 	
 	/**
-	 * 
 	 * @param unknown $url
 	 * @param string $status
 	 * @param string $exit
-	 * 
 	 * @access protected
 	 */
-	protected function ajaxRedirect($url, $status = null, $exit = true) {
+	protected function ajaxRedirect($url, $status = null, $exit = true) 
+	{
 		$this->autoRender = false;
 		if ($this->request->is('ajax')) {
 			$url = Router::normalize($url);
@@ -207,7 +199,7 @@ class AppController extends Controller {
 		} else {
 			$this->redirect($url, $status = null, $exit = true);
 		}
-		if($exit)
+		if ($exit)
 			exit;
 	}
 

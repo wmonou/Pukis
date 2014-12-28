@@ -1,22 +1,22 @@
 <?php
 
+App::uses('AppController', 'Pukis.Controller');
+
 /**
  * UsersAppController
  *
  * @category Controller
- * @package  Module.User.Controller
+ * @package  Module.Users.Controller
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
-App::uses('AppController', 'Pukis.Controller');
-
-class UsersAppController extends AppController{
+class UsersAppController extends AppController
+{
 
 	/**
 	 * Settings for paginate
-	 *
 	 * @var array
 	 **/
 	public $paginate = array(
@@ -24,8 +24,7 @@ class UsersAppController extends AppController{
 		);
 
 	/**
-	 * Helpers
-	 *
+	 * Helpers used
 	 * @var array
 	 **/
 	public $helpers = array(
@@ -36,8 +35,7 @@ class UsersAppController extends AppController{
 	);
 
 	/**
-	 * Components
-	 *
+	 * Components used
 	 * @var array
 	 **/
 	public $components = array(
@@ -45,7 +43,12 @@ class UsersAppController extends AppController{
 		'Session',
 		'Paginator'
 	);
-
+	
+	/**
+	 * Called before actions
+	 * @see Controller::beforeFilter()
+	 * @access public
+	 */
 	public function beforeFilter()
 	{
 		parent::beforeFilter();
@@ -62,14 +65,15 @@ class UsersAppController extends AppController{
 		
 		$this->Cookie->key = 'qSI23ATYH2qs*&sXOw!adre@FUCKIT!KJ34SAv!@*(XSL#$%)asGb$@11IAJL:+!@#HKis~#^';
 		$this->Cookie->httpOnly = true;
-// 		if (!$this->_checkRememberMe()) {
-// 			$this->ajaxRedirect('/admin/users/logout');
-// 		}
+		if (!$this->_checkRememberMe()) {
+			$this->ajaxRedirect('/admin/users/logout');
+		}
 	}
 	
 	/**
 	 * Check remember me cookies
 	 * @return boolean
+	 * @access public
 	 */
 	private function _checkRememberMe() 
 	{

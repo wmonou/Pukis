@@ -1,4 +1,5 @@
 <?php 
+
 App::uses('PukisJsonReader', 'Pukis.Configure');
 
 /**
@@ -11,20 +12,22 @@ App::uses('PukisJsonReader', 'Pukis.Configure');
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     http://pukis.kodehive.com
  */
-class Setting  {
+class Setting  
+{
 	
 	/**
-	 * 
-	 * @var unknown
+	 * Database table used in model
+	 * @var string $useTable
 	 */
 	public $useTable = false;
 
 	/**
-	 * 
-	 * @param unknown $key
-	 * @return mixed
+	 * Find configuration stored in json
+	 * @param string $key
+	 * @return array
+	 * @access public
 	 */
-	public function find($key) 
+	public function find($key = 'all') 
 	{
 		if ($key == 'all') {
 			$this->Config = new PukisJsonReader(APP . 'Module' . DS . 'Pukis' . DS . 'Config' . DS);
@@ -35,8 +38,9 @@ class Setting  {
 	}
 
 	/**
-	 * 
-	 * @param unknown $data
+	 * Store configuration in json
+	 * @param array $data
+	 * @access public
 	 */
 	public function save($data) 
 	{

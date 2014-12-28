@@ -1,49 +1,54 @@
 <?php
-/**
- * AclUtility Component
- *
- * @author Luis Fred G S <luis.fred.gs@gmail.com>
- * @category Component
- * @package Plugin.Admin
- */
+
 App::uses('Component', 'Controller');
 App::uses('Controller', 'Controller');
 App::uses('ComponentCollection', 'Controller');
 App::uses('AclComponent', 'Controller/Component');
 
-
+/**
+ * AclUtilityComponent
+ *
+ * @category Component
+ * @package  Module.Users.Controller
+ * @version  1.0
+ * @author Luis Fred G S <luis.fred.gs@gmail.com>
+ * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
+ * @link     http://pukis.kodehive.com
+ */
 class AclUtilityComponent extends Component {
 
 	/**
-	 * @var string Root controller node in acos table
+	 * Root controller node in acos table
+	 * @var string $rootNode
+	 * @access public
 	 */
 	public $rootNode = 'controllers';
 
 	/**
 	 * Clean Actions switch
-	 *
 	 * @var bool
+	 * @access protected
 	 **/
 	protected $_clean = false;
 
 	/**
-	 * Components
-	 *
+	 * Components used	 
 	 * @var array
+	 * @access public
 	 **/
 	public $components = array('Acl');
 
 	/**
-	 * Controller methods by delegation
-	 *
+	 * Controller methods by delegation	 
 	 * @var string
+	 * @access protected
 	 **/
 	protected $controller = null;
 
 	/**
 	 * initialize - Fired before the controller's beforeFilter method.
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function initialize(Controller $controller) {
 		$this->controller = $controller;
@@ -61,8 +66,8 @@ class AclUtilityComponent extends Component {
 
 	/**
 	 * aco_sync - Sync the ACO table
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function aco_sync($params = array()) {
 		$this->_clean = true;
@@ -75,8 +80,8 @@ class AclUtilityComponent extends Component {
 
 	/**
 	 * aco_update - Updates the Aco Tree with new controller actions.
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function aco_update($params = array()) {
 		$root = $this->_checkNode($this->rootNode, $this->rootNode, null);
@@ -107,8 +112,8 @@ class AclUtilityComponent extends Component {
 
 	/**
 	 * _updateControllers - Contribute for Update controllers list in aco table
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	protected function _updateControllers($root, $controllers, $plugin = null) {
 		$dotPlugin = $pluginPath = $plugin;
@@ -154,9 +159,9 @@ class AclUtilityComponent extends Component {
 
 	/**
 	 * getControllerList - Get a universal list of controllers
-	 *
 	 * @param $plugin If defined, allow get all controllers found in an plugin
 	 * @return array
+	 * @access public
 	 **/
 	public function getControllerList($plugin = null) {
 		if (!$plugin) {
@@ -171,11 +176,11 @@ class AclUtilityComponent extends Component {
 
 	/**
 	 * _checkNode - Check a node for existance
-	 *
 	 * @param string $path
 	 * @param string $alias
 	 * @param int $parentId
 	 * @return array Aco Node array
+	 * @access public
 	 */
 	protected function _checkNode($path, $alias, $parentId = null) {
 		$node = $this->Acl->Aco->node($path);
@@ -191,8 +196,8 @@ class AclUtilityComponent extends Component {
 
 	/**
 	 * _getCallbacks - Get a list of callback methods
-	 *
 	 * @return array
+	 * @access public
 	 **/
 	protected function _getCallbacks($className) {
 		$callbacks = array();
@@ -227,6 +232,7 @@ class AclUtilityComponent extends Component {
 	 * @param array $node
 	 * @param string $plugin Allow check controllers methods found in an plugin
 	 * @return void
+	 * @access public
 	 */
 	protected function _checkMethods($className, $controllerName, $node, $pluginPath = false) {
 		$excludes = $this->_getCallbacks($className);

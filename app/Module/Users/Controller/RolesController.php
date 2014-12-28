@@ -1,23 +1,24 @@
 <?php
 
+App::uses('UsersAppController', 'Users.Controller');
+
 /**
  * RolesController
  *
  * @category Controller
- * @package  Module.User.Controller
+ * @package  Module.Users.Controller
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
-App::uses('UsersAppController', 'Users.Controller');
-
-class RolesController extends UsersAppController{
+class RolesController extends UsersAppController
+{
 	
 	/**
 	 * Controller callback
-	 * 
 	 * @return void
+	 * @access public
 	 */
 	public function beforeFilter()
 	{
@@ -26,9 +27,9 @@ class RolesController extends UsersAppController{
 	}
 	
 	/**
-	 * admin_index
-	 * 
+	 * admin_index - show all roles
 	 * @return void
+	 * @access public
 	 */
 	public function admin_index()
 	{
@@ -37,9 +38,9 @@ class RolesController extends UsersAppController{
 	}
 	
 	/**
-	 * admin_Add
-	 * 
+	 * admin_add - add new roles
 	 * @return void
+	 * @access public
 	 */
 	public function admin_add()
 	{
@@ -56,10 +57,10 @@ class RolesController extends UsersAppController{
 	}
 	
 	/**
-	 * admin_edit
-	 * 
+	 * admin_edit - edit existing roles name
 	 * @param $id Role id
 	 * @return void
+	 * @access public
 	 */
 	public function admin_edit( $id = null )
 	{
@@ -83,11 +84,10 @@ class RolesController extends UsersAppController{
 	}
 	
 	/**
-	 * admin_delete
-	 * 
+	 * admin_delete - delete roles
 	 * @param  $id Role id
-	 * 
 	 * @return void
+	 * @access public
 	 */
 	public function admin_delete($id = null, $confirm = 0)
 	{

@@ -5,7 +5,11 @@
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo $title_for_layout; ?> - <?php echo __d('pukis', 'Pukis'); ?></title>
 		<?php
-			echo $this->Html->meta('icon');
+			echo $this->Html->meta('favicon.ico', '/Pukis/favicon.ico', array('type' => 'icon'));
+			echo $this->Html->meta('description', 'Pukis - A CakePHP ajax user management dashboard');
+			echo $this->Html->meta(array('name' => 'keyword', 'content' => 'pukis, Pukis, cms, CMS, ajax, user management, cakephp'));
+			echo $this->Html->meta(array('name' => 'author', 'content' => 'Yusuf Widiyatmono'));
+			echo $this->Html->meta(array('name' => 'robots', 'content' => 'noindex'));
 			
 			echo $this->Html->css($style);
 			echo $this->Html->script($script);
@@ -17,10 +21,8 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div  id="header">
-				Pukis
-			</div>
-					
+			<?php echo $this->element('Pukis\pukis_header', array(), array('plugin' => 'Pukis')); ?>
+							
 			<div id="content">
 				<div class="pukis-admin-menu">
 					<div class="menu col-md-2 col-xs-3">
@@ -31,7 +33,6 @@
 					</div>
 					
 					<div class="frame col-md-10 col-md-offset-2 col-xs-9 col-xs-offset-3">
-						<div class="flash"></div>
 						<div class="body">
 							<?php print $this->fetch('content'); ?>
 						</div>
@@ -39,10 +40,8 @@
 				</div>
 			</div>
 			
-			<div  id="footer">
-				Footer
-			</div>
-			
+			<?php echo $this->element('Pukis\pukis_footer', array(), array('plugin' => 'Pukis')); ?>
+						
 			<!-- loader  -->
 			<div id="loader">
 				
@@ -58,6 +57,11 @@
 			$(document).ready(function() {
 			
 				var request = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
+
+				$('#header a').click(function(e){
+					e.preventDefault();
+					request.ajaxRequest(this, this.href, $('#header').parent());
+				});
 				
 				$('.sidebar a.sidebar-nav-item-a').click(function(e){
 					e.preventDefault();

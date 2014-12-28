@@ -1,44 +1,45 @@
 <?php
 
+App::uses('UsersAppModel', 'Users.Model');
+App::uses('ExtendAssociationsBehavior', 'Model.Behavior');
+
 /**
  * AclPermission
  *
  * @category Model
- * @package  Module.User.Model
+ * @package  Module.Users.Model
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://akemis.kodehive.com
+ * @link     http://pukis.kodehive.com
  */
-App::uses('UsersAppModel', 'Users.Model');
-
 class AclPermission extends UsersAppModel {
 
 	/**
 	 * name
-	 *
 	 * @var string
+	 * @access public
 	 */
 	public $name = 'AclPermission';
 
 	/**
-	 * useTable
-	 *
+	 * Table used in this model
 	 * @var string
+	 * @access public
 	 */
 	public $useTable = 'aros_acos';
 	
 	/**
-	 * actsAs model behavior
-	 *
-	 * @var unknown
+	 * Model behavior
+	 * @var array
+	 * @access public
 	 */
 	public $actsAs = array('ExtendAssociations', 'Containable');
 	
 	/**
-	 * belongsTo
-	 *
+	 * Model belongsTo relations
 	 * @var array
+	 * @access public
 	 */
 	public $belongsTo = array(
 		'AclAro' => array(
@@ -51,10 +52,8 @@ class AclPermission extends UsersAppModel {
 		),
 	);
 	
-	
 	/**
 	 * change permission for certain role with certain access
-	 * 
 	 * @param integer $roleId
 	 * @param array $acoIdList
 	 * @param string $permission

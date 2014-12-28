@@ -6,6 +6,10 @@
 		<title><?php echo $title_for_layout; ?> - <?php echo __d('pukis', 'Pukis'); ?></title>
 		<?php
 			echo $this->Html->meta('favicon.ico', '/Pukis/favicon.ico', array('type' => 'icon'));
+			echo $this->Html->meta('description', 'Pukis - A CakePHP ajax user management dashboard');
+			echo $this->Html->meta(array('name' => 'keyword', 'content' => 'pukis, Pukis, cms, CMS, ajax, user management, cakephp'));
+			echo $this->Html->meta(array('name' => 'author', 'content' => 'Yusuf Widiyatmono'));
+			echo $this->Html->meta(array('name' => 'robots', 'content' => 'noindex'));
 			
 			echo $this->Html->css($style);
 			echo $this->Html->script($script);
@@ -16,19 +20,8 @@
 		?>
 	</head>
 	<body>
-		<div id="wrapper">
-		
-			<div  id="header">
-				Pukis
-			</div>
-					
-			<div id="content">	 
-				<?php print $this->fetch('content'); ?>
-			</div>
-			
-			<div  id="footer">
-				Footer
-			</div>
+		<div id="wrapper">			
+			<?php print $this->fetch('content'); ?>
 			
 			<!-- loader  -->
 			<div id="loader">

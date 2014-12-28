@@ -8,7 +8,7 @@ App::uses('CakeSession', 'Model/Datasource');
  * User
  *
  * @category Model
- * @package  Module.User.Model
+ * @package  Module.Users.Model
  * @version  1.0
  * @author   Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
@@ -17,9 +17,9 @@ App::uses('CakeSession', 'Model/Datasource');
 class User extends UsersAppModel {
     
     /**
-     * actsAs - Acl Behavior
-     *
+     * Behavior used in this model
      * @var array
+     * @access public
      **/	
     public $actsAs = array(
     	'Acl' => array('type' => 'requester', 'enabled' => false),
@@ -27,9 +27,9 @@ class User extends UsersAppModel {
     );
 
     /**
-     * belongsTo relationship
-     *
+     * Model belongsTo relationship
      * @var array
+     * @access public
      **/
 	public $belongsTo = array(
         'Role' => array(
@@ -40,15 +40,15 @@ class User extends UsersAppModel {
     
     /**
      * validationDomain - for translated validations messages
-     *
      * @var string
+     * @access public
      **/
 	public $validationDomain = 'model_validation';
 		
 	/**
 	 * validation rules
-	 *
 	 * @var array
+	 * @access public
 	 **/    
 	public $validate = array(
 		'email' => array(
@@ -84,8 +84,8 @@ class User extends UsersAppModel {
 	
 	/**
 	 * parentNode
-	 *
 	 * @return void
+	 * @access public
 	 **/	
     public function parentNode() {
             if (!$this->id && empty($this->data)) {
@@ -105,8 +105,8 @@ class User extends UsersAppModel {
 
     /**
      * bindNode
-     *
      * @return void
+     * @access public
      **/
     public function bindNode($user) {
         return array('model' => 'Role', 'foreign_key' => $user['Users.User']['role_id']);
@@ -121,16 +121,11 @@ class User extends UsersAppModel {
         }
         return true;
     }
-	
-    
-    public function beforeDelete($cascade = true) {
-
-    }
     
 	/**
 	 * validate_password_again
-	 *
 	 * @return void
+	 * @access public
 	 **/
 	public function validate_password_again() {
 		if (isset($this->data['User']['password'])) {

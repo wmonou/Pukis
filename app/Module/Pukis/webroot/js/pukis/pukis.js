@@ -72,7 +72,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
 				    		modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(error.status, error.statusText, redirect.url);
 				    	} else {
 				    		ajaxType('get');
-				    		ajaxRequest(obj, '/admin/users/users/login', '#content');		
+				    		ajaxRequest(obj, '/admin/users/users/login', '#wrapper');		
 				    	}
 					},
 					beforeSend: function(){
@@ -125,7 +125,7 @@ PUKISAPP.BEHAVIOR.PUKIS.view = function() {
 
 PUKISAPP.BEHAVIOR.PUKIS.dispacher = function() {
 	var defaultUrl = null;
-	var defaultElement = '#content';
+	var defaultElement = '#wrapper';
 	var redirect = function(url, element) {
 		url = url || defaultUrl;
 		element = element || defaultElement;

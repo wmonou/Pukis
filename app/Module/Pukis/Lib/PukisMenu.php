@@ -7,9 +7,10 @@
  * @version  1.0
  * @author   Yusuf Widiyatmono <Yusuf.Widiyatmono@wmonou.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://www.Pukis.org
+ * @link     http://pukis.kodehive.com
  */
-class PukisMenu {
+class PukisMenu 
+{
 	
 	/**
 	 * Menu variable
