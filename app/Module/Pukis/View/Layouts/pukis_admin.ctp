@@ -63,7 +63,7 @@
 					request.ajaxRequest(this, this.href, $('#header').parent());
 				});
 
-				$('.sidebar a.sidebar-nav-item-a').click(function(e){
+				$('.sidebar a').not('.sidebar a.new').click(function(e){
 					e.preventDefault();
 					request.ajaxRequest(this, this.href, '.body');
 				});

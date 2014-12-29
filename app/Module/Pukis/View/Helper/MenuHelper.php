@@ -82,7 +82,7 @@ class MenuHelper extends AppHelper
 					$output.= '</ul>';
 				}
 
-				$output.= '<li>';
+				$output.= '</li>';
 			}
 
 			$output.= '</ul>';
@@ -90,7 +90,6 @@ class MenuHelper extends AppHelper
 
 		return $output;
 	}
-
 
 	/**
 	 *
@@ -113,11 +112,13 @@ class MenuHelper extends AppHelper
 					'span',
 					'&nbsp;',
 					array('class' => 'sidebar-nav-item-icon fa arrow hidden-xs'));
+			$class = (isset($options['class']))? $options['class'] : '';
 			$output = $this->Html->link(
-					!(empty($options['children']))? $icon . $item . $arrow : $icon . $item,
+					!(isset($options['children']))? $icon . $item . $arrow : $icon . $item,
 					!($options['url'])? '#' : $options['url'],
 					array(
-						'class' => ($options['url'] != '#')? 'sidebar-nav-item-a' : 'sidebar-nav-item-i',
+						'class' => ($options['url'] != '#')? $class . ' sidebar-nav-item-a' : $class . ' sidebar-nav-item-i' ,
+						'target' => 'new',
 						'escape' => false));
 		} else {
 			$output = $this->Html->link($link, '#');
