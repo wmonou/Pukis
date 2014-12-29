@@ -1,6 +1,6 @@
 <div class="users-permissions-admin-index">
 	
-	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
+	<?php echo $this->element('Pukis/pukis_title', array(), array('plugin' => 'Pukis')); ?>
 	
 	<div>
 		<div class="col-md-12">

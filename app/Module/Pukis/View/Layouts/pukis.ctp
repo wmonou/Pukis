@@ -10,33 +10,31 @@
 			echo $this->Html->meta(array('name' => 'keyword', 'content' => 'pukis, Pukis, cms, CMS, ajax, user management, cakephp'));
 			echo $this->Html->meta(array('name' => 'author', 'content' => 'Yusuf Widiyatmono'));
 			echo $this->Html->meta(array('name' => 'robots', 'content' => 'noindex'));
-			
+
 			echo $this->Html->css($style);
 			echo $this->Html->script($script);
-	
+
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
 	</head>
 	<body>
-		<div id="wrapper">			
+		<div id="wrapper">
 			<?php print $this->fetch('content'); ?>
-			
+
 			<!-- loader  -->
 			<div id="loader">
-				
+
 			</div>
-			
+
 			<!-- modal  -->
 			<div id="modal"aria-hidden="true">
-			  	
+
 			</div>
-			
+
 		</div>
-		
 		<?php echo $this->fetch('scriptBottom'); ?>
-		
+
 	</body>
 </html>
-

@@ -1,4 +1,4 @@
-<?php 
+<?php
 App::uses('PukisMenu', 'Pukis.Lib');
 
 PukisMenu::add('sidebar', 'pukis', array(
@@ -8,18 +8,21 @@ PukisMenu::add('sidebar', 'pukis', array(
 	'children' => array(
 		'fork' => array(
 			'title' => __d('pukis', 'Fork'),
-			'url' => '#',
-			'icon' => 'fa fa-code-fork'
+			'url' => 'https://github.com/wmonou/Pukis',
+			'icon' => 'fa fa-code-fork',
+			'target' => 'new'
 		),
 		'star' => array(
 			'title' => __d('pukis', 'Star'),
-			'url' => '#',
-			'icon' => 'fa fa-star'
+			'url' => 'https://github.com/wmonou/Pukis',
+			'icon' => 'fa fa-star',
+			'target' => 'new'
 		),
 		'download' => array(
 			'title' => __d('pukis', 'Star'),
-			'url' => '#',
-			'icon' => 'fa fa-cloud-download'
+			'url' => 'https://github.com/wmonou/Pukis',
+			'icon' => 'fa fa-cloud-download',
+			'target' => 'new'
 		),
 	),
 ));

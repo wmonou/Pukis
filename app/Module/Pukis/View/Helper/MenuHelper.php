@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 /**
- * 
+ *
  * @author ”Yusuf Widiyatmono <yusuf.widiyatmono@wmonou.com>”
  *
  */
@@ -44,56 +44,56 @@ class MenuHelper extends AppHelper
 	 * @var array
 	 */
     public $helpers = array('Html');
-	
+
 	/**
-	 * 
+	 *
 	 * @param array $menus
 	 */
-	public function createMenu($menus) 
+	public function createMenu($menus)
 	{
 		$output = '<nav class="sidebar-nav">';
 		$output.= $this->_createItem($menus, true);
 		$output.= '</nav>';
-		
+
 		return $output;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param unknown $items
 	 * @param unknown $options
 	 */
 	private function _createItem($items, $active = false)
 	{
 		$output = "";
-		
+
 		if (array($items)) {
 			$output.= '<ul>';
-			
+
 			foreach ($items as $itemKey => $itemValue) {
 				$class = ($active)? 'class="active"' : '';
 				$output.= '<li ' . $class . '>';
 				$active = false;
-				
+
 				$output.= $this->_createLink($itemKey, $itemValue);
 				if(isset($itemValue['children']) && !empty($itemValue['children'])){
 					$output.= '<ul>';
 					$output.= $this->_createItem($itemValue['children']);
 					$output.= '</ul>';
 				}
-				
+
 				$output.= '<li>';
 			}
-			
+
 			$output.= '</ul>';
 		}
-		
+
 		return $output;
 	}
-	
-	
+
+
 	/**
-	 * 
+	 *
 	 * @param unknown $menu
 	 * @param unknown $options
 	 * @return unknown
@@ -110,20 +110,20 @@ class MenuHelper extends AppHelper
 					!($options['title'])? $link : $options['title'],
 					array('class' => 'sidebar-nav-item'));
 			$arrow = $this->Html->tag(
-					'span', 
-					'&nbsp;', 
+					'span',
+					'&nbsp;',
 					array('class' => 'sidebar-nav-item-icon fa arrow hidden-xs'));
 			$output = $this->Html->link(
-					(!empty($options['children']))? $icon . $item . $arrow : $icon . $item, 
+					!(empty($options['children']))? $icon . $item . $arrow : $icon . $item,
 					!($options['url'])? '#' : $options['url'],
 					array(
-						'class' => ($options['url'] != '#')? 'sidebar-nav-item-a' : 'sidebar-nav-item-i', 
+						'class' => ($options['url'] != '#')? 'sidebar-nav-item-a' : 'sidebar-nav-item-i',
 						'escape' => false));
 		} else {
 			$output = $this->Html->link($link, '#');
 		}
-		
+
 		return $output;
 	}
-	
+
 }

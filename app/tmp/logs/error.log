@@ -13022,3 +13022,47 @@ Stack Trace:
 #1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #2 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-12-29 04:50:19 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'kode8684_root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /admin/users/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(3539): ConnectionManager::getDataSource('default')
+#3 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(3566): Model->setSource('settings')
+#5 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#7 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\UsersAppController.php(57): Model->find('all')
+#8 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\UsersController.php(31): UsersAppController->beforeFilter()
+#9 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#10 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(190): Controller->startupProcess()
+#13 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(168): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-12-29 05:54:13 Error: [MissingTableException] Table settings for model Setting was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'settings',
+  'class' => 'Setting',
+  'ds' => 'default',
+)
+Request URL: /admin/users/login
+Stack Trace:
+#0 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(3566): Model->setSource('settings')
+#1 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2947): Model->getDataSource()
+#2 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#3 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\UsersAppController.php(57): Model->find('all')
+#4 C:\httpd\htdocs\projects\kodehive\pukis\app\Module\Users\Controller\UsersController.php(31): UsersAppController->beforeFilter()
+#5 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#6 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#7 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#9 C:\httpd\htdocs\projects\kodehive\pukis\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\httpd\htdocs\projects\kodehive\pukis\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

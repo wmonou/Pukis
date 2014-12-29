@@ -1,6 +1,6 @@
 <div class="users-settings-admin-edit">
 	
-	<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
+	<?php echo $this->element('Pukis/pukis_title', array(), array('plugin' => 'Pukis')); ?>
 	
 	<div>
 		<div class="col-sm-offset-2 col-sm-10">

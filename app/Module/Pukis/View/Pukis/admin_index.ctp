@@ -1,4 +1,4 @@
-<?php echo $this->element('Pukis\pukis_header', array(), array('plugin' => 'Pukis')); ?>
+<?php echo $this->element('Pukis/pukis_header', array(), array('plugin' => 'Pukis')); ?>
 
 <div id="content">
 	<div class="pukis-admin-menu">
@@ -13,7 +13,7 @@
 		<div class="frame col-md-10 col-md-offset-2 col-xs-9 col-xs-offset-3">
 			<div class="body">
 				<div class="pukis-pukis-admin-edit">
-					<?php echo $this->element('Pukis\pukis_title', array(), array('plugin' => 'Pukis')); ?>
+					<?php echo $this->element('Pukis/pukis_title', array(), array('plugin' => 'Pukis')); ?>
 				</div>
 				
 				<div>
@@ -38,7 +38,7 @@
 	</div>
 </div>
 
-<?php echo $this->element('Pukis\pukis_footer', array(), array('plugin' => 'Pukis')); ?>
+<?php echo $this->element('Pukis/pukis_footer', array(), array('plugin' => 'Pukis')); ?>
 
 <script type="text/javascript">
 $(document).ready(function() {

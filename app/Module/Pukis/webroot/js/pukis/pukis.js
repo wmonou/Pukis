@@ -1,13 +1,13 @@
 // create the root namespace and making sure we're not overwriting it
 var PUKISAPP = PUKISAPP || {};
- 
+
 // create a general purpose namespace method
 // this will allow us to create namespace a bit easier
 // author http://www.kenneth-truyers.net/2013/04/27/javascript-namespaces-and-modules/
 PUKISAPP.createNameSpace = function(namespace) {
     var nsparts = namespace.split(".");
     var parent = PUKISAPP;
- 
+
     // we want to be able to include or exclude the root namespace
     // So we strip it if it's in the namespace
     if (nsparts[0] === "PUKISAPP") {
@@ -49,7 +49,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
 	}
 	var ajaxRequest = function(obj, url, element) {
 		redirect = PUKISAPP.BEHAVIOR.PUKIS.dispacher().redirect(url, element);
-		if (typeof redirect.url != 'undefined' && redirect.url != null) {			
+		if (typeof redirect.url != 'undefined' && redirect.url != null) {
 			data = null;
 			if (this.type == 'post' && this.data == null) {
 				this.data = $(obj).serialize();
@@ -62,7 +62,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
 						response = PUKISAPP.BEHAVIOR.PUKIS.util().checkJson(data);
 				    	if (typeof response.url != 'undefined') {
 				    		ajaxType('get');
-				    		ajaxRequest(obj, response.url, redirect.element);				
+				    		ajaxRequest(obj, response.url, redirect.element);
 						} else {
 							$(redirect.element).html(data);
 						}
@@ -72,7 +72,7 @@ PUKISAPP.BEHAVIOR.PUKIS.ajax = function() {
 				    		modal = PUKISAPP.BEHAVIOR.PUKIS.view().showErrorModal(error.status, error.statusText, redirect.url);
 				    	} else {
 				    		ajaxType('get');
-				    		ajaxRequest(obj, '/admin/users/users/login', '#wrapper');		
+				    		ajaxRequest(obj, '/admin/users/users/login', '#content');
 				    	}
 					},
 					beforeSend: function(){
@@ -117,7 +117,7 @@ PUKISAPP.BEHAVIOR.PUKIS.view = function() {
 		$('#modal').easyModal({top: '200'});
 		$('#modal').html(message);
 		$('#modal').trigger('openModal');
-	}	
+	}
 	return {
 		showErrorModal: showErrorModal
 	}
@@ -125,7 +125,7 @@ PUKISAPP.BEHAVIOR.PUKIS.view = function() {
 
 PUKISAPP.BEHAVIOR.PUKIS.dispacher = function() {
 	var defaultUrl = null;
-	var defaultElement = '#wrapper';
+	var defaultElement = '#content';
 	var redirect = function(url, element) {
 		url = url || defaultUrl;
 		element = element || defaultElement;

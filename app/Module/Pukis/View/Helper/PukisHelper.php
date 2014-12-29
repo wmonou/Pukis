@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * This class only used for pukis layout cosmetics
@@ -7,7 +7,5 @@
  *
  */
 class PukisHelper extends AppHelper {
-		
-}
 
-?>
+}

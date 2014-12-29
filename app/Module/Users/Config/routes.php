@@ -44,4 +44,3 @@ Router::connect('/admin/permissions/change', array(
 	'action' => 'change',
 	'admin' => true
 	));
- ?>

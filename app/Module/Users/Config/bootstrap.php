@@ -2,8 +2,3 @@
 /**
 * Admin bootstrap
 */
-
-
-
-
-?>

@@ -97,5 +97,3 @@ class UsersAppController extends AppController
 		return true;
 	}
 }
-
- ?>

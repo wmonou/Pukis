@@ -68,4 +68,3 @@ class Role extends UsersAppModel {
         return null;
     }
 }
- ?>

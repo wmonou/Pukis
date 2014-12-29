@@ -61,8 +61,4 @@ class Setting
 			Configure::load('settings', 'settings');
 		}		
 	}
-	
-	
-
-	
 }

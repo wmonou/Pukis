@@ -10,10 +10,10 @@
 			echo $this->Html->meta(array('name' => 'keyword', 'content' => 'pukis, Pukis, cms, CMS, ajax, user management, cakephp'));
 			echo $this->Html->meta(array('name' => 'author', 'content' => 'Yusuf Widiyatmono'));
 			echo $this->Html->meta(array('name' => 'robots', 'content' => 'noindex'));
-			
+
 			echo $this->Html->css($style);
 			echo $this->Html->script($script);
-	
+
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
@@ -21,8 +21,8 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<?php echo $this->element('Pukis\pukis_header', array(), array('plugin' => 'Pukis')); ?>
-							
+			<?php echo $this->element('Pukis/pukis_header', array(), array('plugin' => 'Pukis')); ?>
+
 			<div id="content">
 				<div class="pukis-admin-menu">
 					<div class="menu col-md-2 col-xs-3">
@@ -31,7 +31,7 @@
 							<?php echo $this->Menu->createMenu($sidebar); ?>
 						</aside>
 					</div>
-					
+
 					<div class="frame col-md-10 col-md-offset-2 col-xs-9 col-xs-offset-3">
 						<div class="body">
 							<?php print $this->fetch('content'); ?>
@@ -39,40 +39,39 @@
 					</div>
 				</div>
 			</div>
-			
-			<?php echo $this->element('Pukis\pukis_footer', array(), array('plugin' => 'Pukis')); ?>
-						
+
+			<?php echo $this->element('Pukis/pukis_footer', array(), array('plugin' => 'Pukis')); ?>
+
 			<!-- loader  -->
 			<div id="loader">
-				
+
 			</div>
-			
+
 			<!-- modal  -->
 			<div id="modal">
 
 			</div>
 		</div>
-		
+
 		<script type="text/javascript">
 			$(document).ready(function() {
-			
+
 				var request = new PUKISAPP.BEHAVIOR.PUKIS.ajax();
 
 				$('#header a').click(function(e){
 					e.preventDefault();
 					request.ajaxRequest(this, this.href, $('#header').parent());
 				});
-				
+
 				$('.sidebar a.sidebar-nav-item-a').click(function(e){
 					e.preventDefault();
 					request.ajaxRequest(this, this.href, '.body');
 				});
-				
+
 				$('.sidebar').metisMenu();
-				
+
 			});
 		</script>
-		
+
 	</body>
 </html>
-

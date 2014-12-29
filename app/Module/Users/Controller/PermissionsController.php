@@ -240,5 +240,3 @@ class PermissionsController extends UsersAppController
 	}
 	
 }
-
- ?>

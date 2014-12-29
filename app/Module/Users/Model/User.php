@@ -136,4 +136,3 @@ class User extends UsersAppModel {
 		return true;
 		}
 }
- ?>

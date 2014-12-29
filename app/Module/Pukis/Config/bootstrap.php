@@ -26,5 +26,3 @@ if (file_exists(APP . 'Module' . DS . 'Pukis' . DS . 'Config' . DS . 'settings.j
 CakePlugin::loadAll(
 	array('Users' => array('bootstrap' => true, 'routes' => true))
 );
-
-?>

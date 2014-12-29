@@ -16,5 +16,3 @@ App::uses('AclBehavior', 'Model.Behavior');
 class UsersAppModel extends AppModel{
 			
 }
-
- ?>
