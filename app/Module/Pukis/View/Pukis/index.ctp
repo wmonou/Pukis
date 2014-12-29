@@ -3,7 +3,7 @@
 		<div class="container">
 			<h1>PUKIS <small class="ft-white">user management dashboard Ver. <?php echo Configure::read('Dev.ver')?></small></h1>
 			<p>Pukis is made using CakePHP to accomodate full ajax application.</p>
-			<a href="" class="btn btn-default"><i class="fa fa-github"></i> Downoload</a>
+			<a href="https://github.com/wmonou/Pukis" class="btn btn-default"><i class="fa fa-github"></i> Downoload</a>
 			<a href="/admin/users/login" class="demo btn btn-default">Demo</a>
 		</div>
 	</div>
