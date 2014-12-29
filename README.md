@@ -24,10 +24,10 @@ Installation :
 - Dump database schema from App/Modules/Pukis/Config/Schema
 - Configure your database configuration App/Config/database.php
 
-Sorry - there is no automatic instalation procedure yet, but you are programmer should be easily do it.
+Sorry - there is no automatic instalation procedure yet, but you are programmer should be easily to do it.
 
 To implement ajax view on your view, jQuery ajax has been encapsulate to be a simple function
-<script>
+<code>
 
 	$(document).ready(function(){
 
@@ -58,7 +58,7 @@ To implement ajax view on your view, jQuery ajax has been encapsulate to be a si
 		});
 	})
 
-</script>
+</code>
 
 Hope this will simplify your projects
 
