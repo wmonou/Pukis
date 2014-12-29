@@ -69,8 +69,8 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'rtfGHB',
-		'database' => 'kodehive_pukis',
+		'password' => '',
+		'database' => '',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
