@@ -31,7 +31,7 @@ class UsersController extends UsersAppController
 		parent::beforeFilter();
 		$this->Auth->allow('admin_login');
 	}
-	
+
 	/**
 	 * Index - show all user
 	 * @return void
@@ -42,7 +42,7 @@ class UsersController extends UsersAppController
 		$this->paginate['User']['order'] = 'User.id Desc';
 		$this->set('users', $this->paginate('User'));
 	}
-	
+
 	/**
 	 * admin_add - add new user
 	 * @return void
@@ -51,7 +51,7 @@ class UsersController extends UsersAppController
 	public function admin_add()
 	{
 		if ( !empty( $this->request->data ) ) {
-			$this->User->create();			
+			$this->User->create();
 			if ( $this->User->save( $this->request->data ) ) {
 				$this->Session->setFlash(__d('users', 'User saved.'), 'flash_success', array('plugin' => 'Pukis'));
 				$this->ajaxRedirect('/admin/users/users/index');
@@ -60,7 +60,7 @@ class UsersController extends UsersAppController
 		$roles = $this->Role->find('list', array('conditions' => "Role.id >= '". $this->Auth->user('role_id') ."'"));
 		$this->set(compact('roles'));
 	}
-	
+
 	/**
 	 * admin_edit - edit exsisting user
 	 * @param $id User ID
@@ -73,31 +73,31 @@ class UsersController extends UsersAppController
 			$this->Session->setFlash(__d('users', 'Invalid ID'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->redirect(array('action' => 'index'));
 		}
-		
+
 		$editedUser = $this->User->find('first', array('conditions' => array('id' => $id), 'contain' => false));
-		
+
 		if ($this->Auth->user('id') != $id) {
 			if ($this->Auth->user('role_id') >= $editedUser['User']['role_id']) {
 				$this->Session->setFlash(__d('users', 'Cannot edit your own or upper class!'), 'flash_error', array('plugin' => 'Pukis'));
 				$this->ajaxRedirect('/admin/users/users/index');
 			}
 		}
-		
+
 		if ( !empty( $this->request->data ) ) {
 			if ( $this->User->save($this->request->data) ) {
 				$this->Session->setFlash(__d('users', 'User was saved.'), 'flash_success', array('plugin' => 'Pukis'));
 				$this->ajaxRedirect('/admin/users/users/index');
 			}
-			
+
 			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/users/index');
 		}
-		
+
 		$this->request->data = $editedUser;
 		$roles = $this->Role->find('list', array('conditions' => "Role.id >= '". $this->Auth->user('role_id') ."'"));
 		$this->set(compact('roles'));
 	}
-	
+
 	/**
 	 * admin_login - login
 	 * @return void
@@ -105,12 +105,12 @@ class UsersController extends UsersAppController
 	 */
 	public function admin_login()
 	{
-		
+
 		if ($this->Auth->loggedIn()) {
 			$this->Session->setFlash(__d('users', 'You are still have login'), 'flash_info', array('plugin' => 'Pukis'));
 			return $this->ajaxRedirect($this->Auth->redirect());
 		}
-		
+
 		if ( $this->request->is('post') ) {
 			if ($this->Auth->login()) {
 				// did they select the remember me checkbox?
@@ -118,18 +118,18 @@ class UsersController extends UsersAppController
 					unset($this->request->data['User']['remember_me']);
     	            $this->request->data['User']['password'] = $this->Auth->password($this->request->data['User']['password']);
 	                // write the cookie
-                	$this->Cookie->write('Pukis.token', $this->request->data['User'], true, Configure::read('AuthAccess.duration'));                	
+                	$this->Cookie->write('Pukis.token', $this->request->data['User'], true, Configure::read('AuthAccess.duration'));
 				}
-				
+
 				$this->Session->setFlash(__d('users', 'Login Success'), 'flash_success', array('plugin' => 'Pukis'));
 				return $this->ajaxRedirect($this->Auth->redirect());
 			}
-			
+
 			$this->Session->setFlash(__d('users', 'Login Error'), 'flash_error', array('plugin' => 'Pukis'));
 			return $this->ajaxRedirect($this->Auth->redirect());
 		}
 	}
-	
+
 	/**
 	 * admin_logout - Logout
 	 * @return void
@@ -141,11 +141,11 @@ class UsersController extends UsersAppController
 			$this->Session->setFlash(__d('users', 'Logout Success'), 'flash_success', array('plugin' => 'Pukis'));
 			return $this->ajaxRedirect($this->Auth->redirect());
 		}
-		
+
 		$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
 		$this->ajaxRedirect('/admin/users/users/index');
 	}
-	
+
 	/**
 	 * admin_change_password - Reset Password
 	 * @param  $id User ID
@@ -158,18 +158,19 @@ class UsersController extends UsersAppController
 			$this->Session->setFlash(__d('users', 'Invalid ID'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->redirect(array('action' => 'index'));
 		}
-		
+
 		if ( !empty( $this->request->data ) ) {
-			if ( $this->User->save($this->request->data) ) {
+
+			if ($this->User->save($this->request->data) ) {
 				$this->Session->setFlash(__d('users', 'password was saved.'), 'flash_success', array('plugin' => 'Pukis'));
 				$this->ajaxRedirect('/admin/users/users/index');
 			}
-			
+
 			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/users/index');
 		}
 	}
-	
+
 	/**
 	 * admin_delete - Delete User
 	 * @param $id User ID
@@ -177,37 +178,37 @@ class UsersController extends UsersAppController
 	 * @access public
 	 */
 	public function admin_delete($id = null, $confirm = 0)
-	{	
+	{
 		if (!$id) {
 			$this->Session->setFlash(__d('users', 'Invalid ID!'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/users/index');
 		}
-		
+
 		if ($this->Auth->user('id') == $id) {
 			$this->Session->setFlash(__d('users', 'Cannot delete your own Id!'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/users/index');
 		}
-		
+
 		$deletedUser = $this->User->find('first',array('conditions' => array('id' => $id), 'contain' => false));
 		if ($this->Auth->user('role_id') >= $deletedUser['User']['role_id']) {
 			$this->Session->setFlash(__d('users', 'Cannot delete your own or upper class!'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/users/index');
 		}
-		
+
 		if($confirm == 1) {
 			if ( $this->User->delete($id) ) {
 				$this->Session->setFlash(__d('users', 'User was deleted.'), 'flash_success', array('plugin' => 'Pukis'));
-				$this->ajaxRedirect('/admin/users/users/index');	
+				$this->ajaxRedirect('/admin/users/users/index');
 			}
-			
+
 			$this->Session->setFlash(__d('users', 'Unknown error occured!'), 'flash_error', array('plugin' => 'Pukis'));
 			$this->ajaxRedirect('/admin/users/users/index');
 		}
-		
+
 		$key = 'id';
 		$this->set(compact('key', 'id'));
 	}
-	
+
 	/**
 	 *  admin_install - Install
 	 *  @access public
@@ -216,11 +217,11 @@ class UsersController extends UsersAppController
 	{
 		$this->AclAco->create(array('parent_id' => null, 'alias' => 'controllers'));
 		$this->AclAco->save();
-		
+
 		$this->Session->setFlash(__d('users', 'AclAco has been created'), 'flash_success', array('plugin' => 'Pukis'));
-		$this->ajaxRedirect('/admin/users/users/index');	
+		$this->ajaxRedirect('/admin/users/users/index');
 	}
-	
+
 	/**
 	 * Generate login token to be saved in login table and cookies
 	 * this is used to match login token and prevent hack to cookies
@@ -231,6 +232,6 @@ class UsersController extends UsersAppController
 	{
 		$userId = $this->Auth->user('id');
 		return md5($userId . date('Y m d H:i:s', strtotime('+2 Weeks')));
-		
+
 	}
 }

@@ -27,7 +27,7 @@ PukisMenu::add('sidebar', 'user', array(
 			'icon' => 'fa fa-unlock-alt'
 		),
 		'role' => array(
-			'title' => __d('croogo', 'Role'),
+			'title' => __d('users', 'Role'),
 			'url' => array(
 				'plugin' => 'users',
 				'controller' => 'roles',
